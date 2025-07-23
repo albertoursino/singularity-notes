@@ -1,0 +1,3 @@
+[submodule "nebula-notes-blog/themes/ananke"]
+	path = nebula-notes-blog/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
