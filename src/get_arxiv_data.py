@@ -1,21 +1,26 @@
+from pathlib import Path
+from typing import Any
 import arxiv
 import json
+
+from loguru import logger
+import yaml
 
 # Initialize the arXiv client
 client = arxiv.Client()
 
-MAX_RESULTS = 10
+with open("config.yaml", "r") as config_file:
+    config: dict[str, Any] = yaml.safe_load(config_file)
 
 # Search for the 10 most recent articles in the astrophysics category
 search = arxiv.Search(
     query="cat:astro-ph*",
-    max_results=MAX_RESULTS,
+    max_results=config.get("number_of_articles"),
     sort_by=arxiv.SortCriterion.SubmittedDate,
     sort_order=arxiv.SortOrder.Descending,
 )
 
 # Fetch and format results
-
 results = []
 for i, paper in enumerate(client.results(search)):
     results.append(
@@ -30,5 +35,9 @@ for i, paper in enumerate(client.results(search)):
     )
 
 # Save results to a JSON file
-with open("arxiv_results.json", "w", encoding="utf-8") as f:
+output_file = Path(config.get("output_dir")) / "arxiv_results.json"
+with open(output_file, "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False, indent=2)
+    logger.success(
+        f"JSON file with {len(results)} articles saved successfully at {str(output_file)!r}"
+    )

@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Any
 from loguru import logger
 import requests
 from tqdm import tqdm
@@ -10,7 +11,7 @@ import yaml
 load_dotenv()
 
 with open("config.yaml", "r") as config_file:
-    config: dict = yaml.safe_load(config_file)
+    config: dict[str, Any] = yaml.safe_load(config_file)
 
 with open("arxiv_results.json", "r") as f:
     articles = json.load(f)
@@ -66,7 +67,7 @@ for article in articles:
 # Get content of the PDF
 response = requests.get(pdf_url)
 if response.status_code == 200:
-    pdf_path = Path("best_article.pdf")
-    with open(pdf_path, "wb") as f:
+    output_file = Path(config.get("output_dir")) / "best_article.pdf"
+    with open(output_file, "wb") as f:
         f.write(response.content)
-        logger.success(f"Best article saved at {str(pdf_path)!r}")
+        logger.success(f"Best article saved at {str(output_file)!r}")

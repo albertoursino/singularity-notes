@@ -1,7 +1,7 @@
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.12.4
+    rev: v0.12.5
     hooks:
       # Run the linter.
       - id: ruff-check
@@ -10,8 +10,8 @@ repos:
       - id: ruff-format
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: ''  # Use the sha / tag you want to point at
+    rev: 'v1.17.0'  # Use the sha / tag you want to point at
     hooks:
       - id: mypy
-        args: [--strict, --ignore-missing-imports]
+        args: [--strict, --install-types, --non-interactive, --ignore-missing-imports]
         additional_dependencies: [tokenize-rt==3.2.0]

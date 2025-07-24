@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Any
 import PyPDF2
 from dotenv import load_dotenv
 from loguru import logger
@@ -8,12 +9,12 @@ import yaml
 load_dotenv()
 
 with open("config.yaml", "r") as config_file:
-    config: dict = yaml.safe_load(config_file)
+    config: dict[str, Any] = yaml.safe_load(config_file)
 
 if not config.get("debug"):
-    pdf_path = Path("best_article.pdf")
+    pdf_path = Path(config.get("output_dir")) / "best_article.pdf"
 else:
-    pdf_path = Path("dummy_astronomy_article.pdf")
+    pdf_path = Path(config.get("output_dir")) / "dummy_astronomy_article.pdf"
 
 text = ""
 
@@ -54,6 +55,9 @@ logger.info(f"Generating blog article from the best article PDF using {model!r}.
 response = client.responses.create(model=model, input=prompt)
 markdown = response.output[0].content[0].text
 
-with open("article.md", "w", encoding="utf-8") as md_file:
+output_file = Path(config.get("output_dir")) / "article.md"
+with open(output_file, "w", encoding="utf-8") as md_file:
     md_file.write(markdown)
-    logger.success("Blog article successfully generated and saved to 'article.md'.")
+    logger.success(
+        f"Blog article successfully generated and saved to {str(output_file)!r}."
+    )
