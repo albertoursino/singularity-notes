@@ -12,6 +12,7 @@ dependencies = [
     "loguru (>=0.7.3,<0.8.0)",
     "openai (>=1.97.1,<2.0.0)",
     "python-dotenv (>=1.1.1,<2.0.0)",
+    "pypdf2 (>=3.0.1,<4.0.0)",
 ]
 
 [tool.poetry]
