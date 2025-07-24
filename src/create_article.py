@@ -35,7 +35,7 @@ prompt = (
     - Keep it concise: focus on the key message and interesting insights\n\
     - Include a catchy title, a subtitle, and clear section headings with emojis\n\
     - Make the blog post enjoyable to read while staying faithful to the paper's intent\n\
-    - Avoid citing the authors of the paper\n\
+    - Don't include any credits, I manually will cite the authors and the research paper\n\
     - Avoid technical jargon unless absolutely necessary, and explain it when used\n\n\
     Use consistent punctuation throughout:\n\
     - If using em dashes (—), include spaces (e.g. 'hello — world')\n\
