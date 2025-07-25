@@ -65,6 +65,10 @@ for article in articles:
     if article.get("number") == number:
         pdf_url = article.get("pdf_url")
         logger.debug(f"Selected article title: {article.get('title')}")
+
+        with (Path(config.get("output_dir")) / "best_article.json").open("w") as f:
+            json.dump(article, f)
+
         break
 
 # Get content of the PDF

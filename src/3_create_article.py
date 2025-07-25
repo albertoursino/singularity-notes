@@ -11,10 +11,7 @@ load_dotenv()
 with open("config.yaml", "r") as config_file:
     config: dict[str, Any] = yaml.safe_load(config_file)
 
-if not config.get("debug"):
-    pdf_path = Path(config.get("output_dir")) / "best_article.pdf"
-else:
-    pdf_path = Path(config.get("output_dir")) / "dummy_astronomy_article.pdf"
+pdf_path = Path(config.get("output_dir")) / "best_article.pdf"
 
 text = ""
 
@@ -37,7 +34,7 @@ logger.info(f"Generating blog article from the best article PDF using {model!r}.
 response = client.responses.create(model=model, input=prompt)
 markdown = response.output[0].content[0].text
 
-output_file = Path(config.get("output_dir")) / "article.md"
+output_file = Path(config.get("output_dir")) / "raw_post.md"
 with open(output_file, "w", encoding="utf-8") as md_file:
     md_file.write(markdown)
     logger.success(

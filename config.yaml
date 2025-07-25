@@ -1,4 +1,4 @@
-debug: false
+debug: true
 
 openai_model_name: gpt-4.1-nano
 

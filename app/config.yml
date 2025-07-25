@@ -8,8 +8,8 @@ theme: [hugo-PaperMod]
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
-buildFuture: false
-buildExpired: false
+buildFuture: true
+buildExpired: true
 enableEmoji: true
 pygmentsUseClasses: true
 mainsections: ["posts"]
@@ -58,12 +58,12 @@ params:
   ShowPageNums: true
   ShowToc: true
   # comments: false
-  images: ["images/papermod-cover.png"]
+  images: []
 
   homeInfoParams:
     Title: "👋 Welcome to **Nebula notes**! 🌌"
     Content: >
-      Nebula Notes is a blog which hosts articles - built by AI - based on the most recent **astronomy research papers**.
+      Nebula Notes brings you bite-sized articles on the latest astronomy discoveries—crafted by AI, inspired by cutting-edge research.
 
   # socialIcons:
   #   - name: github

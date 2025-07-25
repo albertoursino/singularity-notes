@@ -12,18 +12,20 @@ General guidelines:
 - Keep it concise: focus on the key message and interesting insights.
 - Avoid technical jargon unless absolutely necessary, and explain it when used.
 - The title must be attractive and easy to understand. 
+- Write a brief final [section] with a closing message which is somehow related to the article itself.
 
 Technical guidelines:
 - Write in [Markdown format].
-- Include a catchy [title], a [subtitle], and clear [section headings].
+- Include a catchy [title], a [subtitle], and clear [section] headings.
 - Include an emoji at the beginning of the [title].
-- Include an emoji at the beginning of each [section headings].
-- Don't include emojis in the [subtitle] nor in the content under each [section headings]. 
+- Include an emoji at the beginning of each [section] headings.
+- Don't include emojis in the [subtitle] nor in the content under each [section] headings. 
 - Don't include math formulas.
 - Don't include any credits, I will manually cite the authors and the research paper.
 - Don't include spaces between em dashes (—) (e.g. write 'hello—world', not 'hello — world').
 - If using straight quotes, not curly quotes (“ ”).
 - Use periods, commas, and other typographical symbols as to be consistent throughout the article.
+- Use capital letters for each word in the [title], [subtitle] and [section] headings (e.g. "Why Is This a Big Deal?")
 
 The following is an example of the structure of an article that you have to create:
 

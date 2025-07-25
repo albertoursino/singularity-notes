@@ -26,7 +26,7 @@ In other words, we're on the cusp of a new era where mapping the universe's most
 
 ---
 
-### ⚙️ The Heart of the Discovery: Lightcone Evolution & Mode Coupling 🌍
+### ⚙️ The Heart of the Discovery: Lightcone Evolution & Mode Coupling
 
 Here's the clever part:
 
@@ -67,11 +67,3 @@ This opens groundbreaking ways to:
 - **The universe is more connected than previously thought**, and our observational methods are catching up to this cosmic truth.
 
 ---
-
-**Credits:** Delon Shen, Nickolas Kokron, Emmanuel Schaan — for pioneering this exciting analytical work that paves the way for upcoming cosmic discoveries.
-
----
-
-**Stay Curious! 🚀**
-
-The universe keeps surprising us — sometimes, all it takes is a new perspective to unlock its deepest secrets.

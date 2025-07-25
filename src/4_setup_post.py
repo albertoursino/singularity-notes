@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 from pathlib import Path
 import re
 from time import time
@@ -38,15 +39,15 @@ def extract_and_remove_title_subtitle(content):
 with open("config.yaml", "r") as config_file:
     config: dict[str, Any] = yaml.safe_load(config_file)
 
-filename = f"article_{config.get('openai_model_name')}_{int(time())}.md"
 
 # Read the created article
-article_source_filepath = Path(config.get("output_dir")) / "article.md"
-with article_source_filepath.open() as f:
+raw_post = Path(config.get("output_dir")) / "raw_post.md"
+with raw_post.open() as f:
     content = f.read()
 
 title, subtitle, content = extract_and_remove_title_subtitle(content)
 
+# Build Hugo header
 header = f"""---
 author: [Powered by ChatGPT (OpenAI)]
 title: "{title}"
@@ -57,7 +58,15 @@ ShowToc: false
 ---
 """
 
+# Write credits
+with (Path(config.get("output_dir")) / "best_article.json").open("r") as f:
+    best_article_json = json.load(f)
+
+credits = f"""**Credits**: {best_article_json["authors"]} — {best_article_json["pdf_url"]}
+"""
+
 # Create a new post in Hugo
-article_dest_filepath = Path("app") / "content" / "posts" / filename
-with article_dest_filepath.open("w") as f:
-    f.write(header + "\n" + content)
+filename = f"post_{config.get('openai_model_name')}_{int(time())}.md"
+hugo_post = Path("app") / "content" / "posts" / filename
+with hugo_post.open("w") as f:
+    f.write(header + "\n" + content + "\n\n" + credits)
