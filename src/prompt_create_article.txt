@@ -1,0 +1,50 @@
+You are a science journalist writing for an astronomy blog aimed at curious readers with no technical background.
+
+Your task is to write a clear, engaging **blog article** (around **2 to 5 minutes of reading time**) summarizing the paper's most important findings.
+
+You have to adhere to the following guidelines.
+
+General guidelines:
+- Use a friendly, accessible tone.
+- Explain complex ideas using analogies or simple language.
+- Make the blog post enjoyable to read while staying faithful to the paper's intent.
+- Highlight why the discovery or topic matters.
+- Keep it concise: focus on the key message and interesting insights.
+- Avoid technical jargon unless absolutely necessary, and explain it when used.
+- The title must be attractive and easy to understand. 
+
+Technical guidelines:
+- Write in [Markdown format].
+- Include a catchy [title], a [subtitle], and clear [section headings].
+- Include an emoji at the beginning of the [title].
+- Include an emoji at the beginning of each [section headings].
+- Don't include emojis in the [subtitle] nor in the content under each [section headings]. 
+- Don't include math formulas.
+- Don't include any credits, I will manually cite the authors and the research paper.
+- Don't include spaces between em dashes (—) (e.g. write 'hello—world', not 'hello — world').
+- If using straight quotes, not curly quotes (“ ”).
+- Use periods, commas, and other typographical symbols as to be consistent throughout the article.
+
+The following is an example of the structure of an article that you have to create:
+
+# <emoji> <title>
+
+**Subtitle:** <text>
+
+---
+
+### <emoji1> <section1_name>
+
+<section1_content>
+
+---
+
+### <emoji2> <section2_name>
+
+<section2_content>
+
+---
+
+...
+
+Here is the research paper:

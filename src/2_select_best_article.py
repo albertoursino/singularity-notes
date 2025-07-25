@@ -10,10 +10,11 @@ import yaml
 
 load_dotenv()
 
+
 with open("config.yaml", "r") as config_file:
     config: dict[str, Any] = yaml.safe_load(config_file)
 
-with open("arxiv_results.json", "r") as f:
+with (Path(config.get("output_dir")) / "arxiv_articles.json").open() as f:
     articles = json.load(f)
 
 article_summaries = []
@@ -25,14 +26,14 @@ for article in articles:
 
 formatted_articles = "\n".join(article_summaries)
 
+
 if not config.get("debug"):
     client = OpenAI()
 
-    prompt = f"You are an editor of an astronomy newsletter for curious, non-expert readers.\
-                Your task is to read them and choose only one that would be most interesting to publish (I will give you the task of summarizing the whole content of the selected paper) as today's featured article.\
-                You must give me only the article 'number'. Imagine your only possible output is one single integer.\
-                Focus on papers that are: 1. Easy to explain or make understandable 2. Related to exciting discoveries, space missions, telescopes, or cosmic phenomena\
-                3. Likely to engage curious readers (e.g., black holes, exoplanets, new data from space).\n\n{formatted_articles}"
+    with open("src/prompt_select_best_article.txt", "r") as file:
+        prompt = file.read()
+
+    prompt += f"\n\n{formatted_articles}"
 
     num_tokens = len(prompt.split())
     logger.debug(f"Number of tokens in a single prompt: {num_tokens}")
@@ -42,7 +43,9 @@ if not config.get("debug"):
 
     dict = {}
     for i in tqdm(range(config.get("number_of_analyses"))):
-        response = client.responses.create(model="gpt-4.1-nano", input=prompt)
+        response = client.responses.create(
+            model=config.get("openai_model_name"), input=prompt
+        )
         try:
             number = int(response.output[0].content[0].text)
         except Exception:

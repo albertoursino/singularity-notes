@@ -35,7 +35,7 @@ for i, paper in enumerate(client.results(search)):
     )
 
 # Save results to a JSON file
-output_file = Path(config.get("output_dir")) / "arxiv_results.json"
+output_file = Path(config.get("output_dir")) / "arxiv_articles.json"
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False, indent=2)
     logger.success(

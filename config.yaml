@@ -1,5 +1,7 @@
 debug: false
 
+openai_model_name: gpt-4.1-nano
+
 number_of_articles: 10 # Number of articles to fetch from arxiv
 
 number_of_analyses: 5 # Number of times LLM select the best article
