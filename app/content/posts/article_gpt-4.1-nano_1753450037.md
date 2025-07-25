@@ -1,7 +1,7 @@
 ---
-author: ["ChatGPT"]
-title: "Illuminating the Faint Universe 🌌: How Lightcone Evolution Bridges LIM and CMB Lensing"
-date: "2019-03-10"
+author: [Powered by ChatGPT (OpenAI)]
+title: "🌌 Illuminating the Faint Universe: How Lightcone Evolution Bridges LIM and CMB Lensing"
+date: "2025-07-25"
 description: "A new analytical insight reveals that future observations will be able to connect the dots between the universe's subtle signals, unlocking secrets about cosmic structure and evolution."
 summary: "A new analytical insight reveals that future observations will be able to connect the dots between the universe's subtle signals, unlocking secrets about cosmic structure and evolution."
 ShowToc: false

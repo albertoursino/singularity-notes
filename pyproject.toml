@@ -13,6 +13,7 @@ dependencies = [
     "openai (>=1.97.1,<2.0.0)",
     "python-dotenv (>=1.1.1,<2.0.0)",
     "pypdf2 (>=3.0.1,<4.0.0)",
+    "poethepoet (>=0.36.0,<0.37.0)",
 ]
 
 [tool.poetry]
@@ -21,3 +22,6 @@ package-mode = false
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+app = "hugo server -D --source app"

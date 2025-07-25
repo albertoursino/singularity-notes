@@ -1,4 +1,4 @@
-# Illuminating the Faint Universe 🌌: How Lightcone Evolution Bridges LIM and CMB Lensing
+# 🌌 Illuminating the Faint Universe: How Lightcone Evolution Bridges LIM and CMB Lensing
 
 **Subtitle:** A new analytical insight reveals that future observations will be able to connect the dots between the universe's subtle signals, unlocking secrets about cosmic structure and evolution.
 
