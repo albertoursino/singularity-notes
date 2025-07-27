@@ -10,8 +10,11 @@ import os
 if __name__ == "__main__":
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
-
     os.makedirs(config.get("output_dir"), exist_ok=True)
+
+    if not os.path.exists("used_articles.json"):
+        with open("used_articles.json", "w") as f:
+            f.write("[]")
 
     logger.info("Fetching articles from arXiv...")
     get_arxiv_articles()
