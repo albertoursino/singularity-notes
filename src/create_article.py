@@ -28,10 +28,10 @@ This is a dummy paragraph for testing purposes. It will be replaced with the act
 ---
 """
     else:
-        with open("src/prompt_create_article.txt", "r") as file:
+        with open("src/resources/prompt_create_article.txt", "r") as file:
             prompt = file.read()
 
-        with open("src/post_template.txt", "r") as file:
+        with open("src/resources/post_template.txt", "r") as file:
             post_template = file.read()
 
         prompt += "\n\nThe following is the structure of the final Markdown file that you have to fill out. "

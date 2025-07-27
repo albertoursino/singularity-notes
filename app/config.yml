@@ -23,14 +23,27 @@ pagination:
   pagerSize: 5
 
 languages:
-  en:
-    languageName: "English"
+  blog:
+    languageName: "Blog"
     weight: 1
-    # menu:
-    #   main:
-    #     - name: About
-    #       url: archives
-    #       weight: 5
+  about:
+    languageName: "About"
+    weight: 1
+    params:
+      languageAltTitle: About
+      profileMode:
+        enabled: true
+        title: Alberto Ursino
+        imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+        subtitle: "🚀 I'm a software engineer passionate about astronomy 🌌"
+        buttons:
+          - name: Wiki
+            url: https://github.com/albertoursino/singularity-notes/blob/main/README.md
+      socialIcons:
+        - name: github
+          url: https://github.com/albertoursino
+        - name: LinkedIn
+          url: https://www.linkedin.com/in/alberto-ursino-8b3466161/
 
 outputs:
   home:
@@ -61,7 +74,7 @@ params:
   images: []
 
   homeInfoParams:
-    Title: "👋 Welcome to **Singularity Notes**! 🌌"
+    Title: "👋 Welcome to **Singularity Notes** !"
     Content: >
       Singularity Notes brings you bite-sized articles on the latest astronomy discoveries—crafted by AI, inspired by cutting-edge research.
 
@@ -110,6 +123,7 @@ params:
   #     threshold: 0.4
   #     minMatchCharLength: 0
   #     keys: ["title", "permalink", "summary", "content"]
+
 
 markup:
   goldmark:

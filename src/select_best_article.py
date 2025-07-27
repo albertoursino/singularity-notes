@@ -32,7 +32,7 @@ def select_best_article():
     if not config.get("debug"):
         client = OpenAI()
 
-        with open("src/prompt_select_best_article.txt", "r") as file:
+        with open("src/resources/prompt_select_best_article.txt", "r") as file:
             prompt = file.read()
 
         prompt += f"\n\n{formatted_articles}"
