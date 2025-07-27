@@ -2,7 +2,6 @@ from pathlib import Path
 from typing import Any
 from loguru import logger
 import requests
-from tqdm import tqdm
 from dotenv import load_dotenv
 from openai import OpenAI
 import json
@@ -37,27 +36,12 @@ def select_best_article():
 
         prompt += f"\n\n{formatted_articles}"
 
-        num_tokens = len(prompt.split())
-        logger.debug(f"Number of tokens in a single prompt: {num_tokens}")
-        logger.debug(
-            f"Number of tokens used to select the best article: {num_tokens * config.get('number_of_analyses')}"
+        logger.debug(f"Number of tokens in the prompt: {len(prompt.split())}")
+
+        response = client.responses.create(
+            model=config.get("openai_model_name"), input=prompt
         )
-
-        dict = {}
-        for i in tqdm(range(config.get("number_of_analyses"))):
-            response = client.responses.create(
-                model=config.get("openai_model_name"), input=prompt
-            )
-            try:
-                number = int(response.output[0].content[0].text)
-            except Exception:
-                continue
-            if number not in dict:
-                dict[number] = 1
-            else:
-                dict[number] += 1
-
-        number = max(dict, key=dict.get)
+        number = int(response.output[0].content[0].text)
     else:
         logger.info("Debug mode is enabled, skipping OpenAI API call...")
         number = 0

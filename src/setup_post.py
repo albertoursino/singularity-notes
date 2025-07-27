@@ -119,11 +119,11 @@ ShowToc: false
         best_article_json = json.load(f)
 
     credits = f"""**Source Paper's Authors**: {best_article_json["authors"]}\n
-**PDF Url**: {best_article_json["pdf_url"]}
+**PDF**: {best_article_json["pdf_url"]}
 """
 
     # Create a new post in Hugo
-    filename = f"post_{config.get('openai_model_name')}_{int(time())}.md"
+    filename = f"{int(time())}.md"
     hugo_post = Path("app") / "content" / "posts" / filename
     with hugo_post.open("w") as f:
         f.write(header + "\n" + content + "\n\n" + credits)
