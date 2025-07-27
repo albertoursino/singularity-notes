@@ -1,1 +1,1 @@
-# nebula-notes-blog
+# singularity-notes-blog

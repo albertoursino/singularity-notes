@@ -1,7 +1,7 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://nebula-blog/"
-title: Nebula Notes
+baseURL: "https://singularity-notes/"
+title: Singularity Notes
 copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
 theme: [hugo-PaperMod]
 
@@ -61,9 +61,9 @@ params:
   images: []
 
   homeInfoParams:
-    Title: "👋 Welcome to **Nebula notes**! 🌌"
+    Title: "👋 Welcome to **Singularity Notes**! 🌌"
     Content: >
-      Nebula Notes brings you bite-sized articles on the latest astronomy discoveries—crafted by AI, inspired by cutting-edge research.
+      Singularity Notes brings you bite-sized articles on the latest astronomy discoveries—crafted by AI, inspired by cutting-edge research.
 
   # socialIcons:
   #   - name: github

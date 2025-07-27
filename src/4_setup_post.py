@@ -62,7 +62,8 @@ ShowToc: false
 with (Path(config.get("output_dir")) / "best_article.json").open("r") as f:
     best_article_json = json.load(f)
 
-credits = f"""**Credits**: {best_article_json["authors"]} — {best_article_json["pdf_url"]}
+credits = f"""**Source Paper's Authors**: {best_article_json["authors"]}\n
+**PDF Url**: {best_article_json["pdf_url"]}
 """
 
 # Create a new post in Hugo

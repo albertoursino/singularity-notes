@@ -13,6 +13,8 @@ with open("config.yaml", "r") as config_file:
 
 pdf_path = Path(config.get("output_dir")) / "best_article.pdf"
 
+# pdf_path = Path("dummy_astronomy_article.pdf")
+
 text = ""
 
 with pdf_path.open(mode="rb") as file:

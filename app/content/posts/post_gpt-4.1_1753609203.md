@@ -1,7 +1,10 @@
-# 🌌 The Cosmic Whodunit: Fast Radio Bursts And The Search For Answers
-
-**Subtitle:** Are Mysterious Signals From Deep Space Telling Us Something New About The Universe?
-
+---
+author: [Powered by ChatGPT (OpenAI)]
+title: "🌌 The Cosmic Whodunit: Fast Radio Bursts And The Search For Answers"
+date: "2025-07-27"
+description: "Are Mysterious Signals From Deep Space Telling Us Something New About The Universe?"
+summary: "Are Mysterious Signals From Deep Space Telling Us Something New About The Universe?"
+ShowToc: false
 ---
 
 ### 🛰️ What Are Fast Radio Bursts?
@@ -39,3 +42,7 @@ The story is far from over. Each new detection adds a piece to the puzzle and so
 FRBs might just be the universe’s way of sending us riddles—signals from the unknown, keeping our curiosity alive. While we don’t have all the answers yet, the search itself is revealing new wonders, pushing the boundaries of what we know about space and time. As telescopes like CHIME continue their watch, perhaps the next big clue will arrive when we least expect it. In the meantime, FRBs remind us that the cosmos still holds mysteries that can leave even the smartest scientists scratching their heads—and that’s part of the excitement of exploring the universe.
 
 ---
+
+**Source Paper's Authors**: Delon Shen, Nickolas Kokron, Emmanuel Schaan
+
+**PDF Url**: http://arxiv.org/pdf/2507.17752v1

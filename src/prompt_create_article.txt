@@ -12,41 +12,37 @@ General guidelines:
 - Keep it concise: focus on the key message and interesting insights.
 - Avoid technical jargon unless absolutely necessary, and explain it when used.
 - The title must be attractive and easy to understand. 
-- Write a brief final [section] with a closing message which is somehow related to the article itself.
+- Write a [section] which summarize the findings of the research paper. 
 
 Technical guidelines:
-- Write in [Markdown format].
+- Write in **Markdown format**.
 - Include a catchy [title], a [subtitle], and clear [section] headings.
-- Include an emoji at the beginning of the [title].
-- Include an emoji at the beginning of each [section] headings.
+- Don't repeat emojis.
 - Don't include emojis in the [subtitle] nor in the content under each [section] headings. 
 - Don't include math formulas.
 - Don't include any credits, I will manually cite the authors and the research paper.
 - Don't include spaces between em dashes (—) (e.g. write 'hello—world', not 'hello — world').
+- Don't include a final message: finish with a [section].
+- End with a conclusion [section] on which you give your conclusions and maybe some hypotheses and what could come in the future.
 - If using straight quotes, not curly quotes (“ ”).
 - Use periods, commas, and other typographical symbols as to be consistent throughout the article.
 - Use capital letters for each word in the [title], [subtitle] and [section] headings (e.g. "Why Is This a Big Deal?")
+- Include bullet point lists only if strictly necessary. At least one might be nice though, it's up to you!
 
-The following is an example of the structure of an article that you have to create:
-
-# <emoji> <title>
-
-**Subtitle:** <text>
-
----
-
-### <emoji1> <section1_name>
-
-<section1_content>
-
----
-
-### <emoji2> <section2_name>
-
-<section2_content>
-
----
-
-...
+Structure of the final Markdown file guidelines:
+[title]
+- The [1st row] must have this structure: "# <emoji> <title>"
+- The [2nd row] must be an empty row
+[subtitle]
+- The [3rd row] must have this structure: "**Subtitle:** <text>"
+- The [4th row] must be an empty row
+- The [5th row] must be "---"
+- The [6th row] must be an empty row
+[section]
+- The [ith row] must have this structure: "### <emoji> <section_header>"
+- The [(i+1)th row] must contain the section text
+- The [(i+2)th row] must be an empty row
+- The [(i+3)th row] must be "---"
+- The [(i+4)th row] must be an empty row
 
 Here is the research paper:

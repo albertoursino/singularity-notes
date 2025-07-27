@@ -1,6 +1,6 @@
 debug: true
 
-openai_model_name: gpt-4.1-nano
+openai_model_name: gpt-4.1
 
 number_of_articles: 10 # Number of articles to fetch from arxiv
 

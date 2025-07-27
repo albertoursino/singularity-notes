@@ -1,5 +1,5 @@
 [project]
-name = "nebula-notes-blog"
+name = "singularity-notes-blog"
 version = "0.1.0"
 description = ""
 authors = [{ name = "Alberto Ursino", email = "Alberto.Ursino@k-ai.at" }]
