@@ -38,7 +38,6 @@ languages:
         subtitle: "🚀 I'm a software engineer passionate about astronomy 🌌"
         buttons:
           - name: Blog Wiki
-            url: https://github.com/albertoursino/singularity-notes/blob/main/README.md
       socialIcons:
         - name: github
           url: https://github.com/albertoursino
