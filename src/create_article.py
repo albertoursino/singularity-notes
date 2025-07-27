@@ -1,10 +1,13 @@
 from pathlib import Path
+import sys
 from typing import Any
 import PyPDF2
 from dotenv import load_dotenv
 from loguru import logger
 from openai import OpenAI
 import yaml
+
+from utils import create_output_dir
 
 load_dotenv()
 
@@ -51,15 +54,22 @@ This is a dummy paragraph for testing purposes. It will be replaced with the act
         num_tokens = len(prompt.split())
         logger.debug(f"Number of tokens in the prompt: {num_tokens}")
 
-        client = OpenAI()
-        model = config.get("openai_model_name")
-        logger.info(
-            f"Generating blog article from the best article PDF using {model!r}..."
-        )
-        response = client.responses.create(model=model, input=prompt)
-        markdown = response.output[0].content[0].text
+        try:
+            client = OpenAI()
+            model = config.get("openai_model_name")
+            logger.info(
+                f"Generating blog article from the best article PDF using {model!r}..."
+            )
+            response = client.responses.create(model=model, input=prompt)
+            markdown = response.output[0].content[0].text
+        except Exception as e:
+            logger.error(f"Error calling OpenAI API: {e}")
+            # TODO: send an email
+            sys.exit(1)
 
+    # Save the raw post in the output directory
     output_file = Path(config.get("output_dir")) / "raw_post.md"
+    create_output_dir(Path(config.get("output_dir")))
     with open(output_file, "w", encoding="utf-8") as md_file:
         md_file.write(markdown)
         logger.success(

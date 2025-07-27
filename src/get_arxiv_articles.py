@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Any
 import arxiv
@@ -5,6 +6,8 @@ import json
 
 from loguru import logger
 import yaml
+
+from utils import create_output_dir
 
 
 def get_arxiv_articles():
@@ -22,8 +25,14 @@ def get_arxiv_articles():
         sort_order=arxiv.SortOrder.Descending,
     )
 
-    # Get used articles
     used_articles_file = Path("used_articles.json")
+
+    # Create file if it doesn't exist
+    if not os.path.exists(used_articles_file):
+        with open(used_articles_file, "w") as f:
+            f.write("[]")
+
+    # Get used articles
     with open(used_articles_file, "r", encoding="utf-8") as f:
         used_articles = json.load(f)
     used_arxiv_ids = {article["arxiv_id"] for article in used_articles}
@@ -53,6 +62,7 @@ def get_arxiv_articles():
 
     # Save results to a JSON file
     output_file = Path(config.get("output_dir")) / "arxiv_articles.json"
+    create_output_dir(Path(config.get("output_dir")))
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
         logger.success(
