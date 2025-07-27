@@ -7,7 +7,7 @@ from loguru import logger
 from openai import OpenAI
 import yaml
 
-from utils import create_output_dir
+from src.utils import create_output_dir
 
 load_dotenv()
 

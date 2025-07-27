@@ -8,7 +8,7 @@ from typing import Any
 
 from loguru import logger
 import yaml
-from utils import create_output_dir, validate_content
+from src.utils import create_output_dir, validate_content
 
 
 def setup_post():

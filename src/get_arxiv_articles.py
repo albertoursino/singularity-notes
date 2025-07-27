@@ -7,7 +7,7 @@ import json
 from loguru import logger
 import yaml
 
-from utils import create_output_dir
+from src.utils import create_output_dir
 
 
 def get_arxiv_articles():
