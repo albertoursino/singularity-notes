@@ -27,4 +27,4 @@ Technical guidelines:
 - If using straight quotes, not curly quotes (“ ”).
 - Use periods, commas, and other typographical symbols as to be consistent throughout the article.
 - Use capital letters for each word in the [title], [subtitle] and [section] headings (e.g. "Why Is This a Big Deal?")
-- Include bullet point lists only if strictly necessary. At least one might be nice though, it's up to you!
+- Include bullet point lists (maximum 2) only if strictly necessary.

@@ -28,7 +28,7 @@ languages:
     weight: 1
   about:
     languageName: "About"
-    weight: 1
+    weight: 2
     params:
       languageAltTitle: About
       profileMode:
@@ -37,7 +37,7 @@ languages:
         imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
         subtitle: "🚀 I'm a software engineer passionate about astronomy 🌌"
         buttons:
-          - name: Wiki
+          - name: Blog Wiki
             url: https://github.com/albertoursino/singularity-notes/blob/main/README.md
       socialIcons:
         - name: github
