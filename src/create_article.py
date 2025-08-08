@@ -7,7 +7,7 @@ from loguru import logger
 from openai import OpenAI
 import yaml
 
-from src.utils import create_output_dir
+from utils import create_output_dir
 
 load_dotenv()
 
@@ -16,7 +16,7 @@ def create_article():
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
 
-    if config.get("debug"):
+    if config["debug"]:
         logger.info("Debug mode is enabled, skipping OpenAI API call...")
         markdown = """# This is a dummy title for testing purposes.
 
@@ -31,41 +31,32 @@ This is a dummy paragraph for testing purposes. It will be replaced with the act
 ---
 """
     else:
-        with open("src/resources/prompt_create_article.txt", "r") as file:
-            prompt = file.read()
-
-        with open("src/resources/post_template.txt", "r") as file:
-            post_template = file.read()
-
-        prompt += "\n\nThe following is the structure of the final Markdown file that you have to fill out. "
-        prompt += "Fill out **only** the parts in between '<>'. **Don't modify the other parts for any reason, leave as they are!**. "
-        prompt += f"Double check that the last two rows are an empty row and then a row with '---'.\n{post_template}"
-
-        pdf_path = Path(config.get("output_dir")) / "best_article.pdf"
+        # Get PDF content
         pdf_content = ""
-
-        with pdf_path.open(mode="rb") as file:
+        with (Path(config["output_dir"]) / "best_article.pdf").open(mode="rb") as file:
             reader = PyPDF2.PdfReader(file)
             for page in reader.pages:
                 pdf_content += page.extract_text() or ""
 
-        prompt += f"\n\nHere is the research paper:\n\n{pdf_content}"
+        # Construct the prompt
+        with open("src/resources/prompt_create_article.txt", "r") as file:
+            prompt = file.read()
 
-        num_tokens = len(prompt.split())
-        logger.debug(f"Number of tokens in the prompt: {num_tokens}")
+        prompt += f"\n{pdf_content}\n\nRESPONSE:"
 
         try:
             client = OpenAI()
-            model = config.get("openai_model_name")
-            logger.info(
-                f"Generating blog article from the best article PDF using {model!r}..."
-            )
+            model = config["openai_model_name"]
+            logger.info(f"Generating blog article using {model!r}...")
             response = client.responses.create(model=model, input=prompt)
             markdown = response.output[0].content[0].text
         except Exception as e:
             logger.error(f"Error calling OpenAI API: {e}")
             # TODO: send an email
             sys.exit(1)
+
+    logger.debug(f"# Used tokens in input: {len(prompt.split())}")
+    logger.debug(f"# Used tokens in output: {len(markdown.split())}")
 
     # Save the raw post in the output directory
     output_file = Path(config.get("output_dir")) / "raw_post.md"

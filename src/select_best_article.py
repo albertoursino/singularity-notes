@@ -2,14 +2,16 @@ import os
 from pathlib import Path
 import sys
 from typing import Any
+import PyPDF2
 from loguru import logger
 import requests
 from dotenv import load_dotenv
 from openai import OpenAI
 import json
+from tqdm import tqdm
 import yaml
 
-from src.utils import create_output_dir
+from utils import create_output_dir
 
 load_dotenv()
 
@@ -31,33 +33,49 @@ def select_best_article():
         title = article.get("title")
         summary = article.get("summary")
         article_summaries.append(
-            f"Article {number}:\nTitle: {title}\nSummary: {summary}\n"
+            f"**Number**: {number}\n**Title**: {title}\n**Abstract**: {summary}\n"
         )
 
     formatted_articles = "\n".join(article_summaries)
 
-    if not config.get("debug"):
-        # Prepare prompt
+    if not config["debug"]:
+        # Construct prompt
         with open("src/resources/prompt_select_best_article.txt", "r") as file:
             prompt = file.read()
-        prompt += f"\n\n{formatted_articles}"
-        logger.debug(f"Number of tokens in the prompt: {len(prompt.split())}")
+        prompt += f"\n\n{formatted_articles}\nRESPONSE:"
 
         retries = 0
+        output_tokens = 0
         while retries < 5:
             try:
                 client = OpenAI()
-                response = client.responses.create(
-                    model=config.get("openai_model_name"), input=prompt
-                )
-                number = int(response.output[0].content[0].text)
+                votes_dict = {}
+                for i in tqdm(
+                    range(config["select_best_article"]["reasoning_paths"]),
+                    desc="Select the best article...",
+                ):
+                    response = client.responses.create(
+                        model=config["openai_model_name"], input=prompt
+                    )
+                    try:
+                        number = int(response.output[0].content[0].text)
+                    except Exception:
+                        continue
+                    if number not in votes_dict:
+                        votes_dict[number] = 1
+                    else:
+                        votes_dict[number] += 1
+
+                # Get the most common answer
+                number = max(votes_dict, key=votes_dict.get)
+
+                output_tokens += len(response.output[0].content[0].text.split())
             except Exception as e:
                 logger.error(f"Error during OpenAI API call: {e}")
                 retries += 1
                 logger.info(f"Retrying... ({retries}/5)")
             else:
                 break
-
         if retries == 5:
             logger.error("Failed to select the best article after 5 retries.")
             # TODO: send an email
@@ -65,6 +83,12 @@ def select_best_article():
     else:
         logger.info("Debug mode is enabled, skipping OpenAI API call...")
         number = 0
+
+    logger.debug(f"# Votes to the best article: {votes_dict[number]}/{i + 1}")
+    logger.debug(
+        f"# Used tokens in input: {len(prompt.split()) * config['select_best_article']['reasoning_paths']}"
+    )
+    logger.debug(f"# Used tokens in output: {output_tokens}")
 
     # Get the PDF URL of the selected article
     pdf_url = None
@@ -74,7 +98,7 @@ def select_best_article():
             best_article_json = article
 
             pdf_url = article.get("pdf_url")
-            logger.debug(f"Selected article title: {article.get('title')}")
+            logger.debug(f"Best article title: {article.get('title')}")
 
             article.pop("number")
 
@@ -99,14 +123,27 @@ def select_best_article():
             f"Used articles updated successfully at {str(used_articles_path)!r}"
         )
 
-    # Save the best article's PDF
     response = requests.get(pdf_url)
     if response.status_code == 200:
-        output_file = Path(config.get("output_dir")) / "best_article.pdf"
-        create_output_dir(Path(config.get("output_dir")))
-        with open(output_file, "wb") as f:
+        create_output_dir(Path(config["output_dir"]))
+
+        # Save the best article's PDF
+        pdf_file = Path(config["output_dir"]) / "best_article.pdf"
+        with open(pdf_file, "wb") as f:
             f.write(response.content)
-            logger.success(f"Best article saved at {str(output_file)!r}")
+        logger.success(f"PDF of the best research paper saved at {str(pdf_file)!r}")
+
+        # Save PDF content for debugging purposes
+        pdf_content = ""
+        with (pdf_file).open(mode="rb") as file:
+            reader = PyPDF2.PdfReader(file)
+            for page in reader.pages:
+                pdf_content += page.extract_text() or ""
+
+        txt_file = Path(config["output_dir"]) / "best_article.txt"
+        with (txt_file).open(mode="w") as f:
+            f.write(pdf_content)
+        logger.success(f"Raw content of the PDF saved at {str(txt_file)!r}")
 
 
 if __name__ == "__main__":

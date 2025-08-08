@@ -7,7 +7,7 @@ import json
 from loguru import logger
 import yaml
 
-from src.utils import create_output_dir
+from utils import create_output_dir
 
 
 def get_arxiv_articles():
@@ -22,7 +22,7 @@ def get_arxiv_articles():
         query="cat:astro-ph*",
         max_results=config.get("number_of_articles"),
         sort_by=arxiv.SortCriterion.SubmittedDate,
-        sort_order=arxiv.SortOrder.Descending,
+        sort_order=arxiv.SortOrder.Ascending,
     )
 
     used_articles_file = Path("used_articles.json")
