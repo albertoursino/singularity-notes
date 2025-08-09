@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import sys
 from typing import Any
 import arxiv
 import json
@@ -7,7 +8,9 @@ import json
 from loguru import logger
 import yaml
 
-from utils import create_output_dir
+sys.path.append(str(Path.cwd()))
+
+from src.utils import create_output_dir
 
 
 def get_arxiv_articles():

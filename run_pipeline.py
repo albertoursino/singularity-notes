@@ -1,9 +1,9 @@
 import sys
 from loguru import logger
-from src.get_arxiv_articles import get_arxiv_articles
-from src.select_best_article import select_best_article
-from src.create_article import create_article
-from src.setup_post import setup_post
+from src.stages.get_arxiv_articles import get_arxiv_articles
+from src.stages.select_best_article import select_best_article
+from src.stages.create_article import create_article
+from src.stages.setup_post import setup_post
 
 if __name__ == "__main__":
     try:

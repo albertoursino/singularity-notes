@@ -1,14 +1,16 @@
 from datetime import datetime
 import json
 from pathlib import Path
-import re
 import sys
 from time import time
 from typing import Any
 
 from loguru import logger
 import yaml
-from utils import create_output_dir, validate_content
+
+sys.path.append(str(Path.cwd()))
+
+from src.utils import create_output_dir
 
 
 def setup_post():
@@ -43,9 +45,9 @@ def setup_post():
 
     # Build Hugo header
     header = (
-        f"---\nauthor: [Powered by OpenAI ({config['model']})]\ntitle: '{title}'\n"
-        f"date: '{datetime.now().strftime('%Y-%m-%d')}'\ndescription: '{subtitle}'\n"
-        f"summary: '{subtitle}'\nShowToc: false\n---\n\n"
+        f"""---\nauthor: [Powered by OpenAI ({config["model"]})]\ntitle: "{title}"\n"""
+        f"""date: "{datetime.now().strftime("%Y-%m-%d")}"\ndescription: "{subtitle}"\n"""
+        f"""summary: "{subtitle}"\nShowToc: false\n---\n\n"""
     )
 
     # Write credits
@@ -54,8 +56,8 @@ def setup_post():
         best_article_json = json.load(f)
 
     credits = (
-        f"**Source Paper's Authors**: {best_article_json['authors']}\n\n"
-        f"**PDF**: {best_article_json['pdf_url']}"
+        f"""**Source Paper's Authors**: {best_article_json["authors"]}\n\n"""
+        f"""**PDF**: {best_article_json["pdf_url"]}"""
     )
 
     # Create a new post in Hugo
