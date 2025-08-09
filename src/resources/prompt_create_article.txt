@@ -8,824 +8,115 @@ INSTRUCTIONS:
 - Highlight why the discovery or topic matters.
 - Focus on the key message and interesting insights.
 - The title must be attractive and easy to understand.
-- The full research paper will be most likely "dirty": parse it as best as you can (e.g., ignore artifacts like math formulas that are not clear, links)
+- The full research paper will be most likely "dirty": parse it as best as you can (e.g., ignore characters not human understandable, math symbols, links)
 - Do not include any credits or references to the original research paper (I will put them manually).
 
 STRUCTURE OF THE OUTPUT:
-- Use Markdown format.
-- Do not use italic.
-- The title should always start with "#", while section headers with "###"
-- Do not include sections without headers. A section header and the content should always be in between "---"
-- Include only 1 emoji at the beginning of the title, and only 1 at the beginning of each section header.
-- Write as many sections (more or less of the same length) as you want, but respect the reading time.
-- Write the article following the structure below (respect the blank lines).
+- Use valid JSON format.
+- You can use **bold** and *italic* like in Markdown.
+- Use paragraphs.
+- The title and the section headers should always start with an emoji.
+{
+  "title": "",
+  "subtitle": "",
+  "sections": [
+    {
+      "header": "",
+      "content": ""
+    }
+  ]
+}
 
-# <emoji> <title>
+EXAMPLE OUTPUT:
+{
+  "title": "🌌 Unveiling The Secrets Of Blazing Cosmic Behemoths: How The SST-1M Telescope Is Sherpherding Our Understanding Of Markarian 421",
+  "subtitle": "Cutting-edge observations shed light on one of the universe's most energetic and enigmatic objects",
+  "sections": [
+    {
+      "header": "🔭 What Is So Special About Mrk 421?",
+      "content": "Imagine a lighthouse, but instead of shining on a coast, it beams intensely into the depths of space — that’s what blazars like Markarian 421 (Mrk 421) are for the universe. These galaxies host supermassive black holes that launch jets of particles moving close to the speed of light directly toward Earth, dramatically boosting their emissions. This makes them like cosmic fireworks, radiating across the electromagnetic spectrum, especially in gamma rays—the universe’s most energetic light.
+      
+      Mrk 421 is notably one of the closest and brightest of these high-frequency peaked blazars. Sitting at a cosmic distance of about 122 million parsecs, it’s been a favorite target for astronomers seeking to understand how black holes power jets and accelerate particles to universe-defying energies."
+    },
+    {
+      "header": "🛰️ How Did The New Observations Happen?",
+      "content": "Detecting gamma rays from Earth is tricky—these high-energy photons are absorbed by our atmosphere. So, astronomers use a clever trick called the Imaging Atmospheric Cherenkov Technique, which involves detecting faint flashes of blue Cherenkov light produced when gamma rays interact with Earth's atmosphere, creating showers of secondary particles.
+      
+      This is where the SST-1M (Small-Size Telescopes) comes into play. Located at the Ondrejov Observatory in the Czech Republic, these telescopes are compact but mighty, using sophisticated cameras and synchronization systems to catch these fleeting Cherenkov flashes. During early 2024, the team used two such telescopes to observe Mrk 421 for over 50 hours in total, meticulously filtering the data to ensure only the clearest signals were studied."
+    },
+    {
+      "header": "🔍 What Did The Data Reveal?",
+      "content": "After rigorous analysis, the team confirmed that Mrk 421 was actively emitting gamma rays, with a solid detection significance — meaning the signals are real and not just background noise. Their measurements showed the energy spectrum of the gamma rays well fits typical models, with the source exhibiting variability in its emission but without any dramatic flare-ups during this period.
+      
+      By building a spectral energy distribution (SED)—a chart showing how much energy the source emits at different frequencies—the researchers could fit models that describe the physical processes inside the jet. Specifically, they used a Synchrotron Self-Compton (SSC) model, which suggests that most of the high-energy emission results from electrons accelerating and scattering their own emitted light up to gamma-ray energies.
+      
+      The modeling yielded parameters consistent with previous studies but with improved precision, such as the strength of magnetic fields in the jet and the energies that the particles reach. These details are vital to understanding how jets are powered and how particles are accelerated to nearly the speed of light."
+    },
+    {
+      "header": "🌌 Why Does This Matter?",
+      "content": "Each new observation of blazars like Mrk 421 is like adding a piece to a cosmic jigsaw puzzle. Understanding their high-energy behavior helps astronomers learn about extreme physics—magnetism, relativistic jets, and particle acceleration—that can’t be replicated on Earth. Furthermore, these insights help us understand the environments around supermassive black holes and the role they play in galaxy evolution.
+      
+      By improving observational techniques and models, we can also better interpret transient phenomena, such as flares, which might encode clues about the most energetic processes in the universe. Since Mrk 421 is relatively close, it serves as a nearby laboratory for these cosmic extremes."
+    },
+    {
+      "header": "🤔 What’s Next?",
+      "content": "The early results from SST-1M are promising, but they’re just the beginning. Future work will incorporate data from other observatories like HAWC and multiple wavelengths to refine the models of Mrk 421’s emissions further. Continuous monitoring can also catch sudden flares, providing real-time insights into jet dynamics and particle acceleration.
+      
+      The ongoing development of smaller, more sensitive telescopes like SST-1M promises to open new windows into the high-energy universe, revealing secrets that remain hidden in these cosmic powerhouses. As technology advances and collaborations grow, the mysteries of blazars like Mrk 421 may soon unlock answers to some of astronomy’s most profound questions about extreme physics and the universe’s most energetic phenomena."
+    }
+  ]
+}
 
-Subtitle: <subtitle>
+EXAMPLE OUTPUT:
+{
+  "title": "🧊 Looking Inside The Ice: How Cameras Are Unlocking The Secrets Of The Antarctic For IceCube",
+  "subtitle": "A New Camera System Promises To Sharpen Our View Of Elusive Neutrinos—By Better Understanding The Ice Deep Below The South Pole",
+  "sections": [
+    {
+      "header": "📷 What Is IceCube, And Why Does Antarctic Ice Matter?",
+      "content": "Beneath the frozen surface of the South Pole, an extraordinary observatory sits buried in a cubic kilometer of Antarctic ice. This is IceCube: an underground telescope that doesn’t look up at the night sky, but instead peers into the depths of the universe by catching ghostly particles called neutrinos. These neutrinos zip through space—and us—barely interacting with matter, making them incredibly hard to study.
+      
+      Here’s the twist: for IceCube to detect these particles, it relies entirely on the unique properties of the Antarctic ice. When a neutrino manages to interact with the ice, it creates a flash of blue light called Cherenkov radiation. Thousands of sensitive detectors capture this light, which tells scientists where the neutrino came from, as well as its energy.
+      
+      But there’s a snag: to do this well, we need to know exactly how light behaves as it travels through miles of ice—how the ice absorbs, scatters, and bends that faint glow. Tiny differences in ice clarity, leftover bubbles from when the detector was drilled in, or even distortions in the detectors’ positions can throw off the results.
+    },
+    {
+      "header": "💡 Cameras In The Deep: The IceCube Upgrade’s New Eyes",
+      "content": "Enter the IceCube Upgrade—a major update aiming to make this chilly telescope even sharper. One key innovation is a network of nearly 2,000 miniature cameras and glowing LEDs deployed on every new detector module, called D-Eggs and mDOMs. Picture an underground light show where cameras peer through the ice as different LEDs illuminate their environment.
+      
+      These cameras take pictures not for pretty postcards, but to carefully map out the ice itself. They’re designed to capture how light travels, bounces, and is scattered—both in the solid sheet between the detector “strings,” and in the columns of ice that refroze after drilling each detector hole.
+      
+      Why does this matter? Because by truly understanding how light moves through Antarctic ice, IceCube’s reconstruction of elusive neutrinos becomes much more precise. It’s like cleaning a foggy window: the better the clarity, the truer the cosmic picture."
+    },
+    {
+      "header": "🧠 From Pictures To Physics: How Artificial Intelligence Reads The Ice",
+      "content": "Taking thousands of icy snapshots is just the beginning—the real trick is turning them into scientific knowledge. This is where artificial intelligence comes in. The IceCube team has built a special image analysis framework, buttressed by a custom simulator called CamSim. CamSim lets researchers “practice” by generating fake, but realistic, images of what the cameras will see under different conditions.
+      
+      To read these images, scientists trained a deep learning model called OPTICUS—a smart algorithm inspired by how the brain processes visual information. OPTICUS learns to spot subtle patterns in the images, telling researchers key properties of the ice, like how far blue light travels before being scattered (the “scattering length”) or how light behaves in bubble-rich columns formed during refreezing.
+      
+      What’s impressive is how well these AI models work, even in simulations that mimic real-world uncertainty. OPTICUS can estimate optical properties of the ice with impressive accuracy—often to within just a percent or less of the true value."
+    },
+    {
+      "header": "🧭 Pinpointing The Detectors: Getting Geometry Just Right",
+      "content": "Cameras can also help solve another major challenge: knowing exactly where each sensor sits. After deployment and freezing, detector positions can shift ever so slightly. Even tiny misplacements can scramble where neutrinos seem to come from.
+      
+      By photographing LEDs on neighboring modules, the cameras can “triangulate” positions and orientations—even spotting tiny deviations smaller than a meter. This method cleverly uses the angles seen in images (and some statistical wizardry) to refine the detector map under the ice. When they tested this approach, the result was a much sharper understanding of where everything sits, boosting the precision of every event the experiment records."
+    },
+    {
+      "header": "🔍 Key Findings: What Did The Research Show?",
+      "content": "- The new IceCube camera system, paired with bright LEDs, promises to map both the bulk ice and the hole ice (column where a detector sits) in unprecedented detail
+      - Using AI models trained on simulated images, researchers achieved sub-percent level accuracy in measuring key ice properties, like scattering length, which directly impacts neutrino event quality.
+      - The same images can also be used to refine the exact 3D positions of each detector module, reaching sub-meter precision—a critical factor for event reconstruction.
+      - These results show that the camera system can dramatically reduce uncertainties, paving the way for more confident discoveries in neutrino astronomy.
+      - Future plans include extending the analysis to multiple ice properties and testing the full setup in real-world conditions."
+    },
+    {
+      "header": "🛰️ Conclusion And The View Ahead",
+      "content": "The performance study of the IceCube Upgrade Camera System paints a picture of a next-generation observatory that’s more than just a buried telescope—it’s a forensic lab, mapping its own environment in extraordinary detail. By combining clever hardware, advanced simulation, and artificial intelligence, the IceCube team is turning the Antarctic into both a detector and a calibration tool.
+      
+      In the coming years, as the cameras begin to capture real data, we could see even further enhancements: models that extract multiple ice properties at once; ever more precise detector maps; perhaps even real-time adjustments as the ice slowly changes. The ultimate promise? To sharpen our eyes on the universe’s most mysterious messengers—neutrinos—and unlock new astronomical discoveries, all by looking into the heart of the ice."
+    }
+  ]
+}
 
----
-
-### <emoji> <section_title>
-
-<section_content>
-
----
-
-### <emoji> <section_title>
-
-<section_content>
-
----
-
-EXAMPLE:
-Research paper content:
-SST-1M Observations of Markarian 421
-S. R. Muthyala,𝑎,∗A. Araudo,𝑎J. Juryšek𝑎and A. L. Müller𝑎for the SST-1M
-Collaboration
-𝑎FZU - Institute of Physics of the Czech Academy of Sciences,
-Na Slovance 1999/2, Prague 8, Czech Republic
-E-mail: muthyala@fzu.cz
-Markarian 421 (Mrk 421) is the closest and one of the brightest high-frequency peaked blazars,
-locatedataredshiftofz=0.031. Itisastrongsourceofgammarays,anditsbroadbandemission
-has been extensively studied over the years through multi-wavelength observations from various
-telescopes. Mrk 421 has been a target of observational campaigns conducted by the SST-1M
-telescopes–twosingle-mirrorsmall-sizeCherenkovtelescopesatOndrejovObservatory,Prague,
-CzechRepublic. Thesetelescopesoperateinmonoandstereoscopicmodes,utilizingtheImaging
-AtmosphericCherenkovTechnique(IACT)todetectVeryHighEnergy(VHE)gammaraysinthe
-1–300 TeV energy range. We present recent SST-1M observations, data analysis, and the results
-of preliminary physical modeling of Mrk 421’s emission mechanisms.
-39th International Cosmic Ray Conference (ICRC2025)
-15–24 July 2025
-Geneva, Switzerland
-∗Speaker
-©Copyright owned by the author(s) under the terms of the Creative Commons
-Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0). https://pos.sissa.it/arXiv:2507.18445v1  [astro-ph.HE]  24 Jul 2025SST-1M Observations of Markarian 421 S. R. Muthyala
-Introduction to SST-1Ms
-Observationsofveryhighenergy(VHE)gammarayscanshedlightonthehighlyaccelerating
-processesintheuniverse. However,VHEgammarayscannotbedirectlydetectedbyground-based
-telescopes, as they are absorbed in the atmosphere. Instead, they can be detected by ground-
-based telescopes through Cherenkov radiation produced by charged particles resulting from the
-interactions of gamma-ray photons with atomic nuclei in the atmosphere.
-Figure 1: LEFT: SST-1M telescope 1 in Ondrejov Observatory near Prague. RIGHT: An aerial view of the
-Ondřejov site shows the two SST-1Ms located 155.2 m apart (C. Alispach et al., 2025).
-SST-1M is a single-mirror small-size Cherenkov telescope as shown in Figure 1. Ondrejov
-observatoryintheCzechRepublichoststwoSST-1Mtelescopes,whichcanoperateinmonomode
-andalsotakeadvantageoftheirrelativedistanceof155.2manddetecttheshowersstereoscopically
-(see right panel of Figure 1) [1, 2]. The SST-1M timestamps are synchronized to nanosecond
-precision using the White Rabbit timing network [3]. SST-1M was designed by a consortium
-of institutes from Poland, Switzerland, and the Czech Republic, aiming for the detection of the
-VHE gamma-rays induced atmospheric showers in the energy range of 3-300 TeV. SST-1M uses a
-4-m diameter, single multi-segmented mirror dish composed of 18 hexagonal facets and a highly
-performing SiPM-based camera with a wide optical field of view of 9 degrees. These SST-1Ms
-are designed and built to enable remote observations and can be used in mono and stereo modes.
-The geometrical and timing properties of the detected waveforms are used to find the physical
-propertiesof theprimaryparticle. Theraw pixelwaveformsare calibratedandprocessed uptothe
-photon list with reconstructed energies and arrival directions (see [2] for the details of the analysis
-and reconstruction) using the standard data processing and analysis tool developed for SST-1M,
-sst1mpipe 1[4].
-1. Markarian 421
-Blazars are a particular class of radio-loud active galactic nuclei (AGN), characterized by the
-ultra-relativisticjetsfromthesupermassiveblackholebeingorientedalongorveryclosetotheline
-of sight. Due to relativistic beaming, the jet pointing toward us appears highly boosted and often
-dominates the observed emission across the entire electromagnetic spectrum, while the counter-jet
-1https://github.com/SST-1M-collaboration/sst1mpipe
-2SST-1M Observations of Markarian 421 S. R. Muthyala
-istypicallyundetectable. BlazarsarethemostcommonlydetectedclassofVHEgamma-raysources
-in the extragalactic sky. Their spectral energy distribution (SED) is characterized by two energy
-peaks. Thelow-energypeakisproducedbythesynchrotronemissionfromultra-relativisticelectrons
-embedded in the magnetic field of the jet, while the high-energy peak is thought to be produced
-by synchrotron self-Compton (SSC) emission [5]. Based on the position of the synchrotron peak,
-these sources are subclassified as low synchrotron peaked (LSP) blazars if the peak frequency is
-lessthan1014Hz,orhighsynchrotronpeaked(HSP)blazarsifthefrequencyislargerthan1014Hz.
-Mrk 421 is an HSP blazar and a strong gamma-ray source. It is the closest and one of the
-brightestblazars,ataredshift 𝑧=0.031oradistanceof122MpcfromtheEarth. Itwasfirstdetected
-above 0.5 TeV by the Whipple Observatory in 1992 [6]. This source is continuously monitored by
-theLargeAreaTelescope(LAT)onboardNASA’sFermiGamma-RaySpaceTelescopeintheenergy
-range of 50 MeV to 1 TeV. Recently, the High Altitude Water Cherenkov (HAWC) Observatory
-reported photons with energies up to 9 TeV [5]. It is a highly variable source; hence, several
-multi-wavelength studies have been performed by many telescopes over the years.
-2. Data Acquisition and Analysis
-Inthiscontribution,wepresentthefirstSST-1MobservationsofMrk421,conductedbetween
-JanuaryandMay2024,andderiveapreliminarymodelofemissionusingtheaveragedSED.During
-this observation period, the raw data collected by the telescopes for 23 days of effective exposure
-in mono mode is about 55.24 h hours for telescope 1 and 60.60 h hours for telescope 2, of which
-51.10hhoursareavailableinstereoscopicmode. SincetheatmosphericconditionsatOndřejovare
-highly variable, in order to attain a high-quality data set, we perform data selection. Data quality
-cuts are applied to remove data affected by bad atmospheric conditions, such as highly variable
-night sky background (NSB), clouds, auroras, and technical issues. After the selection cuts, the
-finalsampleusedfordataanalysisconsistsofabout34.31hoursfortelescope1and40.48hoursfor
-telescope 2, of which 32.92 hours are available in stereoscopic mode.
-Forobservationanddatataking,wefollowthewobbletechnique,whichallowsustodetermine
-thebackgroundfromthesamedatasetasthesignalevents[7]. Whenthegamma-rayshowertriggers
-the SST-1M telescope, the entire waveform of 50 samples with 4 ns binning is stored. During data
-analysis in sst1mpipe , the waveform in each camera pixel is calibrated, integrated, and cleaned
-frombackgroundnoisetoobtaintheimageparameters. Forthesecleanedimages,RandomForests
-trained on the Monte Carlo simulations are applied to each event to get the final parameters of the
-primary particles, including the so-called gammaness, describing how gamma-like a given shower
-image is. An energy-dependent cut on gammaness is applied to obtain the final photon list. From
-thefinalphotonlist,wecanderivethefluxesandenergiestoconstructspectralenergydistributions
-(SEDs) and skymaps.
-The significance map in the left panel of Figure 2 quantifies the statistical probability of
-observing the signal at a particular location in the sky. The excess map in the middle panel of
-Figure2showsthedifferencebetweentheobservedgamma-raycountsandtheexpectedbackground
-counts. Themapsareproducedusingthe’ringbackgroundmethod’inthePythonpackage gammapy
-[8]. Here, a ring with radius 0.7°and width 0.3°was used to estimate background events, and a
-region of 0.3°around Mrk 421 was excluded from the background estimation. The source was
-3SST-1M Observations of Markarian 421 S. R. Muthyala
-Figure 2: Significance (LEFT) and excess (MIDDLE) maps of Mrk 421 in stereo mode. RIGHT: 1D
-distribution of significance in stereo mode.
-Best fit parameters Power law index Amplitude (Tev−1cm−2s−1)Reference Energy (TeV)
-Intrinsic Spectrum 3.24±0.26[1.06±0.12]×10−123.00±0.00
-Table 1: Best fit parameters for the intrinsic spectra of Mrk 421 obtained using PL model.
-clearlydetectedduringtheobservationsof32.9hourswithatotalsignificanceof10.95andexcess
-counts of 178. The distribution of local significance in the right panel of Figure 2 shows that the
-background/off-region can be described by a Gaussian function, and the excess counts show the
-presence of the source. The background distribution is fitted by a Gaussian with a mean of −0.14
-and a standard deviation of 1.03, which is consistent with theoretical expectations for an unbiased
-background.
-Wealsoused gammapy toperform1Dspectralanalysisusingthereflectedbackgroundmethod.
-The forward folding method is used to reconstruct the gamma-ray spectrum observed by the
-telescope. This is one of the methods used to remove the experimental systematics. It aims at
-findingthetruedistributionbymaximizingtheagreementprobabilitybetweentheexperimentaldata
-distribution and the one expected from Monte Carlo. For every night, we reconstruct the spectrum
-using the Power Law (PL) spectral model d𝑁/d𝐸=𝐴(𝐸/3 TeV)−𝛼, where𝛼stands for spectral
-index and𝐴for the flux normalization at 3 TeV. In Figure 3 we show the light curve of Mrk 421,
-where the total flux per night is obtained by integrating∫
-(d𝑁/d𝐸)d𝐸. If we assume a constant
-fluxfromMrk421,weobtainanaveragefluxforenergiesabove1TeVof 𝐹=[8.01±2.54]×10−14
-(Tev−1cm−2s−1). In the figure, flux data points are represented by orange markers and the black
-line represents the average flux. Note that no flares are detected in this observation period 2(see
-however, [9]).
-ThepreliminaryspectrumofMrk421obtainedfromthefinaldatafilesofthesourceinstereo
-mode using roughly 32.92 h of observations is shown in Figure 4. The image shows the observed
-and intrinsic spectrum produced using a PL spectral model in blue and green, respectively, along
-withtheuncertaintybandsofthemodel(area),thederivedfluxdatapoints,andupperlimitsinthe
-same colors. The best-fit parameters of intrinsic spectra are shown in Table 1.
-2Typically, for a flare, the peak flux should be more than three times the standard deviation of the average flux in a
-band.
-4SST-1M Observations of Markarian 421 S. R. Muthyala
-Figure 3: Light Curve of Mrk 421 in stereo mode for the year 2024.
-Figure 4: Energy spectrum of Mrk 421 in stereo mode, showing both observed (blue) and intrinsic (green)
-spectra fitted with a PL model.
-3. Data Modeling
-Previous studies [e.g. 5] show a good fit for the low and high-energy components, but a poor
-fit for the high-energy tail, usually due to a lack of sufficient data. In this study, we aim to obtain
-better fits of the high-energy tail of Mrk 421 with the addition of new data observed by SST-1M at
-photon energies greater than 2 TeV.
-Following [5], we use the Python package agnpy[10], and a 𝜒2fit is then performed by
-the Python package gammapy. We consider a broken power law for the distribution of relativistic
-5SST-1M Observations of Markarian 421 S. R. Muthyala
-Figure 5: LEFT: SED of Mrk 421 with best fit SSC model using agnpy package. RIGHT: zoomed figure
-showing SST-1M data points on the SED.
-electrons with a minimum energy of 500𝑚𝑒𝑐2. The data consists of observed data from SST-1M
-combined with the time-averaged SED of Mrk 421 from Abdo et al (2011a) [11], which provides
-multi-frequencydatafromseveralinstrumentscoveringtheenergyrangefromradiotogammarays,
-observedduringthetimeperiodofJanuary19toJune1,2009. Intheirstudy,thedatawerecorrected
-for host galaxy emission subtraction, galactic extinction correction for optical/x-ray data, and TeV
-data were corrected for absorption in Extragalactic Background Light (EBL) using the model in
-[12]. The best fit corresponds to a Doppler factor of 𝛿𝐷=24.29±0.01, giving the value of radius
-emission zone as 𝑅=6.1×1016cm using values of redshift as 𝑧=0.031and the variability time
-scale of 1 day; and for an electron distribution that follows a broken power law with energy break
-of𝐸b=59.08±0.51GeV and spectral indexes before and after the break of 𝛼1=2.11±0.01and
-𝛼2=3.38±0.10, respectively. The minimum electron energy was frozen to 𝐸min=255MeV, and
-the maximum electron energy of the best fit is given by 𝐸max=557.47±0.58GeV. The magnetic
-field results in a value of B = 24.58±1.01mG. In Figure 5 we show the multi-frequency SED of
-Mrk421(datapoints)andthebestSSCmodel(blackline),andasummaryofthebest-fitparameters
-is shown in Table 2, which are in good agreement with previous results [5].
-4. Conclusions
-WepresentthepreliminaryresultsofthefirstsetofobservationsofMrk421takenbySST-1M
-telescopes in stereo mode from January to May 2024, with roughly 33 hours of observation. We
-obtainanintrinsicenergyspectrumofMrk421byfittingaPLmodelwithanindexof 3.24±0.26and
-anamplitudeof[1.06±0.12]×10−12TeV−1cm−2s−1,atareferenceenergyof3TeV.Significance
-and excess maps show the detection confidence of the source. The best-fit parameters of the SED
-6SST-1M Observations of Markarian 421 S. R. Muthyala
-Parameter Symbol Mrk 421
-Doppler factor 𝛿𝐷 24.29±0.01
-Magnetic field B [mG] 24.58±1.01
-Spectral index before break 𝛼1 2.11±0.01
-Spectral index after break 𝛼2 3.38±0.10
-Energy break 𝐸b[GeV] 59.08±0.51
-Maximum electron energy 𝐸max[GeV] 557.47±0.58
-Table 2: Best fit parameters for the SSC model of Mrk 421 using agnpy.
-modeling of Mrk 421 in stereo mode seem to be in good agreement with previous results [5]. In
-a further study, we will focus on improving the SED by adding data from HAWC [5], and more
-simultaneousdatafromotherinstrumentsatdifferentenergiestobuildatime-averagedSEDmodel
-of Mrk 421.
-5. Acknowledgments
-This publication was created as part of the projects funded in Poland by the Minister of
-Science based on agreements number 2024/WK/03 and DIR/WK/2017/12. The construction,
-calibration, software control, and support for operation of the SST-1M cameras are supported by
-SNF (grants CRSII2_141877, 20FL21_154221, CRSII2_160830, _166913, 200021-231799), by
-the Boninchi Foundation, and by the Université de Genève, Faculté de Sciences, Département
-de Physique Nucléaire et Corpusculaire. The Czech partner institutions acknowledge support of
-the infrastructure and research projects by the Ministry of Education, Youth and Sports of the
-Czech Republic (MEYS) and the European Union funds (EU), MEYS LM2023047, EU/MEYS
-CZ.02.01.01/00/22_008/0004632, CZ.02.01.01/00/22_010/0008598, Co-funded by the European
-Union (Physics for Future – Grant Agreement No. 101081515), and Czech Science Foundation,
-GACR 23-05827S.
-References
-[1] C. Alispach, A. Araudo, M. Balbo, V. Beshley, A. Biland, J. Blažek et al.,
-The SST-1M imaging atmospheric Cherenkov telescope for gamma-ray astrophysics, JCAP
-2025(2025) 047 [ 2409.11310 ].
-[2] C. Alispach, A. Araudo, M. Balbo, V. Beshley, J. Blažek, J. Borkowski et al., Observation of
-thecrabnebulawiththesingle-mirror small-size telescope stereoscopic systematlow
-altitude, 2506.01733 .
-[3] J. Serrano et al., The White Rabbit Project, in ICALEPCS, Kobe,Japan, 12th International
-Conference on Accelerator and Large Experimental Physics Control Systems, 2009.
-[4] J. Jurysek et al., Sst-1m-collaboration/sst1mpipe: v0.7.3, Feb., 2025.
-10.5281/zenodo.14808846.
-7SST-1M Observations of Markarian 421 S. R. Muthyala
-[5] A. Albert, R. Alfaro, C. Alvarez, J.R. Angeles Camacho, J.C. Arteaga-Velázquez,
-K.P. Arunbabu et al.,
-Long-term Spectra of the Blazars Mrk 421 and Mrk 501 at TeV Energies Seen by HAWC,
-Astrophyical Journal 929(2022) 125 [ 2106.03946 ].
-[6] M. Punch, C.W. Akerlof, M.F. Cawley, M. Chantell, D.J. Fegan, S. Fennell et al.,
-Detection of TeV photons from the active galaxy Markarian 421, Nature 358(1992) 477.
-[7] V.P. Fomin, A.A. Stepanian, R.C. Lamb, D.A. Lewis, M. Punch and T.C. Weekes,
-New methods of atmospheric Cherenkov imaging for gamma-ray astronomy. I. The false source method,
-Astroparticle Physics 2(1994) 137.
-[8] A. Donath et al., gammapy/gammapy: v.0.19, Nov., 2021. 10.5281/zenodo.5721467.
-[9] T. Tavernier and SST-1M Consortium,
-Detection of enhanced very-high-energy gamma-ray emission from Markarian 421, The
-Astronomer’s Telegram 16533(2024) 1.
-[10] C. Nigro, J. Sitarek, P. Gliwny, D. Sanchez, A. Tramacere and M. Craig,
-agnpy: An open-source python package modelling the radiative processes of jetted active galactic nuclei,
-Astronomy andAstropysics 660(2022) A18 [ 2112.14573 ].
-[11] A.A. Abdo, M. Ackermann, M. Ajello, L. Baldini, J. Ballet, G. Barbiellini et al., Fermilarge
-areatelescope observations ofmarkarian 421:Themissingpieceofitsspectralenergy
-distribution, TheAstrophysical Journal 736(2011) 131.
-[12] A. Franceschini and G. Rodighiero,
-The extragalactic background light revisited and the cosmic photon-photon opacity,
-Astronomy andAstropysics 603(2017) A34 [ 1705.10256 ].
-8SST-1M Observations of Markarian 421 S. R. Muthyala
-Full Authors List: SST-1M Collaboration
-C. Alispach1, A. Araudo2, M. Balbo1, V. Beshley3, J. Blažek2, J. Borkowski4, S. Boula5, T. Bulik6, F. Cadoux‘, S. Casanova5,
-A. Christov2, J. Chudoba2, L. Chytka7, P. Čechvala2, P. Dědic2, D. della Volpe1, Y. Favre1, M. Garczarczyk8, L. Gibaud9, T. Gieras5,
-E. Głowacki9, P. Hamal7, M. Heller1, M. Hrabovský7, P. Janeček2, M. Jelínek10, V. Jílek7, J. Juryšek2, V. Karas11, B. Lacave1,
-E.Lyard12,E.Mach5,D.Mandát2,W.Marek5,S.Michal7,J.Michałowski5,M.Miroń9,R.Moderski4,T.Montaruli1,A.Muraczewski4,
-S. R. Muthyala2, A. L. Müller2, A. Nagai1, K. Nalewajski5, D. Neise13, J. Niemiec5, M. Nikołajuk9, V. Novotný2,14, M. Ostrowski15,
-M. Palatka2, M. Pech2, M. Prouza2, P. Schovanek2, V. Sliusar12, Ł. Stawarz15, R. Sternberger8, M. Stodulska1, J. Świerblewski5,
-P. Świerk5, J. Štrobl10, T. Tavernier2, P. Trávníček2, I. Troyano Pujadas1, J. Vícha2, R. Walter12, K. Zie ¸tara15
-1Département de Physique Nucléaire, Faculté de Sciences, Université de Genève, 24 Quai Ernest Ansermet, CH-1205 Genève,
-Switzerland.2FZU - Institute of Physics of the Czech Academy of Sciences, Na Slovance 1999/2, Prague 8, Czech Republic.
-3Pidstryhach Institute for Applied Problems of Mechanics and Mathematics, National Academy of Sciences of Ukraine, 3-b Naukova
-St., 79060, Lviv, Ukraine.4Nicolaus Copernicus Astronomical Center, Polish Academy of Sciences, ul. Bartycka 18, 00-716 Warsaw,
-Poland.5InstituteofNuclearPhysics,PolishAcademyofSciences,PL-31342Krakow,Poland.6AstronomicalObservatory,University
-ofWarsaw,Al. Ujazdowskie4,00-478Warsaw,Poland.7PalackýUniversityOlomouc,FacultyofScience,17. listopadu50,Olomouc,
-Czech Republic.8Deutsches Elektronen-Synchrotron (DESY) Platanenallee 6, D-15738 Zeuthen, Germany.9Faculty of Physics,
-University of Białystok, ul. K. Ciołkowskiego 1L, 15-245 Białystok, Poland.10Astronomical Institute of the Czech Academy of
-Sciences, Fričova 298, CZ-25165 Ondřejov, Czech Republic.11Astronomical Institute of the Czech Academy of Sciences, Boční II
-1401, CZ-14100 Prague, Czech Republic.12Département d’Astronomie, Faculté de Science, Université de Genève, Chemin d’Ecogia
-16, CH-1290 Versoix, Switzerland.13ETH Zurich, Institute for Particle Physics and Astrophysics, Otto-Stern-Weg 5, 8093 Zurich,
-Switzerland.14Institute of Particle and Nuclear Physics, Faculty of Mathematics and Physics, Charles University, V Holešovičkách 2,
-Prague 8, Czech Republic.15Astronomical Observatory, Jagiellonian University, ul. Orla 171, 30-244 Krakow, Poland.
-9
-
-RESPONSE:
-# 🌌 Unveiling The Secrets Of Blazing Cosmic Behemoths: How The SST-1M Telescope Is Sherpherding Our Understanding Of Markarian 421
-
-Subtitle: Cutting-edge observations shed light on one of the universe's most energetic and enigmatic objects
-
----
-
-### 🔭 What Is So Special About Mrk 421?
-
-Imagine a lighthouse, but instead of shining on a coast, it beams intensely into the depths of space — that’s what blazars like Markarian 421 (Mrk 421) are for the universe. These galaxies host supermassive black holes that launch jets of particles moving close to the speed of light directly toward Earth, dramatically boosting their emissions. This makes them like cosmic fireworks, radiating across the electromagnetic spectrum, especially in gamma rays—the universe’s most energetic light.
-
-Mrk 421 is notably one of the closest and brightest of these high-frequency peaked blazars. Sitting at a cosmic distance of about 122 million parsecs, it’s been a favorite target for astronomers seeking to understand how black holes power jets and accelerate particles to universe-defying energies.
-
----
-
-### 🛰️ How Did The New Observations Happen?
-
-Detecting gamma rays from Earth is tricky—these high-energy photons are absorbed by our atmosphere. So, astronomers use a clever trick called the Imaging Atmospheric Cherenkov Technique, which involves detecting faint flashes of blue Cherenkov light produced when gamma rays interact with Earth's atmosphere, creating showers of secondary particles.
-
-This is where the SST-1M (Small-Size Telescopes) comes into play. Located at the Ondrejov Observatory in the Czech Republic, these telescopes are compact but mighty, using sophisticated cameras and synchronization systems to catch these fleeting Cherenkov flashes. During early 2024, the team used two such telescopes to observe Mrk 421 for over 50 hours in total, meticulously filtering the data to ensure only the clearest signals were studied.
-
----
-
-### 🔍 What Did The Data Reveal?
-
-After rigorous analysis, the team confirmed that Mrk 421 was actively emitting gamma rays, with a solid detection significance — meaning the signals are real and not just background noise. Their measurements showed the energy spectrum of the gamma rays well fits typical models, with the source exhibiting variability in its emission but without any dramatic flare-ups during this period.
-
-By building a spectral energy distribution (SED)—a chart showing how much energy the source emits at different frequencies—the researchers could fit models that describe the physical processes inside the jet. Specifically, they used a Synchrotron Self-Compton (SSC) model, which suggests that most of the high-energy emission results from electrons accelerating and scattering their own emitted light up to gamma-ray energies.
-
-The modeling yielded parameters consistent with previous studies but with improved precision, such as the strength of magnetic fields in the jet and the energies that the particles reach. These details are vital to understanding how jets are powered and how particles are accelerated to nearly the speed of light.
-
----
-
-### 🌌 Why Does This Matter?
-
-Each new observation of blazars like Mrk 421 is like adding a piece to a cosmic jigsaw puzzle. Understanding their high-energy behavior helps astronomers learn about extreme physics—magnetism, relativistic jets, and particle acceleration—that can’t be replicated on Earth. Furthermore, these insights help us understand the environments around supermassive black holes and the role they play in galaxy evolution.
-
-By improving observational techniques and models, we can also better interpret transient phenomena, such as flares, which might encode clues about the most energetic processes in the universe. Since Mrk 421 is relatively close, it serves as a nearby laboratory for these cosmic extremes.
-
----
-
-### 🤔 What’s Next?
-
-The early results from SST-1M are promising, but they’re just the beginning. Future work will incorporate data from other observatories like HAWC and multiple wavelengths to refine the models of Mrk 421’s emissions further. Continuous monitoring can also catch sudden flares, providing real-time insights into jet dynamics and particle acceleration.
-
-The ongoing development of smaller, more sensitive telescopes like SST-1M promises to open new windows into the high-energy universe, revealing secrets that remain hidden in these cosmic powerhouses. As technology advances and collaborations grow, the mysteries of blazars like Mrk 421 may soon unlock answers to some of astronomy’s most profound questions about extreme physics and the universe’s most energetic phenomena.
-
----
-Research paper content:
-arXiv:astro-ph/9204002v1  26 Apr 1992Gravitational Lensing and the Variability of G
-Lawrence M Krauss1and Martin White2
-Center for Theoretical Physics
-Sloane Laboratory, Yale University
-New Haven CT 06511
-Abstract
-The four observables associated with gravitational lensing of dista nt quasars by in-
-tervening galaxies: image splittings, relative ampliﬁcations, time delay s, and optical
-depths, provide separate measures of the strength of the grav itational constant G
-at cosmological distances. These allow one, in principle, to factor ou t unknown
-lensing parameters to directly to probe the variation of Gover cosmological time.
-We estimate constraints on ˙Gwhich may be derivable by this method both now
-and in the future. The limits one may obtain can compete or exceed ot her direct
-limits on ˙Gtoday, but unfortunately extracting this information, is not indep endent
-of the eﬀort to ﬁx other cosmological parameters such as H0and Ω 0from lensing
-observations.
-|1Also Department of Astronomy. Research supported in part by a P residential
-Young Investigator Award, the DOE, the Foundation for Physical Science, and the
-Texas National Research Laboratory Commission. |
-|2Address after September 1, Center for Particle Astrophysics, U niversity of Cali-
-fornia, Berkeley. |
-11. Introduction
-The gravitational constant, G, is the poorest measured fundamental con-
-stant in nature. In fact, it may not even be a constant at all. The ex ceedingly
-small value of G, coupled with the large value of the age of the universe encour-
-aged speculation early on, ﬁrst following Dirac and then spurred by t he advent
-of Brans-Dicke cosmology, that the two quantities may be somehow tied together
-[Dirac 1937, Dyson]. Moreover, because classical general relativit y cannot be quan-
-tized, there has been a recurring interest in the possibility that GR a rises as the
-low energy limit of a more fundamental theory. In such a theory, th e gravitational
-constant may arise dynamically, associated with the vacuum expect ation value of
-some ﬁeld (or dynamics of some internal space). Since this dynamica l value may be
-time dependent, so may G. Over the past year, largely as a result of considerations
-based on extensions of the original old inﬂationary models [Guth 1981 , Linde 1982,
-Albrecht and Steinhardt 1982, Steinhardt and Accetta 1990], the re has been a re-
-newed interest [La and Steinhardt 1989] in the possibility that the gr avitational
-constant has varied on cosmological timescales.
-There exist several sensitive direct probes of a monotonic change in the grav-
-itational constant during the present epoch, including the use of p ulsar timing mea-
-surements and radar experiments, all of which suggest that ˙G/GH≤0.4 today.
-[Shapiro 1964, Shapiro et al. 1971, Helling 1987, Reasen 1983, Damou r et al. 1988]
-At the opposite extreme, calculations of primordial nucleosynthes is put indirect
-limits on ˙Gduring the ﬁrst seconds of the big bang expansion from limits on the
-observed Helium abundance [Accetta et al. 1990]. If the variation of Ghas followed
-a constant power law in time, the latter limit ( ˙G/GH≤0.01) is stronger than the
-2direct limits on the variation today . What has been lacking however is a ny way to
-directly probe the value of Gat times between these two epochs. Since it has even
-been proposed that Gmay oscillate in time [Accetta and Steinhardt 1991], a direct
-measure of Gat intermediate times would be of great interest. It is the purpose
-of this paper to suggest that observations of gravitational lensin g could, in princi-
-ple, provide such a measure, and to investigate the realistic limits whic h it may be
-possible to obtain.
-On ﬁrst thought it is not clear that lensing can constrain G. While the
-bend angle which light rays are subject to is directly related to the st rength of the
-gravitational constant at the time light rays pass the lensing objec t, the quantity
-which enters into all formulas is the product GM, whereMis the mass of the
-lensing object. Unless Mcan be determined independently a separate extraction
-ofGseems impossible. However, it is not the actual bend angle which is dire ctly
-observed in gravitational lensing. All lensing observables depend als o (in somewhat
-diﬀerent ways) upon the distance of the lensing galaxy and the quas ar as inferred
-from their redshifts. The distance redshift relation depends upon the time-averaged
-value ofG, which for redshifts of O(1) can be a signiﬁcant fraction of the lifetime
-of the universe. Thus for any lensing system a prediction of one obs ervable based
-on a measurement of another can give a signal of the time variability o fG. What
-remains to be seen however is exactly how sensitive such a compariso n is, and how
-much it depends on our knowledge, or lack thereof, of cosmological parameters such
-as the Hubble constant H0, the density parameter Ω 0, and even the cosmological
-constant Λ.
-The organization of the paper is as follows: in section 2 we outline our n ota-
-3tions and conventions and introduce the models we will use. In sectio n 3 we consider
-constraints from lensing statistics and in section 4 we discuss const raints which can
-be derived from individual lensing systems. Section 5 contains our co nclusions.
-2. Cosmology and Lens Models
-The observables of interest in gravitational lensing depend upon th e combi-
-nation GM (where M is the mass of the lensing galaxy) and the distance to the
-galaxy and source. If it is assumed that the bending occurs predom inantly as the
-light rays pass through the local region of the lensing galaxy and thu s the time
-required is much shorter than the time scale over which G varies signiﬁ cantly, the
-eﬀect of the variation of G will be to replace GM by GlM(whereGlis G at the time
-of lensing) and also to alter the distance-red shift relation. Measur ing the ﬁrst eﬀect
-is cleanest, in principle, because it is not dependent upon cosmologica l modelling.
-Unfortunately, unless there is an independent way to determine th e mass of the
-lensing galaxy the ﬁrst eﬀect alone is unmeasurable. Since both veloc ity dispersion,
-and stellar luminosity will also depend upon G, there are no observables which seem
-to allowMto be independently extracted.
-Hence, to proceed, we must consider some speciﬁc cosmological mo del, incor-
-porating a variable G. We will consider for deﬁniteness a Brans-Dicke (BD) theory
-(thisisperhapsthesimplest viableextensionofGRwithavaryinggrav itationalcon-
-stant and is often used in connection with extended inﬂationary mod els). While our
-discussionwillbeintermsofBDcosmology,thegeneralfeaturessh ouldbecharacter-
-istic of any model with varying G. In particular, these ideas could be applied to any
-theory based on the Friedman-Robertson-Walker metric (which ha s gained more ex-
-4perimental support recently from the isotropy of the cosmic micro wave background)
-with an evolution equation for the scale factor determined by the eq uation of state
-of matter which also incorporates a varying value of Gconsistently in the equations
-of motion (e.g. [Dyson, Beckenstein 1977, Beckenstein and Meisels 1 980]).
-In the BD cosmology the line element is the usual FRW metric
-ds2=−dt2+R2(t)[dχ2+sk(χ)2dΩ] (1)
-wheresk= sinh(χ),χ,sin(χ) fork=−1,0,1. Einstein’s equations are modiﬁed and
-a new dynamical ﬁeld φ, withG∼φ−1, is introduced. For large time the general so-
-lutionoftheBrans-Dickeﬁeldequationswillbematterdominatedand inmanycases
-ofinterest(e.g. [Weinberg 1972,La and Steinhardt 1989,Steinhar dt and Accetta 1990])
-φ∼Rσ, where σwill be a function of the Brans-Dicke scalar-tensor coupling
-constant3,ω, which tends to zero in the limit ω→ ∞(where Einstein’s theory
-is recovered).
-|3The independent limits on the scalar-tensor coupling constant in the simplest
-Brans-Dicke theory are already far more stringent than we will plac e from the vari-
-ation ofG[Reasonberg 1979], but our purpose here is to use this model merely as
-a testing ground to explore the sensitivity of lensing parameters to G.|
-In the (k= 0) examples cited above σ= (1+ω)−1. The evolution equation for the
-scale factor in a matter dominated epoch is
-/parenleftBigg˙R
-R/parenrightBigg2
-+k
-R2=8πG0
-3ρ0/parenleftbigg2ω+3
-2ω+4/parenrightbigg/parenleftbiggR0
-R/parenrightbigg3+σ
-+(σ2ω
-6−σ)/parenleftBigg˙R
-R/parenrightBigg2
-(2)
-If we deﬁne η=R/R0and
-Ω0=/parenleftBigg8πG0ρ0
-3H2
-0/parenrightBigg/parenleftbigg2ω+3
-2ω+4/parenrightbigg/parenleftBigg
-1+σ−σ2ω
-6/parenrightBigg−1
-(3)
-5we can rewrite this as
-˙η2+(Ω0−1)H2
-0= Ω0H2
-0η−(1+σ)(4)
-k
-R2
-0= (Ω0−1)H2
-0/parenleftBigg
-1+σ−ωσ2
-6/parenrightBigg
-(5)
-Note that if one instead were simply to allow Gto vary as a power law and
-were to use Einstein’s equations unchanged one would obtain the sam e result (4,5),
-except without the last factor on the r.h.s. of (5). For a ﬁxed value of Ω0andH0,
-it is this factor which causes R0to vary with ω.
-The measure of distance we will use is the angular diameter distance
-dA=R0
-1+zsk(χ) (6)
-whichassumesthatthelensedraystraverseameanﬁlled“beam”. ( Similar, butalge-
-braically more complex constraints can be obtained in the case of an “ empty” beam
-approximation, whereaﬃneanglesanddistancesareused(i.e. see[T urner et al. 1984,
-Krauss and White 1991]). The mean ﬁlled beam approximation is probab ly closer
-to the actual situation, however, it has been shown that the unce rtainty due to
-clumpiness of matter in the beam trajectory can be one of the main s ources of un-
-certainty in the analysis of individual lensing systems [Alcock and Ande rson 1985].
-If the Hubble constant were independently measured it is possible th at this uncer-
-tainty could be reduced since it also enters into the determinations o fH0from time
-delays in lensing systems.
-Once the evolution equation for the scale factor, R(t), is speciﬁed we can
-solve for the distance redshift relation in the usual way [Weinberg 19 72]. For the
-special case k= 0 we obtain a simple expression for the distance as a function of
-6x= 1+z, (similar expressions for Ω 0/negationslash= 1 can also be obtained.)
-dA=1
-βH0x(1−x−β) (7)
-whereβ= (1 +σ)/2. The distance is plotted in ﬁgure 1 for β= 0.4,0.5,0.6,
-and reduces to the usual expression [Turner et al. 1984] in the limit o f constant G
-(ω→ ∞,β→1/2). As a guide to the expected magnitude of βone would like to
-obtain sensitivity to, notice that an assumed variation-since-lensin g of
-∆G
-G=Gl−G0
-G0= 20%⇒σ=log1.2
-logxl∼0.2 (8)
-for lenses zl∼1.5. This corresponds to β∼0.6. If we take the age of the universe
-to bet0= 2/(3+σ)H−1
-0= 1010yr, this then gives
-˙G/G|0=−σH0∼10−11yr−1(9)
-which is comparable with other direct measures of ˙G/G.
-We will consider two simpliﬁed lens models in what follows: the point mass
-andtheisothermal sphere lenses. The point masslens is chosen for its simplicity, the
-isothermal lens because the ﬂatness of rotation curves of galaxie s suggest ρ∼r−2is
-a reasonable approximation to galactic mass distributions (at least a symptotically).
-While for any actual lens system these models are overly simplistic the y serve to
-illustrate the main points. The observables for these lens systems w hich we would
-want toexamineforsensitivity to βare: timedelaysbetween images, anglesbetween
-images and ratio in brightness of the images, as well as the (diﬀerent ial and total)
-optical depth for lensing.
-73. Lensing statistics
-The formalism appropriate to gravitational lensing statistics was ﬁr st devel-
-oped in [Turner et al. 1984] and latter generalized to arbitrary Robe rtson-Walker
-cosmologies in [Gott et al. 1989] (see also [Krauss and White 1991] for a recent pre-
-sentation). The key quantity is the optical depth, or integrated p robability of
-lensing,τ, assuming a non-evolving population of galaxies, modelled as singular
-isothermal spheres. This depth is relatively free of matter cluster ing uncertainties
-[Alcock and Anderson 1985] but is sensitive to variations in the distan ce-redshift
-relation, which makes it a good probe of cosmology.
-As an example consider the expression for τ, for ak= 0 universe. Including
-theβdependence of the bend angle ( α∼G) we obtain
-τ(y= 1+z) =F
-β2/integraldisplayy
-1dx x−3−β(xβ−1)2/bracketleftBiggyβ−xβ
-yβ−1/bracketrightBigg2
-;F=n0πα2
-0R3
-0(10)
-whereH0R0= 1 and n0is the comoving number density of galactic lenses, which
-we assume in this instance are all identical (non-evolving) isotherma l spheres pro-
-ducing identical bend angles α0. The bend angle α0is related to measured velocity
-dispersions of nearby galaxies today. For further details of these deﬁnitions see
-[Turner et al. 1984]. Equation (10) reduces to eqn (2.26c) of [Turne r et al. 1984] in
-the limit β→1/2. The integral can be done analytically but the result is cumber-
-some and is not shown here. The optical depth vs redshift is shown in ﬁgure 2 for
-β= 0.4,0.5,0.6. As can be seen the variation with βis slight making this a poor
-measure of ˙G/G. A similarly small dependence on βis shown by the diﬀerential
-optical depth dτ/dz. Since the distance-redshift relation becomes less βdependent
-as Ω0decreases we expect the variation in τto be less than above when Ω 0<1, al-
-8though this is somewhat oﬀset by the βdependence of Fcoming through R0. Thus
-variations of Ggoing as a power law in time have little eﬀect on lensing statistics, at
-least at the level where these statistics are likely to be determined in the forseeable
-future.
-4. Individual systems
-A better hope of constraining ˙Gcomes from examining the observables asso-
-ciated with multiply imaged quasars (i.e. see[Hewitt et al. 1988]). Speciﬁ cally we
-will be interested in the observables: time delay, image splitting and ima ge magniﬁ-
-cation for our two model lenses. The strategy will be the following: e ach observable
-will depend both on GM, and on dA(G). If we have more than two observables
-for each system, then we hope to overly constrain the system so t hat we can check
-for consistency between the diﬀerent determinations of these qu antities from each
-observable.
-1) Point mass lens.
-For these lenses the time delay ∆ tand ratio in magnitude of images rare
-related through [Krauss and Small 1991]
-∆t= 2GM(1+z)[(r−1√r)+log(r)] (11)
-(the (1+ z) factor is absent in microlensing [Krauss and Small 1991]) so these tw o
-parameters can be used to infer GMat the time of lensing, independently of the
-cosmological distance-redshift relation . If it is not possible to measure ∆ tin the lens
-system, or if the measure has a large uncertainty, GMmust be obtained some other
-way, e.g. from virial velocity measurements. Any limit on βwill depend on how
-9well this quantity is known.
-GivenGMwe can use the observed angular splitting of images and the
-relation
-∆θ=4GM
-c2Sr−1/radicalBig
-r1/2(r−1)−2r(12)
-to determine S=DS/DLSwhereDSandDLSare the angular diameter distances
-from the observer to the source and from the lens to the source r espectively. This
-is a function only of the (known) redshifts, Ω 0andβ, e.g. in the k= 0 case
-S≡s0(χS)
-s0(χS−χL)=1−x−β
-S
-x−β
-L−x−β
-S(13)
-so a knowledge of the redshifts allows a determination of β(up to clumping un-
-certainties [Alcock and Anderson 1985]) if we assume a value for Ω 0(or conversely
-a determination of Ω 0if we know β). Notice that S is a ratio of distances and so
-is independent of H0. As an example if we take zL= 1,zS= 3 then for k= 0,
-mean ﬁlled beam, S is a monotonically increasing function of βvarying from 2 .3 to
-2.5 asβruns from 0 .4 to 0.6 as can be seen in ﬁgure 3. Given the above and the
-fact that typical image splittings can be ∼3′′−7′′it is not impossible that a good
-measurement of the angular splitting could limit βto be in the range competitive
-with other direct probes of ˙G.
-2) Isothermal Sphere
-For the somewhat more realistic, isothermal sphere model the situ ation is
-simpler (in principle). If the velocity dispersion of the lensing galaxy, σ||, is known,
-say from measurements of the rotation curves, a measure of the angular splitting
-10allows us to immediately infer S:
-∆θ=2α
-c2S=8πσ2
-||
-c2S⇒S=8π
-∆θ/parenleftbiggσ||
-c/parenrightbigg2
-(14)
-In fact a simultaneous measurement of the time delay, which gives us D=DL/S
-(whereDLis the angular diameter distance from the observer to the lens),
-∆t= 32π2(1+z)/parenleftbiggσ||
-c/parenrightbigg4D
-c(15)
-and the image splitting would in principle allow us to measure both βand Ω 0(up
-to uncertainties in H0, because DLhas the dimensions of distance and hence is de-
-pendent upon H0) because the dependence of DandSonβand Ω 0is diﬀerent4.
-We expect the strongest constraint on βfor ﬁxed Ω 0to come from Showever.
-|4See ﬁgure 4. |
-The singular isothermal sphere (SIS) model is probably still too naiv e to
-apply to actual individual lens systems. One should at least include th e eﬀects of
-a ﬁnite galactic core [Hinshaw and Krauss 1987, Krauss and White 199 1]. Alterna-
-tively, a more complicated, but more general model, the ‘elliptical lens ’
-[Narayan and Grossman 1988], is available for use in extracting these quantities for
-individual galactic lenses. Nevertheless, the SIS model should give a general idea
-of the methodology to be used, and the possible sensitivity to β. Using these other
-models in an application of these ideas to actual lenses would merely re quire replac-
-ing the above equations for Sand ∆twith somewhat more complicated equations
-which would include the lensing parameters ﬁt by the observations.
-Because of the simplicity of the SIS model we only had to make due with 2
-lensing observables to overconstrain the system. We note howeve r that the ratio of
-11image ampliﬁcations itself is also dependent on Sandβ, and so can also be used to
-probe for consistency when more complicated ﬁts to galactic lenses are required.
-5. Conclusions
-While we have demonstrated here that gravitational lensing provide s in prin-
-cipleadirect sensitivity tovariationsin Gover cosmologicaltime, ourresultssuggest
-thatto becompetitive with limits on ˙Gatthepresent time, lensing parameters must
-be extracted from observations at the level of 10% or better–a d aunting but not im-
-possible task. Statistical measures such as the optical depth do n ot seem suﬃciently
-sensitive to ˙G/G, the eﬀects of reasonable changes in Gbeing swamped by larger
-uncertainties from our present lack of knowledge of Ω 0andH0. For individual lens
-systems a simpliﬁed model suggests that it may be possible to see var iations of the
-order˙G/G∼10−11/yr if accurate measures of the angular splitting, ampliﬁcations,
-and perhaps also time delays become available for a system with sourc e and lens at
-relatively high redshifts ( zS∼2,3 andzL∼1). Pessimistically, it is worth noting
-that a possible variation in Gis yet one more uncertainty which could limit one’s
-ability to extract H0from measurements of time delays in individual systems. On
-the other hand, if H0and Ω 0are measured reliably by independent means, one’s
-ability to probe for variations in Gwill improve.
-Nevertheless, in spite of the limitations of this method, it is worth emp ha-
-sizing that it does provide perhaps the only ‘direct’ probe of variatio ns inGduring
-intermediate times between the present epoch, and the nucleosyn thesis era in the
-very early universe. We have placed ‘direct’ in quotation marks beca use as we have
-demonstrated, one’s ability to extract information on ˙Gis intertwined with our
-12knowledge (or ignorance) of the proper cosmological model for th e evolution of the
-universe during this time. In this regard, we also note that for our a nalysis, we
-used as an analytic tool to probe the sensitivity of lensing, a simple Br ans-Dicke
-cosmological model, which in fact is already ruled out by other constr aints for the
-parameter range which would produce the level of time variation pro bed here. In
-this case, Gwould vary as a simple power law with time. We expect our results
-would be applicable for any similar, more viable, model. Of course, ther e are other
-possibilities, including an oscillatory behaviour of Gwith a cosmologically interest-
-ing period (i.e. [Accetta and Steinhardt 1991]). One would need speciﬁ c models to
-perform an analysis similar to that performed here, but it may be tha t for such
-scenarios, gravitational lensing could provide sensitive limits, by com paring results
-obtained from lensing systems at diﬀerent redshifts.
-13References
-Accetta, F.S., Krauss, L.M. and Romanelli, P., 1990, Phys. Lett. 248 , 146
-Accetta, F.S., and Steinhardt, P.J., UPR-0454T
-Albrecht, A. and Steinhardt, P.J., 1982, Phys. Rev. Lett. 48, 122 0
-Alcock and Anderson, 1985, Ap.J. 291, L29
-Beckenstien, J.D., 1977, Phys. Rev. D15, 1458;
-Beckenstein, J.D., and Meisels, A., 1980, Ap.J. 237, 342
-Damour, T., Gibbons, G.W., and Taylor, J.H., 1988, Phys. Rev. Lett. 6 1, 1151
-Dirac, P.A.M., 1937, Nature 139, 323;
-Dirac, P.A.M., 1938, Proc.Roy.Soc. A165, 199
-Dyson, F.J., in “Aspects of Quantum Theory”, ed. A.Salam and E.P.Wign er, p213.
-Gott R., et. al., 1989, Ap.J. 338, 1
-Guth, A.H., 1981, Phys. Rev. D23, 347
-Helling, 1987, in “Problems in Gravitation”, Moscow State U.P. p.46,
-ed. V.N.Melnikov
-Hewitt, J.N., et. al., 1988, in “Gravitational Lenses”, Springer-Ver lag,
-ed. Moran, Hewitt and Lo.
-Hinshaw, G., and Krauss, L.M., 1987, Ap.J. 320, 468
-Krauss, L.M., and Small, T.A., 1991, Ap. J. 378, 22
-Krauss, L.M., and White, M., 1991, Yale preprint YCTP-P42-91,
-14submitted to Ap. J.
-La, P. and Steinhardt, P.J., 1989, Phys. Rev. Lett. 62, 376
-Linde, A.D., 1982, Phys. Lett. 108B, 389;
-Narayan, R. and Grossman, S. in “Gravitational Lenses”, ed. J.M. Moran,
-J.N. Hewitt and K.Y. Lo, Springer-Verlag (1988)
-Press and Gunn, 1973, Ap.J. 185, 397
-Reasenberg, R.D., et. al., 1979, Ap.J. 234, L219
-Reasenberg, R.D., 1983, Philos. Trans. Roy. Soc. London A 310, 22 7
-Shapiro, I.I., 1964, Phys. Rev. Lett. 13, 789;
-Shapiro, I.I. et. al., 1971, Phys. Rev. Lett. 26, 1132
-Steinhardt, P.J. and Accetta, F.S., 1990, Phys. Rev. Lett. 64, 27 40
-Turner, E., Ostriker, J., and Gott, R., 1984, Ap.J. 284, 1
-Weinberg, S., 1972, “Gravitation and Cosmology”, Wiley
-Will, C.M., “Theory and Experiment in Gravitational Physics”,
-Will, C.M., 1984, Phys. Rep. 113, 345
-Young et. al., 1980, Ap.J. 241, 507
-15References
-[Dirac 1937] P.A.M.Dirac, 1937, Na-
-ture139323; P.A.M.Dirac, 1938,
-Proc.Roy.Soc. A165199
-[Dyson] F.J.Dyson, in “Aspects of Quan-
-tum Theory”, ed. A.Salam and
-E.P.Wigner, p213.
-[Guth 1981] A.H.Guth, 1981, Phys. Rev. D23
-347
-[Linde 1982] A.D.Linde, 1982, Phys. Lett.
-108B389;
-[Albrecht and Steinhardt 1982] A.Albrecht and P.J.Steinhardt,
-1982, Phys. Rev. Lett. 481220
-[La and Steinhardt 1989] P.La and P.J.Steinhardt, 1989,
-Phys. Rev. Lett. 62376
-[Steinhardt and Accetta 1990] P.J.Steinhardt and F.S.Accetta,
-1990, Phys. Rev. Lett. 642740
-[Shapiro 1964] I.I.Shapiro, 1964, Phys. Rev. Lett.
-13789;
-[Shapiro et al. 1971] I.I.Shapiro et.al., 1971, Phys. Rev.
-Lett.261132
-16[Helling 1987] Helling, 1987, in “Problems in
-Gravitation”, Moscow State U.P.
-p.46, ed. V.N.Melnikov
-[Reasen 1983] R.D.Reasenberg, 1983, Philos.
-Trans. Roy. Soc. London A 310
-227
-[Damour et al. 1988] T. Damour, G.W. Gibbons, and
-J.H. Taylor, 1988, Phys. Rev. Lett.
-611151
-[Accetta et al. 1990] F.S.Accetta, L.M. Krauss and P.
-Romanelli, 1990, Phys. Lett. 248
-146
-[Accetta and Steinhardt 1991] F.S.Accetta and P.J.Steinhardt,
-UPR-0454T
-[Reasonberg 1979] R.D.Reasenberg et. al., 1979,
-Ap.J.234L219
-[Beckenstein 1977] J.D. Beckenstien, 1977, Phys. Rev.
-D151458;
-[Beckenstein and Meisels 1980] J.D. Beckenstein and A. Meisels,
-1980, Ap.J. 237342
-17[Weinberg 1972] S. Weinberg, 1972, “Gravitation
-and Cosmology ”, Wiley
-[Press and Gunn 1973] Press and Gunn, 1973, Ap.J. 185
-397
-[Alcock and Anderson 1985] Alcock and Anderson, 1985, Ap.J.
-291L29
-[Turner et al. 1984] E. Turner, J. Ostriker, and R.
-Gott, 1984, Ap.J. 2841
-[Krauss and White 1991] L. Krauss and M. White, 1991,
-Yale preprint YCTP-P42-91, sub-
-mitted to Ap. J.
-[Gott et al. 1989] R. Gott et. al., 1989, Ap.J. 3381
-[Will 1984] C.M. Will, 1984, Phys. Rep. 113
-345
-[Hewitt et al. 1988] J.N. Hewitt et. al., 1988, in “Grav-
-itational Lenses”, Springer-Verlag,
-ed. Moran, Hewitt and Lo.
-[Hinshaw and Krauss 1987] G.Hinshaw and L.Krauss, 1987,
-Ap.J.320468
-[Krauss and Small 1991] L.M.KraussandT.A. Small, 1991,
-Ap. J.37822
-18[Young et al. 1980] Young et. al., 1980, Ap.J. 241507
-[Cliﬀord ????] C.M. Will, “Theory and Experi-
-ment in Gravitational Physics”,
-[Narayan and Grossman 1988] R. Narayan and S. Grossman, in
-“Gravitational Lenses”, ed. J.M.
-Moran, J.N. Hewitt and K.Y. Lo,
-Springer-Verlag (1988)
-19
-
-RESPONSE:
-# 🌟 Could The Force Of Gravity Change Over Time? Exploring How We Can Test It With Gravitational Lensing
-
-Subtitle: Scientists are using cosmic light-bending phenomena to check if the strength of gravity has evolved throughout the universe’s history
-
----
-
-### 🔭 Why Is The Strength Of Gravity So Important?
-
-Imagine gravity as the universe’s glue—holding planets, stars, and galaxies together. But what if this glue isn’t as constant as we think? Some theories suggest that the gravitational constant, labeled **G**, might change over cosmic time. If true, this could impact our understanding of the universe's history, how galaxies form, and even how the universe itself expands.
-
-Knowing whether **G** has been steady or fluctuating is crucial. It might unravel new physics beyond Einstein’s General Relativity and shed light on the fundamental workings of the cosmos.
-
----
-
-### 🧲 How Can We Detect Changes In G Across Cosmic Time?
-
-Detecting subtle shifts in gravity's strength isn’t easy. But, astronomers have a clever tool at their disposal: **gravitational lensing**. Think of gravitational lensing as nature’s giant optical illusion—massive objects like galaxies bend light from more distant sources, creating multiple images or brightening backgrounds like a cosmic funhouse mirror.
-
-Here's the trick: the amount of bending depends on **G** and the mass of the lens. By carefully studying these light-bending effects from different galaxies at various distances, scientists can infer whether **G** has been constant or has changed over billions of years.
-
----
-
-### 🔎 What Do The Observations Look Like?
-
-To do this, researchers examine phenomena such as:
-
-- **Image splitting**: How far apart are the multiple images of a quasar?
-- **Time delays**: How long does light take to travel along different paths?
-- **Magnifications**: How bright do the images appear?
-
-All these observables depend on the properties of the lensing galaxy and the universe's overall geometry. By comparing these measurements across different cosmic epochs (distances), scientists can detect tiny variations indicative of a changing **G**.
-
----
-
-### 💡 Theoretical Frameworks and Challenges
-
-Physicists often use models like **Brans-Dicke theory**, which allows **G** to vary with time, as a testing ground. These models modify Einstein's equations to include a scalar field that influences gravity itself.
-
-However, there's a catch: the *mass* of the lensing galaxy—needed to determine how much light bends—is hard to measure independently of **G**. The observables also depend on other uncertain factors like the universe's expansion rate (**Hubble constant**) and matter density (**Ω0**). This tangled web makes isolating a change in **G** quite challenging.
-
-Furthermore, many current measurements suggest **G** is remarkably steady today, with limits on how fast it could be changing being tiny—less than about 0.4% per billion years according to other methods like pulsar timing.
-
----
-
-### 🌌 Could Future Lensing Studies Detect Changes?
-
-While current techniques face uncertainties, upcoming observations might improve sensitivity enough to detect a relative change of about 10% in **G** over cosmic history. More precise measurements of time delays, image positions, and brightness ratios from distant quasars, especially those at high redshift, could reveal if gravity’s strength was different when the universe was young.
-
-Detecting such a variation would have profound implications, possibly supporting or ruling out theories involving dynamic "scalar fields" tied to **G**. It could also help clarify whether gravity is truly uniform through the cosmos or subtly oscillates over cosmic epochs.
-
----
-
-### 🌟 Why Should We Care?
-
-Understanding whether the gravitational constant has varied is like peering into the universe's deep past, testing the very fabric of physics. It’s a quest to find out if the rules governing everything we see have been stable or have evolved, revealing deeper layers of the cosmic story.
-
-In the long run, these kinds of studies might not only refine our knowledge of gravity but could point the way toward new physics beyond Einstein—questing at the fundamental laws that underpin our universe.
-
----
-Research paper content:
+RESEARCH PAPER:

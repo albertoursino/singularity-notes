@@ -26,23 +26,23 @@ languages:
   blog:
     languageName: "Blog"
     weight: 1
-  about:
-    languageName: "About"
-    weight: 2
-    params:
-      languageAltTitle: About
-      profileMode:
-        enabled: true
-        title: Alberto Ursino
-        imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
-        subtitle: "🚀 I'm a software engineer passionate about astronomy 🌌"
-        buttons:
-          - name: Blog Wiki
-      socialIcons:
-        - name: github
-          url: https://github.com/albertoursino
-        - name: LinkedIn
-          url: https://www.linkedin.com/in/alberto-ursino-8b3466161/
+  # about:
+  #   languageName: "About"
+  #   weight: 2
+  #   params:
+  #     languageAltTitle: About
+  #     profileMode:
+  #       enabled: true
+  #       title: Alberto Ursino
+  #       imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+  #       subtitle: "🚀 I'm a software engineer passionate about astronomy 🌌"
+  #       buttons:
+  #         - name: Blog Wiki
+  #     socialIcons:
+  #       - name: github
+  #         url: https://github.com/albertoursino
+  #       - name: LinkedIn
+  #         url: https://www.linkedin.com/in/alberto-ursino-8b3466161/
 
 outputs:
   home:
@@ -52,9 +52,8 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
-  # author: ["Me", "You"] # multiple authors
+  description: "Singularity Notes - Blog"
+  author: Alberto Ursino
 
   defaultTheme: auto
   # disableThemeToggle: true
@@ -73,9 +72,10 @@ params:
   images: []
 
   homeInfoParams:
-    Title: "👋 Welcome to **Singularity Notes** !"
+    Title: "Welcome to **Singularity Notes**! 👋"
     Content: >
-      Singularity Notes brings you bite-sized articles on the latest astronomy discoveries—crafted by AI, inspired by cutting-edge research.
+      A fully automated blog delivering bite-sized articles on the latest astronomy discoveries—crafted by AI and driven by cutting-edge research. Developed by [Alberto Ursino](https://github.com/albertoursino).
+    
 
   # socialIcons:
   #   - name: github

@@ -55,7 +55,7 @@ def select_best_article():
                     desc="Select the best article...",
                 ):
                     response = client.responses.create(
-                        model=config["openai_model_name"], input=prompt
+                        model=config["model"], input=prompt
                     )
                     try:
                         number = int(response.output[0].content[0].text)

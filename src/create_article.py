@@ -42,11 +42,11 @@ This is a dummy paragraph for testing purposes. It will be replaced with the act
         with open("src/resources/prompt_create_article.txt", "r") as file:
             prompt = file.read()
 
-        prompt += f"\n{pdf_content}\n\nRESPONSE:"
+        prompt += f"\n{pdf_content}\n\nOUTPUT:"
 
         try:
             client = OpenAI()
-            model = config["openai_model_name"]
+            model = config["model"]
             logger.info(f"Generating blog article using {model!r}...")
             response = client.responses.create(model=model, input=prompt)
             markdown = response.output[0].content[0].text
@@ -59,7 +59,7 @@ This is a dummy paragraph for testing purposes. It will be replaced with the act
     logger.debug(f"# Used tokens in output: {len(markdown.split())}")
 
     # Save the raw post in the output directory
-    output_file = Path(config.get("output_dir")) / "raw_post.md"
+    output_file = Path(config.get("output_dir")) / "raw_post.json"
     create_output_dir(Path(config.get("output_dir")))
     with open(output_file, "w", encoding="utf-8") as md_file:
         md_file.write(markdown)

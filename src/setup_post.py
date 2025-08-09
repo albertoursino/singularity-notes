@@ -15,72 +15,54 @@ def setup_post():
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
 
-    # Read the created article
+    # Read the created article from the JSON file
     try:
-        raw_post = Path(config.get("output_dir")) / "raw_post.md"
+        raw_post = Path(config.get("output_dir")) / "raw_post.json"
         with raw_post.open() as f:
-            content = f.read()
+            json_content = json.load(f)
     except FileNotFoundError:
         logger.error(f"Raw post file not found at {str(raw_post)!r}.")
         sys.exit(1)
 
-    try:
-        validate_content(content)
-    except ValueError as e:
-        logger.error(f"Content validation failed: {e}")
-        # TODO: send an email
-        sys.exit(1)
+    title = json_content["title"]
+    subtitle = json_content["subtitle"]
+    sections = json_content["sections"]
 
-    logger.success("Content validation passed")
+    logger.debug(f"Title of the article: {title}")
+    logger.debug(f"Subtitle of the article: {subtitle}")
+    logger.debug(f"Number of sections: {len(sections)}")
 
-    lines = content.splitlines()
-
-    # * The pops should work because the content has been validated
-
-    # Extract and remove title (first line starting with "# ")
-    title_match = re.match(r"# (.+)", lines[0])
-    title = title_match.group(1).strip() if title_match else ""
-    lines.pop(0)  # Remove the title line
-    lines.pop(0)  # Remove empty line after title
-    logger.debug(f"Extracted title: {title}")
-
-    # Extract and remove subtitle (third line, starting with "Subtitle: ")
-    if lines[0].startswith("Subtitle: "):
-        subtitle = lines[0].replace("Subtitle: ", "", 1).strip()
-    lines.pop(0)  # Remove the subtitle line
-    lines.pop(0)  # Remove empty line after subtitle
-    lines.pop(0)  # Remove the separator line
-    lines.pop(0)  # Remove empty line after separator
-    logger.debug(f"Extracted subtitle: {subtitle}")
-
-    # Reconstruct content
-    content = "\n".join(lines)
+    # Setup content
+    content = ""
+    for section in sections:
+        section_header = section["header"]
+        section_content = section["content"]
+        content += (
+            "### " + section_header + "\n\n" + section_content + "\n\n" + "---" + "\n\n"
+        )
 
     # Build Hugo header
-    header = f"""---
-author: [Powered by ChatGPT (OpenAI)]
-title: "{title}"
-date: "{datetime.now().strftime("%Y-%m-%d")}"
-description: "{subtitle}"
-summary: "{subtitle}"
-ShowToc: false
----
-"""
+    header = (
+        f"---\nauthor: [Powered by OpenAI ({config['model']})]\ntitle: '{title}'\n"
+        f"date: '{datetime.now().strftime('%Y-%m-%d')}'\ndescription: '{subtitle}'\n"
+        f"summary: '{subtitle}'\nShowToc: false\n---\n\n"
+    )
 
     # Write credits
     create_output_dir(Path(config.get("output_dir")))
     with (Path(config.get("output_dir")) / "best_article.json").open("r") as f:
         best_article_json = json.load(f)
 
-    credits = f"""**Source Paper's Authors**: {best_article_json["authors"]}\n
-**PDF**: {best_article_json["pdf_url"]}
-"""
+    credits = (
+        f"**Source Paper's Authors**: {best_article_json['authors']}\n\n"
+        f"**PDF**: {best_article_json['pdf_url']}"
+    )
 
     # Create a new post in Hugo
-    filename = f"{int(time())}.md"
+    filename = f"article_{int(time())}.md"
     hugo_post = Path("app") / "content" / "posts" / filename
     with hugo_post.open("w") as f:
-        f.write(header + "\n" + content + "\n\n" + credits)
+        f.write(header + content + credits)
         logger.success(f"Post successfully created at {str(hugo_post)!r}.")
 
 

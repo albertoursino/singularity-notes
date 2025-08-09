@@ -1,7 +1,7 @@
 debug: false
 
 # Check out all the models here: https://platform.openai.com/docs/models
-openai_model_name: gpt-4.1-nano 
+model: gpt-4.1-nano 
 
 number_of_articles: 10 # Number of articles to fetch from arxiv
 
