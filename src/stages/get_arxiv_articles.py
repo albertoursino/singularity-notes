@@ -13,12 +13,9 @@ sys.path.append(str(Path.cwd()))
 from src.utils import create_output_dir
 
 
-def get_arxiv_articles():
+def get_arxiv_articles(config: dict):
     # Initialize the arXiv client
     client = arxiv.Client()
-
-    with open("config.yaml", "r") as config_file:
-        config: dict[str, Any] = yaml.safe_load(config_file)
 
     # Search for the 10 most recent articles in the astrophysics category
     search = arxiv.Search(
@@ -65,7 +62,6 @@ def get_arxiv_articles():
 
     # Save results to a JSON file
     output_file = Path(config.get("output_dir")) / "arxiv_articles.json"
-    create_output_dir(Path(config.get("output_dir")))
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
         logger.success(
@@ -74,4 +70,9 @@ def get_arxiv_articles():
 
 
 if __name__ == "__main__":
-    get_arxiv_articles()
+    with open("config.yaml", "r") as config_file:
+        config: dict[str, Any] = yaml.safe_load(config_file)
+
+    create_output_dir(Path(config.get("output_dir")))
+
+    get_arxiv_articles(config)

@@ -1,0 +1,43 @@
+{
+  "title": "Article Schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Main title of the article",
+      "minLength": 5
+    },
+
+    "subtitle": {
+      "type": "string",
+      "description": "Subtitle of the article",
+      "minLength": 5
+    },
+    
+    "sections": {
+      "type": "array",
+      "description": "List of sections in the article",
+      "items": {
+        "type": "object",
+        "properties": {
+          "header": {
+            "type": "string",
+            "description": "Section header",
+            "minLength": 5
+          },
+          
+          "content": {
+            "type": "string",
+            "description": "Section content",
+            "minLength": 20
+          }
+        },
+        "required": ["header", "content"],
+        "additionalProperties": false
+      },
+      "minItems": 3
+    }
+  },
+  "required": ["title", "subtitle", "sections"],
+  "additionalProperties": false
+}

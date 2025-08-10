@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import sys
 from typing import Any
@@ -9,29 +10,28 @@ import yaml
 
 sys.path.append(str(Path.cwd()))
 
-from src.utils import create_output_dir
+from src.utils import create_output_dir, validate_json_data
 
 load_dotenv()
 
 
-def create_article():
-    with open("config.yaml", "r") as config_file:
-        config: dict[str, Any] = yaml.safe_load(config_file)
-
+def create_article(config: dict):
     if config["debug"]:
         logger.info("Debug mode is enabled, skipping OpenAI API call...")
-        markdown = """# This is a dummy title for testing purposes.
-
-Subtitle: This is a dummy subtitle for testing purposes.
-
----
-
-### This is a dummy section header for testing purposes.
-
-This is a dummy paragraph for testing purposes. It will be replaced with the actual content generated from the best article PDF.
-
----
-"""
+        model_output = {
+            "title": "🌌 Unveiling The Secrets Of Blazing Cosmic Behemoths: How The SST-1M Telescope Is Sherpherding Our Understanding Of Markarian 421",
+            "subtitle": "Cutting-edge observations shed light on one of the universe's most energetic and enigmatic objects",
+            "sections": [
+                {
+                    "header": "🔭 What Is So Special About Mrk 421?",
+                    "content": "Imagine a lighthouse, but instead of shining on a coast...",
+                },
+                {
+                    "header": "🛰️ How Did The New Observations Happen?",
+                    "content": "Detecting gamma rays from Earth is tricky—these...",
+                },
+            ],
+        }
     else:
         # Get PDF content
         pdf_content = ""
@@ -44,31 +44,51 @@ This is a dummy paragraph for testing purposes. It will be replaced with the act
         with open("src/resources/prompt_create_article.txt", "r") as file:
             prompt = file.read()
 
+        with Path("src/resources/article_schema.json").open() as f:
+            json_schema = json.load(f)
+
         prompt += f"\n{pdf_content}\n\nOUTPUT:"
 
-        try:
-            client = OpenAI()
-            model = config["model"]
-            logger.info(f"Generating blog article using {model!r}...")
-            response = client.responses.create(model=model, input=prompt)
-            markdown = response.output[0].content[0].text
-        except Exception as e:
-            logger.error(f"Error calling OpenAI API: {e}")
+        retries = 0
+        while retries < 5:
+            try:
+                client = OpenAI()
+                model = config["model"]
+
+                logger.info(f"Generating article using {model!r}...")
+
+                response = client.responses.create(model=model, input=prompt)
+
+                model_output = response.output[0].content[0].text
+
+                validate_json_data(model_output, json_schema)
+            except Exception as e:
+                logger.error(f"Error during OpenAI API call: {e}")
+                retries += 1
+                logger.info(f"Retrying... ({retries}/5)")
+            else:
+                break
+        if retries == 5:
+            logger.error("Failed to create the article after 5 retries.")
             # TODO: send an email
             sys.exit(1)
 
-    logger.debug(f"# Used tokens in input: {len(prompt.split())}")
-    logger.debug(f"# Used tokens in output: {len(markdown.split())}")
+        logger.debug(f"# Used tokens in input: {len(prompt.split())}")
+        logger.debug(f"# Used tokens in output: {len(model_output.split())}")
 
     # Save the raw post in the output directory
     output_file = Path(config.get("output_dir")) / "raw_post.json"
-    create_output_dir(Path(config.get("output_dir")))
-    with open(output_file, "w", encoding="utf-8") as md_file:
-        md_file.write(markdown)
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(model_output, f)
         logger.success(
             f"Blog article successfully generated and saved to {str(output_file)!r}."
         )
 
 
 if __name__ == "__main__":
-    create_article()
+    with open("config.yaml", "r") as config_file:
+        config: dict[str, Any] = yaml.safe_load(config_file)
+
+    create_output_dir(Path(config.get("output_dir")))
+
+    create_article(config)

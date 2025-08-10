@@ -1,6 +1,7 @@
 public/
 used_articles.json
 output/
+*.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

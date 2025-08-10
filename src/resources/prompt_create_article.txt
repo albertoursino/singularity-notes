@@ -8,13 +8,14 @@ INSTRUCTIONS:
 - Highlight why the discovery or topic matters.
 - Focus on the key message and interesting insights.
 - The title must be attractive and easy to understand.
-- The full research paper will be most likely "dirty": parse it as best as you can (e.g., ignore characters not human understandable, math symbols, links)
+- The research paper will be most likely "dirty": ignore characters not human understandable, math symbols, links, etc.
 - Do not include any credits or references to the original research paper (I will put them manually).
 
 STRUCTURE OF THE OUTPUT:
 - Use valid JSON format.
 - You can use **bold** and *italic* like in Markdown.
 - Use paragraphs.
+- Use bullet point lists.
 - The title and the section headers should always start with an emoji.
 {
   "title": "",

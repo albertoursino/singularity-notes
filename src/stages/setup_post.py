@@ -13,10 +13,7 @@ sys.path.append(str(Path.cwd()))
 from src.utils import create_output_dir
 
 
-def setup_post():
-    with open("config.yaml", "r") as config_file:
-        config: dict[str, Any] = yaml.safe_load(config_file)
-
+def setup_post(config: dict):
     # Read the created article from the JSON file
     try:
         raw_post = Path(config.get("output_dir")) / "raw_post.json"
@@ -51,7 +48,6 @@ def setup_post():
     )
 
     # Write credits
-    create_output_dir(Path(config.get("output_dir")))
     with (Path(config.get("output_dir")) / "best_article.json").open("r") as f:
         best_article_json = json.load(f)
 
@@ -69,4 +65,9 @@ def setup_post():
 
 
 if __name__ == "__main__":
-    setup_post()
+    with open("config.yaml", "r") as config_file:
+        config: dict[str, Any] = yaml.safe_load(config_file)
+
+    create_output_dir(Path(config.get("output_dir")))
+
+    setup_post(config)

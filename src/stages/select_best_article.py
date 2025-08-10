@@ -18,10 +18,7 @@ from src.utils import create_output_dir
 load_dotenv()
 
 
-def select_best_article():
-    with open("config.yaml", "r") as config_file:
-        config: dict[str, Any] = yaml.safe_load(config_file)
-
+def select_best_article(config: dict):
     try:
         with (Path(config.get("output_dir")) / "arxiv_articles.json").open() as f:
             articles = json.load(f)
@@ -127,8 +124,6 @@ def select_best_article():
 
     response = requests.get(pdf_url)
     if response.status_code == 200:
-        create_output_dir(Path(config["output_dir"]))
-
         # Save the best article's PDF
         pdf_file = Path(config["output_dir"]) / "best_article.pdf"
         with open(pdf_file, "wb") as f:
@@ -149,4 +144,9 @@ def select_best_article():
 
 
 if __name__ == "__main__":
-    select_best_article()
+    with open("config.yaml", "r") as config_file:
+        config: dict[str, Any] = yaml.safe_load(config_file)
+
+    create_output_dir(Path(config.get("output_dir")))
+
+    select_best_article(config)
