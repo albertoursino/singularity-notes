@@ -1,4 +1,10 @@
 repos:
+  - repo:
+      https://github.com/python-poetry/poetry-plugin-export
+    rev: 1.9.0
+    hooks:
+      - id: poetry-export
+        args: [-f, requirements.txt, -o, requirements.txt, --without-hashes]
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
     rev: v0.12.5
@@ -8,9 +14,8 @@ repos:
         args: [ --fix ]
       # Run the formatter.
       - id: ruff-format
-
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 'v1.17.0'  # Use the sha / tag you want to point at
+    rev: v1.17.0
     hooks:
       - id: mypy
         args: [--strict, --install-types, --non-interactive, --ignore-missing-imports]
