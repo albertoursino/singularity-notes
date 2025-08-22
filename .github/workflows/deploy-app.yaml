@@ -1,7 +1,7 @@
 name: Deploy web app
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
