@@ -4,6 +4,7 @@ import sys
 from typing import Any
 import PyPDF2
 from dotenv import load_dotenv
+from jsonschema import ValidationError
 from loguru import logger
 from openai import OpenAI
 import yaml
@@ -56,16 +57,27 @@ def create_article(config: dict):
                 model = config["model"]
 
                 logger.info(f"Generating article using {model!r}...")
-
                 response = client.responses.create(model=model, input=prompt)
 
-                model_output = response.output[0].content[0].text
+                model_output = response.output_text
 
-                validate_json_data(model_output, json_schema)
-            except Exception as e:
-                logger.error(f"Error during OpenAI API call: {e}")
+                # Save the raw post in the output directory
+                output_file = Path(config.get("output_dir")) / "raw_post.json"
+                with open(output_file, "w", encoding="utf-8") as f:
+                    f.write(model_output)
+                    logger.success(
+                        f"Blog article successfully generated and saved to {str(output_file)!r}."
+                    )
+
+                with (output_file).open() as f:
+                    validate_json_data(json.load(f), json_schema)
+            except ValidationError as e:
+                logger.error(f"Schema validation failed: {e}")
                 retries += 1
                 logger.info(f"Retrying... ({retries}/5)")
+            except Exception as e:
+                logger.error(f"Error during OpenAI API call: {e}. Exiting...")
+                sys.exit(1)
             else:
                 break
         if retries == 5:
@@ -75,14 +87,6 @@ def create_article(config: dict):
 
         logger.debug(f"# Used tokens in input: {len(prompt.split())}")
         logger.debug(f"# Used tokens in output: {len(model_output.split())}")
-
-    # Save the raw post in the output directory
-    output_file = Path(config.get("output_dir")) / "raw_post.json"
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(model_output, f)
-        logger.success(
-            f"Blog article successfully generated and saved to {str(output_file)!r}."
-        )
 
 
 if __name__ == "__main__":

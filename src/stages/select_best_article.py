@@ -41,7 +41,7 @@ def select_best_article(config: dict):
         # Construct prompt
         with open("src/resources/prompt_select_best_article.txt", "r") as file:
             prompt = file.read()
-        prompt += f"\n\n{formatted_articles}\nRESPONSE:"
+        prompt += f"\n\n{formatted_articles}\nOUTPUT:"
 
         retries = 0
         output_tokens = 0
@@ -51,7 +51,7 @@ def select_best_article(config: dict):
                 votes_dict = {}
                 for i in tqdm(
                     range(config["select_best_article"]["reasoning_paths"]),
-                    desc="Select the best article...",
+                    desc=f"Select the best article with model {config['model']!r}...",
                 ):
                     response = client.responses.create(
                         model=config["model"], input=prompt

@@ -44,8 +44,6 @@ def get_arxiv_articles(config: dict):
         arxiv_id = paper.get_short_id()
         if arxiv_id in used_arxiv_ids:
             logger.warning(f"Skipping already used article: {arxiv_id}")
-            if i != 0:
-                i -= 1
             continue
         results.append(
             {

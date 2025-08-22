@@ -1,20 +1,29 @@
+from pathlib import Path
 import sys
+from typing import Any
 from loguru import logger
-from src.stages.get_arxiv_articles import get_arxiv_articles
+import yaml
 from src.stages.select_best_article import select_best_article
-from src.stages.create_article import create_article
+from stages.create_raw_post import create_article
 from src.stages.setup_post import setup_post
+from src.stages.get_arxiv_articles import get_arxiv_articles
+from src.utils import create_output_dir
 
 if __name__ == "__main__":
+    with open("config.yaml", "r") as config_file:
+        config: dict[str, Any] = yaml.safe_load(config_file)
+
+    create_output_dir(Path(config.get("output_dir")))
+
     try:
         logger.info("Fetching articles from arXiv...")
-        get_arxiv_articles()
+        get_arxiv_articles(config)
         logger.info("Selecting the best article...")
-        select_best_article()
+        select_best_article(config)
         logger.info("Creating article...")
-        create_article()
+        create_article(config)
         logger.info("Setting up post...")
-        setup_post()
+        setup_post(config)
         logger.success("Pipeline completed successfully.")
     except Exception as e:
         logger.error(f"An error occurred: {e}")
