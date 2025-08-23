@@ -41,12 +41,12 @@ def select_best_article(config: dict, output_dir: Path):
 
         retries = 0
         output_tokens = 0
-        while retries < 5:
+        while retries < config["max_retries"]:
             try:
                 client = OpenAI()
                 votes_dict = {}
                 for i in tqdm(
-                    range(config["select_best_article"]["reasoning_paths"]),
+                    range(config["reasoning_paths"]),
                     desc=f"Select the best article with model {config['model']!r}...",
                 ):
                     response = client.responses.create(
@@ -69,8 +69,10 @@ def select_best_article(config: dict, output_dir: Path):
                 logger.info(f"Retrying... ({retries}/5)")
             else:
                 break
-        if retries == 5:
-            logger.error("Failed to select the best article after 5 retries.")
+        if retries == config["max_retries"]:
+            logger.error(
+                f"Failed to select the best article after {config['max_retries']} retries."
+            )
             # TODO: send an email
             sys.exit(1)
     else:
@@ -79,7 +81,7 @@ def select_best_article(config: dict, output_dir: Path):
 
     logger.debug(f"# Votes to the best article: {votes_dict[number]}/{i + 1}")
     logger.debug(
-        f"# Used tokens in input: {len(prompt.split()) * config['select_best_article']['reasoning_paths']}"
+        f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}"
     )
     logger.debug(f"# Used tokens in output: {output_tokens}")
 

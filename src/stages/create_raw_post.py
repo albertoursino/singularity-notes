@@ -50,7 +50,7 @@ def create_raw_post(config: dict, output_dir: Path) -> None:
         prompt += f"\n{pdf_content}\n\nOUTPUT:"
 
         retries = 0
-        while retries < 5:
+        while retries < config["max_retries"]:
             try:
                 client = OpenAI()
                 model = config["model"]
@@ -83,8 +83,10 @@ def create_raw_post(config: dict, output_dir: Path) -> None:
                     f"Post successfully generated and saved to {str(output_file)!r}."
                 )
                 break
-        if retries == 5:
-            logger.error("Failed to create the post after 5 retries.")
+        if retries == config["max_retries"]:
+            logger.error(
+                f"Failed to create the post after {config['max_retries']} retries."
+            )
             # TODO: send an email
             sys.exit(1)
 

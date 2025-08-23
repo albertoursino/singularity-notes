@@ -1,10 +1,14 @@
+# Whether or not to use the OpenAI API
 debug: false
 
-# Check out all the models here: https://platform.openai.com/docs/models
-model: gpt-4.1-nano 
+# Check out all OpenAI models here: https://platform.openai.com/docs/models
+model: gpt-4.1-nano
 
-number_of_articles: 10 # Number of articles to fetch from arxiv
+# Number of articles to fetch from arXiv
+number_of_articles: 10 
 
-select_best_article:
-    # Number of times LLM select the best article. Related to the technique "Self-consistency".
-    reasoning_paths: 5
+# Number of retries if the model doesn't give a well-formatted response
+max_retries: 1
+
+# Number of times LLM select the best article. Related to the technique "Self-consistency".
+reasoning_paths: 1
