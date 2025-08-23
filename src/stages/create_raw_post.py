@@ -64,6 +64,7 @@ def create_raw_post(config: dict, output_dir: Path) -> None:
                 output_file = output_dir / "raw_post.json"
                 with open(output_file, "w", encoding="utf-8") as f:
                     f.write(model_output)
+                logger.debug(f"Model output saved at {str(output_file)!r}")
 
                 # Validate the JSON file
                 logger.info("Validating JSON response...")

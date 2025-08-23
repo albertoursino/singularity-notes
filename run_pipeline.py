@@ -19,17 +19,12 @@ if __name__ == "__main__":
 
     create_output_dir(OUTPUT_DIR)
 
-    try:
-        logger.info("Fetching articles from arXiv...")
-        get_arxiv_articles(config, OUTPUT_DIR)
-        logger.info("Selecting the best article...")
-        select_best_article(config, OUTPUT_DIR)
-        logger.info("Creating article...")
-        create_raw_post(config, OUTPUT_DIR)
-        logger.info("Setting up post...")
-        setup_post(config, OUTPUT_DIR)
-        logger.success("Pipeline completed successfully.")
-    except Exception as e:
-        logger.error(f"An error occurred: {e}")
-        # TODO: send an email
-        sys.exit(1)
+    logger.info("Fetching articles from arXiv...")
+    get_arxiv_articles(config, OUTPUT_DIR)
+    logger.info("Selecting the best article...")
+    select_best_article(config, OUTPUT_DIR)
+    logger.info("Creating article...")
+    create_raw_post(config, OUTPUT_DIR)
+    logger.info("Setting up post...")
+    setup_post(config, OUTPUT_DIR)
+    logger.success("Pipeline completed successfully.")
