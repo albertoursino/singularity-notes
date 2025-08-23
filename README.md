@@ -25,7 +25,7 @@ Launch the app with
 poe app
 ```
 
-### ✨ Create new articles
+### ✨ Create new posts
 
 1. Set the parameters in `config.yaml`
 2. Create a new post with
