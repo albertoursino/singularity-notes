@@ -12,7 +12,7 @@ import yaml
 def setup_post(config: dict, output_dir: Path):
     # Read the created article from the JSON file
     try:
-        raw_post = OUTPUT_DIR / "raw_post.json"
+        raw_post = output_dir / "raw_post.json"
         with raw_post.open() as f:
             json_content = json.load(f)
     except FileNotFoundError:
