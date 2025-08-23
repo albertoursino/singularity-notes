@@ -2,10 +2,11 @@ from pathlib import Path
 from jsonschema import validate
 
 
-def create_output_dir(output_dir: Path) -> None:
+def create_output_dir(output_dir: Path) -> Path:
     """Create the output directory if it does not exist."""
     if not output_dir.exists():
         output_dir.mkdir(parents=True)
+    return output_dir
 
 
 def validate_json_data(data: dict, schema: dict) -> bool:

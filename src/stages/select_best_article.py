@@ -11,16 +11,12 @@ import json
 from tqdm import tqdm
 import yaml
 
-sys.path.append(str(Path.cwd()))
-
-from src.utils import create_output_dir
-
 load_dotenv()
 
 
-def select_best_article(config: dict):
+def select_best_article(config: dict, output_dir: Path):
     try:
-        with (Path(config.get("output_dir")) / "arxiv_articles.json").open() as f:
+        with (output_dir / "arxiv_articles.json").open() as f:
             articles = json.load(f)
     except FileNotFoundError:
         logger.error("No articles found. Please run the pipeline to fetch articles.")
@@ -56,10 +52,8 @@ def select_best_article(config: dict):
                     response = client.responses.create(
                         model=config["model"], input=prompt
                     )
-                    try:
-                        number = int(response.output[0].content[0].text)
-                    except Exception:
-                        continue
+                    number = int(response.output_text)
+
                     if number not in votes_dict:
                         votes_dict[number] = 1
                     else:
@@ -68,7 +62,7 @@ def select_best_article(config: dict):
                 # Get the most common answer
                 number = max(votes_dict, key=votes_dict.get)
 
-                output_tokens += len(response.output[0].content[0].text.split())
+                output_tokens += len(response.output_text.split())
             except Exception as e:
                 logger.error(f"Error during OpenAI API call: {e}")
                 retries += 1
@@ -101,7 +95,7 @@ def select_best_article(config: dict):
 
             article.pop("number")
 
-            with (Path(config.get("output_dir")) / "best_article.json").open("w") as f:
+            with (output_dir / "best_article.json").open("w") as f:
                 json.dump(article, f)
 
             break
@@ -125,7 +119,7 @@ def select_best_article(config: dict):
     response = requests.get(pdf_url)
     if response.status_code == 200:
         # Save the best article's PDF
-        pdf_file = Path(config["output_dir"]) / "best_article.pdf"
+        pdf_file = output_dir / "best_article.pdf"
         with open(pdf_file, "wb") as f:
             f.write(response.content)
         logger.success(f"PDF of the best research paper saved at {str(pdf_file)!r}")
@@ -137,16 +131,18 @@ def select_best_article(config: dict):
             for page in reader.pages:
                 pdf_content += page.extract_text() or ""
 
-        txt_file = Path(config["output_dir"]) / "best_article.txt"
+        txt_file = output_dir / "best_article.txt"
         with (txt_file).open(mode="w") as f:
             f.write(pdf_content)
         logger.success(f"Raw content of the PDF saved at {str(txt_file)!r}")
 
 
 if __name__ == "__main__":
+    sys.path.append(str(Path.cwd()))
+    from run_pipeline import OUTPUT_DIR
+    from src.utils import create_output_dir
+
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
 
-    create_output_dir(Path(config.get("output_dir")))
-
-    select_best_article(config)
+    select_best_article(config, create_output_dir(OUTPUT_DIR))

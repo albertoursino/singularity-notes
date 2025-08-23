@@ -8,12 +8,8 @@ import json
 from loguru import logger
 import yaml
 
-sys.path.append(str(Path.cwd()))
 
-from src.utils import create_output_dir
-
-
-def get_arxiv_articles(config: dict):
+def get_arxiv_articles(config: dict, output_dir: Path) -> None:
     # Initialize the arXiv client
     client = arxiv.Client()
 
@@ -59,7 +55,7 @@ def get_arxiv_articles(config: dict):
         i += 1
 
     # Save results to a JSON file
-    output_file = Path(config.get("output_dir")) / "arxiv_articles.json"
+    output_file = output_dir / "arxiv_articles.json"
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
         logger.success(
@@ -68,9 +64,11 @@ def get_arxiv_articles(config: dict):
 
 
 if __name__ == "__main__":
+    sys.path.append(str(Path.cwd()))
+    from run_pipeline import OUTPUT_DIR
+    from src.utils import create_output_dir
+
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
 
-    create_output_dir(Path(config.get("output_dir")))
-
-    get_arxiv_articles(config)
+    get_arxiv_articles(config, create_output_dir(OUTPUT_DIR))

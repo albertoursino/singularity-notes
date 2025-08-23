@@ -8,15 +8,11 @@ from typing import Any
 from loguru import logger
 import yaml
 
-sys.path.append(str(Path.cwd()))
 
-from src.utils import create_output_dir
-
-
-def setup_post(config: dict):
+def setup_post(config: dict, output_dir: Path):
     # Read the created article from the JSON file
     try:
-        raw_post = Path(config.get("output_dir")) / "raw_post.json"
+        raw_post = OUTPUT_DIR / "raw_post.json"
         with raw_post.open() as f:
             json_content = json.load(f)
     except FileNotFoundError:
@@ -48,7 +44,7 @@ def setup_post(config: dict):
     )
 
     # Write credits
-    with (Path(config.get("output_dir")) / "best_article.json").open("r") as f:
+    with (output_dir / "best_article.json").open("r") as f:
         best_article_json = json.load(f)
 
     credits = (
@@ -65,9 +61,11 @@ def setup_post(config: dict):
 
 
 if __name__ == "__main__":
+    sys.path.append(str(Path.cwd()))
+    from run_pipeline import OUTPUT_DIR
+    from src.utils import create_output_dir
+
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
 
-    create_output_dir(Path(config.get("output_dir")))
-
-    setup_post(config)
+    setup_post(config, create_output_dir(OUTPUT_DIR))

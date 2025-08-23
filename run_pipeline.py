@@ -3,17 +3,21 @@ import sys
 from typing import Any
 from loguru import logger
 import yaml
-from src.stages.select_best_article import select_best_article
-from stages.create_raw_post import create_article
-from src.stages.setup_post import setup_post
-from src.stages.get_arxiv_articles import get_arxiv_articles
-from src.utils import create_output_dir
+
+
+OUTPUT_DIR = Path("output/")
 
 if __name__ == "__main__":
+    from src.stages.select_best_article import select_best_article
+    from src.stages.create_raw_post import create_article
+    from src.stages.setup_post import setup_post
+    from src.stages.get_arxiv_articles import get_arxiv_articles
+    from src.utils import create_output_dir
+
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
 
-    create_output_dir(Path(config.get("output_dir")))
+    create_output_dir(OUTPUT_DIR)
 
     try:
         logger.info("Fetching articles from arXiv...")

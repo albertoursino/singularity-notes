@@ -5,8 +5,6 @@ model: gpt-4.1-nano
 
 number_of_articles: 10 # Number of articles to fetch from arxiv
 
-output_dir: "output" # Directory to save the output files
-
 select_best_article:
     # Number of times LLM select the best article. Related to the technique "Self-consistency".
     reasoning_paths: 5
