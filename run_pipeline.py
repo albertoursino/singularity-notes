@@ -9,7 +9,7 @@ OUTPUT_DIR = Path("output/")
 
 if __name__ == "__main__":
     from src.stages.select_best_article import select_best_article
-    from src.stages.create_raw_post import create_article
+    from src.stages.create_raw_post import create_raw_post
     from src.stages.setup_post import setup_post
     from src.stages.get_arxiv_articles import get_arxiv_articles
     from src.utils import create_output_dir
@@ -25,7 +25,7 @@ if __name__ == "__main__":
         logger.info("Selecting the best article...")
         select_best_article(config)
         logger.info("Creating article...")
-        create_article(config)
+        create_raw_post(config)
         logger.info("Setting up post...")
         setup_post(config)
         logger.success("Pipeline completed successfully.")
