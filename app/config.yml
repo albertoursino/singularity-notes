@@ -56,7 +56,7 @@ params:
   homeInfoParams:
     Title: "Welcome to Singularity Notes! 🌌"
     Content: >
-      A fully automated blog delivering bite-sized articles on the latest astronomy discoveries—crafted by AI and driven by cutting-edge research. [Give a star on GitHub!](https://github.com/albertoursino/singularity-notes) ⭐
+      A fully automated blog delivering bite-sized articles on the latest astronomy discoveries—created by AI and driven by cutting-edge research. [Give a star on GitHub!](https://github.com/albertoursino/singularity-notes) ⭐
     
 
   # socialIcons:
