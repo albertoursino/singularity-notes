@@ -32,5 +32,5 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
-app = "hugo server -D --source app"
+app = "hugo server -D --source app --disableFastRender"
 pipe = "python run_pipeline.py"
