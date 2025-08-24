@@ -41,7 +41,7 @@ def create_raw_post(config: dict, output_dir: Path) -> None:
                 pdf_content += page.extract_text() or ""
 
         # Construct the prompt
-        with open("src/resources/prompt_create_article.txt", "r") as file:
+        with open("src/resources/prompt_create_post.txt", "r") as file:
             prompt = file.read()
 
         with Path("src/resources/article_schema.json").open() as f:
