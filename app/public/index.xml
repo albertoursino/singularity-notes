@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Singularity Notes</title>
+    <link>https://albertoursino.github.io/singularity-notes/</link>
+    <description>Recent content on Singularity Notes</description>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <copyright>PaperMod Contributors</copyright>
+    <lastBuildDate>Sun, 24 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://albertoursino.github.io/singularity-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>💥 Cosmic Collisions: How Merging Dead Stars Can Ignite the Brightest Bursts in the Universe</title>
+      <link>https://albertoursino.github.io/singularity-notes/posts/article_1756041746/</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://albertoursino.github.io/singularity-notes/posts/article_1756041746/</guid>
+      <description>A friendly tour of a powerful idea: gamma-ray bursts as the final fireworks of neutron-star and black hole pairs</description>
+    </item>
+    <item>
+      <title>🌌 Could The Gravity Constant Really Be Changing? How Gravitational Lensing Might Help Uncover the Universe’s Secrets</title>
+      <link>https://albertoursino.github.io/singularity-notes/posts/article_1755959180/</link>
+      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://albertoursino.github.io/singularity-notes/posts/article_1755959180/</guid>
+      <description>New research suggests that the way light bends around galaxies could reveal if the strength of gravity has shifted over cosmic time</description>
+    </item>
+  </channel>
+</rss>

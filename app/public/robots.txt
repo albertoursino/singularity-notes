@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://albertoursino.github.io/singularity-notes/sitemap.xml
