@@ -1,10 +1,10 @@
 [project]
-name = "singularity-notes-blog"
+name = "singularity-notes"
 version = "0.1.0"
-description = ""
+description = "Fully automated blog delivering articles written by AI on the latest astronomy discoveries."
 authors = [{ name = "Alberto Ursino", email = "Alberto.Ursino@k-ai.at" }]
 readme = "README.md"
-requires-python = ">=3.13,<4.0"
+requires-python = ">=3.13, <4.0"
 dependencies = [
     "hugo (>=0.148.1,<0.149.0)",
     "pre-commit (>=4.2.0,<5.0.0)",
@@ -32,5 +32,5 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
-app = "hugo server -D --source app"
+app = "hugo server -D --source app --disableFastRender"
 pipe = "python run_pipeline.py"

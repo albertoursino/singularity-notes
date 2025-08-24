@@ -51,7 +51,7 @@ params:
   homeInfoParams:
     Title: "Welcome to Singularity Notes! 🌌"
     Content: >
-      A fully automated blog delivering bite-sized articles on the latest astronomy discoveries—crafted by AI and driven by cutting-edge research. [Give a star on GitHub!](https://github.com/albertoursino/singularity-notes) ⭐
+      A fully automated blog delivering bite-sized articles on the latest astronomy discoveries—created by AI and driven by cutting-edge research. [Give a star on GitHub!](https://github.com/albertoursino/singularity-notes) ⭐
     
 
   # socialIcons:
@@ -71,7 +71,7 @@ params:
   # label:
   # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
   # text: "Home"
-  # icon: icon.png
+  # icon: icon.jpg
   # iconHeight: 35
 
   # analytics:
@@ -80,11 +80,12 @@ params:
 
   assets:
     disableHLJS: true
-  #     favicon: "<link / abs url>"
-  #     favicon16x16: "<link / abs url>"
-  #     favicon32x32: "<link / abs url>"
-  #     apple_touch_icon: "<link / abs url>"
-  #     safari_pinned_tab: "<link / abs url>"
+    # https://tools.beeimg.com/emoji/
+    favicon: "https://emoji.beeimg.com/🌌/microsoft" 
+    favicon16x16: "https://emoji.beeimg.com/🌌/microsoft"
+    favicon32x32: "https://emoji.beeimg.com/🌌/microsoft"
+    apple_touch_icon: "https://emoji.beeimg.com/🌌/microsoft"
+    safari_pinned_tab: "https://emoji.beeimg.com/🌌/microsoft"
 
   # cover:
   #     hidden: true # hide everywhere but not in structured data
