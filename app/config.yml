@@ -85,11 +85,12 @@ params:
 
   assets:
     disableHLJS: true
-    favicon: "https://emoji.beeimg.com/🌌"
-    favicon16x16: "https://emoji.beeimg.com/🌌"
-    favicon32x32: "https://emoji.beeimg.com/🌌"
-    apple_touch_icon: "https://emoji.beeimg.com/🌌"
-    safari_pinned_tab: "https://emoji.beeimg.com/🌌"
+    # https://tools.beeimg.com/emoji/
+    favicon: "https://emoji.beeimg.com/🌌/microsoft" 
+    favicon16x16: "https://emoji.beeimg.com/🌌/microsoft"
+    favicon32x32: "https://emoji.beeimg.com/🌌/microsoft"
+    apple_touch_icon: "https://emoji.beeimg.com/🌌/microsoft"
+    safari_pinned_tab: "https://emoji.beeimg.com/🌌/microsoft"
 
   # cover:
   #     hidden: true # hide everywhere but not in structured data
