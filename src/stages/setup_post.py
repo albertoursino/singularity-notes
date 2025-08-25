@@ -1,5 +1,6 @@
 from datetime import datetime
 import json
+import os
 from pathlib import Path
 import sys
 from time import time
@@ -53,11 +54,28 @@ def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
     )
 
     # Create a new post in Hugo
-    filename = f"article_{int(time())}.md"
-    hugo_post = Path("app") / "content" / "posts" / filename
+    posts_dir = Path("app") / "content" / "posts"
+    Path(posts_dir).mkdir(parents=True, exist_ok=True)
+    hugo_post = posts_dir / f"article_{int(time())}.md"
     with hugo_post.open("w") as f:
         f.write(header + content + credits)
         logger.success(f"Post successfully created at {str(hugo_post)!r}.")
+
+    used_articles_path = Path("used_articles.json")
+
+    # Update used articles if the file exists
+    if os.path.exists(used_articles_path):
+        with used_articles_path.open("r") as f:
+            used_articles = json.load(f)
+
+        used_articles.append(best_article_json)
+
+        with used_articles_path.open("w") as f:
+            json.dump(used_articles, f, indent=2)
+
+        logger.success(
+            f"Used articles updated successfully at {str(used_articles_path)!r}"
+        )
 
 
 if __name__ == "__main__":
