@@ -1,15 +1,28 @@
 # Welcome to Singularity Notes! 🌌
 
-A fully automated blog delivering bite-sized articles on the latest astronomy discoveries—crafted by AI and driven by cutting-edge research.
+A fully automated blog delivering bite-sized posts on the latest astronomy discoveries—created by AI and driven by cutting-edge research.
+
+The idea is to deploy a static website on GitHub Pages and daily update it with a new post.
+
+If you want to try out the webapp locally, follow the instructions from below.
 
 ## 🛠️ Installation
 
 1. Install Python environment
 
-   ```shell
-   python -m venv .venv
-   pip install -r requirements.txt
-   ```
+   - with [Poetry](https://python-poetry.org/)
+
+     ```shell
+     poetry config virtualenvs.in-project true --local
+     poetry install
+     ```
+
+   - with Python venv module
+
+     ```shell
+     python -m venv .venv
+     pip install -r requirements.txt
+     ```
 
 2. Create an `.env` file in the working directory and set the OpenAI key
 

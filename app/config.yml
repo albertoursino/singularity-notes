@@ -56,8 +56,7 @@ params:
   homeInfoParams:
     Title: "Welcome to Singularity Notes! 🌌"
     Content: >
-      A fully automated blog delivering bite-sized articles on the latest astronomy discoveries—created by AI and driven by cutting-edge research. [Give a star on GitHub!](https://github.com/albertoursino/singularity-notes) ⭐
-    
+      A fully automated blog delivering bite-sized posts on the latest astronomy discoveries—created by AI and driven by cutting-edge research. [Give a star on GitHub!](https://github.com/albertoursino/singularity-notes) ⭐
 
   # socialIcons:
   #   - name: github
@@ -86,7 +85,7 @@ params:
   assets:
     disableHLJS: true
     # https://tools.beeimg.com/emoji/
-    favicon: "https://emoji.beeimg.com/🌌/microsoft" 
+    favicon: "https://emoji.beeimg.com/🌌/microsoft"
     favicon16x16: "https://emoji.beeimg.com/🌌/microsoft"
     favicon32x32: "https://emoji.beeimg.com/🌌/microsoft"
     apple_touch_icon: "https://emoji.beeimg.com/🌌/microsoft"
@@ -106,7 +105,6 @@ params:
   #     minMatchCharLength: 0
   #     keys: ["title", "permalink", "summary", "content"]
 
-
 markup:
   goldmark:
     renderer:
@@ -118,7 +116,6 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
-
 # privacy:
 #   vimeo:
 #     disabled: false
