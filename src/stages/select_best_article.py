@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 import sys
 from typing import Any
@@ -87,36 +86,18 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
 
     # Get the PDF URL of the selected article
     pdf_url = ""
-    best_article_json = None
     for article in articles:
         if article.get("number") == number:
-            best_article_json = article
-
             pdf_url = article.get("pdf_url")
             logger.debug(f"Best article title: {article.get('title')}")
 
             article.pop("number")
 
+            # Save best article in a JSON file
             with (output_dir / "best_article.json").open("w") as f:
                 json.dump(article, f)
 
             break
-
-    used_articles_path = Path("used_articles.json")
-
-    # Update used articles if the file exists
-    if os.path.exists(used_articles_path):
-        with used_articles_path.open("r") as f:
-            used_articles = json.load(f)
-
-        used_articles.append(best_article_json)
-
-        with used_articles_path.open("w") as f:
-            json.dump(used_articles, f, indent=2)
-
-        logger.success(
-            f"Used articles updated successfully at {str(used_articles_path)!r}"
-        )
 
     response = requests.get(pdf_url)
     if response.status_code == 200:
