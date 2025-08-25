@@ -1,11 +1,10 @@
 from pathlib import Path
-import sys
 from typing import Any
 from loguru import logger
 import yaml
 
 
-OUTPUT_DIR = Path("output/")
+OUTPUT_DIR: Path = Path("output/")
 
 if __name__ == "__main__":
     from src.stages.select_best_article import select_best_article

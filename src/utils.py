@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Any
 from jsonschema import validate
 
 
@@ -9,7 +10,7 @@ def create_output_dir(output_dir: Path) -> Path:
     return output_dir
 
 
-def validate_json_data(data: dict, schema: dict) -> bool:
+def validate_json_data(data: dict[Any, Any], schema: dict[Any, Any]) -> bool:
     """
     Validate JSON data against the provided JSON Schema.
 

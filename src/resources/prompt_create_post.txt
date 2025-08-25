@@ -13,6 +13,7 @@ INSTRUCTIONS:
 
 STRUCTURE OF THE OUTPUT:
 - Generate a response in valid JSON format.
+- If you use escape characters, only "\n" is allowed.
 - You can use bold and italic like in Markdown.
 - Use paragraphs and bullet point lists.
 - The title and the section headers should always start with an emoji.
