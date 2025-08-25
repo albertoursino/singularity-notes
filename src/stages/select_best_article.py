@@ -14,7 +14,7 @@ import yaml
 load_dotenv()
 
 
-def select_best_article(config: dict, output_dir: Path):
+def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
     try:
         with (output_dir / "arxiv_articles.json").open() as f:
             articles = json.load(f)
@@ -44,7 +44,7 @@ def select_best_article(config: dict, output_dir: Path):
         while retries < config["max_retries"]:
             try:
                 client = OpenAI()
-                votes_dict = {}
+                votes_dict: dict[int, int] = {}
                 for i in tqdm(
                     range(config["reasoning_paths"]),
                     desc=f"Select the best article with model {config['model']!r}...",
@@ -60,7 +60,7 @@ def select_best_article(config: dict, output_dir: Path):
                         votes_dict[number] += 1
 
                 # Get the most common answer
-                number = max(votes_dict, key=votes_dict.get)
+                number = max(votes_dict, key=lambda x: votes_dict.get(x, 0))
 
                 output_tokens += len(response.output_text.split())
             except Exception as e:
@@ -75,18 +75,18 @@ def select_best_article(config: dict, output_dir: Path):
             )
             # TODO: send an email
             sys.exit(1)
+
+        logger.debug(f"# Votes to the best article: {votes_dict[number]}/{i + 1}")
+        logger.debug(
+            f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}"
+        )
+        logger.debug(f"# Used tokens in output: {output_tokens}")
     else:
         logger.info("Debug mode is enabled, skipping OpenAI API call...")
         number = 0
 
-    logger.debug(f"# Votes to the best article: {votes_dict[number]}/{i + 1}")
-    logger.debug(
-        f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}"
-    )
-    logger.debug(f"# Used tokens in output: {output_tokens}")
-
     # Get the PDF URL of the selected article
-    pdf_url = None
+    pdf_url = ""
     best_article_json = None
     for article in articles:
         if article.get("number") == number:
@@ -137,6 +137,9 @@ def select_best_article(config: dict, output_dir: Path):
         with (txt_file).open(mode="w") as f:
             f.write(pdf_content)
         logger.success(f"Raw content of the PDF saved at {str(txt_file)!r}")
+    else:
+        logger.error(f"Can't fetch the URL {pdf_url!r}.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

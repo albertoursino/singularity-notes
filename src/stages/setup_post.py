@@ -9,7 +9,7 @@ from loguru import logger
 import yaml
 
 
-def setup_post(config: dict, output_dir: Path):
+def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
     # Read the created article from the JSON file
     try:
         raw_post = output_dir / "raw_post.json"

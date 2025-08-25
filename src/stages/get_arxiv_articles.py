@@ -9,7 +9,7 @@ from loguru import logger
 import yaml
 
 
-def get_arxiv_articles(config: dict, output_dir: Path) -> None:
+def get_arxiv_articles(config: dict[Any, Any], output_dir: Path) -> None:
     # Initialize the arXiv client
     client = arxiv.Client()
 

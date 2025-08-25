@@ -15,10 +15,10 @@ from src.utils import validate_json_data
 load_dotenv()
 
 
-def create_raw_post(config: dict, output_dir: Path) -> None:
+def create_raw_post(config: dict[Any, Any], output_dir: Path) -> None:
     if config["debug"]:
         logger.info("Debug mode is enabled, skipping OpenAI API call...")
-        model_output = {
+        model_output = """{
             "title": "🌌 Unveiling The Secrets Of Blazing Cosmic Behemoths: How The SST-1M Telescope Is Sherpherding Our Understanding Of Markarian 421",
             "subtitle": "Cutting-edge observations shed light on one of the universe's most energetic and enigmatic objects",
             "sections": [
@@ -32,6 +32,7 @@ def create_raw_post(config: dict, output_dir: Path) -> None:
                 },
             ],
         }
+        """
     else:
         # Get PDF content
         pdf_content = ""
