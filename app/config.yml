@@ -49,9 +49,9 @@ params:
   images: []
 
   homeInfoParams:
-    Title: "Welcome to Singularity Notes! 🌌"
+    Title: "Galaxy lovers, hop aboard our blog! 🌌"
     Content: >
-      A fully automated blog delivering bite-sized posts on the latest astronomy discoveries—created by AI and driven by cutting-edge research. [Give a star on GitHub!](https://github.com/albertoursino/singularity-notes) ⭐
+      *Singularity Notes* is fully automated blog delivering bite-sized posts on the latest astronomy discoveries—created by AI and driven by cutting-edge research. [Give a star on GitHub!](https://github.com/albertoursino/singularity-notes) ⭐
 
   # socialIcons:
   #   - name: github
@@ -79,12 +79,12 @@ params:
 
   assets:
     disableHLJS: true
-    # https://tools.beeimg.com/emoji/
-    favicon: "https://emoji.beeimg.com/🌌/microsoft"
-    favicon16x16: "https://emoji.beeimg.com/🌌/microsoft"
-    favicon32x32: "https://emoji.beeimg.com/🌌/microsoft"
-    apple_touch_icon: "https://emoji.beeimg.com/🌌/microsoft"
-    safari_pinned_tab: "https://emoji.beeimg.com/🌌/microsoft"
+    # https://tools.beeimg.com/emoji/, https://gist.github.com/FlyteWizard/468c0a0a6c854ed5780a32deb73d457f
+    favicon: https://github.githubassets.com/images/icons/emoji/unicode/1f320.png?v8
+    favicon16x16: https://github.githubassets.com/images/icons/emoji/unicode/1f320.png?v8
+    favicon32x32: https://github.githubassets.com/images/icons/emoji/unicode/1f320.png?v8
+    apple_touch_icon: https://github.githubassets.com/images/icons/emoji/unicode/1f320.png?v8
+    safari_pinned_tab: https://github.githubassets.com/images/icons/emoji/unicode/1f320.png?v8
 
   # cover:
   #     hidden: true # hide everywhere but not in structured data
