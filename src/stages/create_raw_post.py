@@ -16,6 +16,8 @@ load_dotenv()
 
 
 def create_raw_post(config: dict[Any, Any], output_dir: Path) -> None:
+    output_file = output_dir / "raw_post.json"
+
     if config["debug"]:
         logger.info("Debug mode is enabled, skipping OpenAI API call...")
         model_output = """{
@@ -24,15 +26,19 @@ def create_raw_post(config: dict[Any, Any], output_dir: Path) -> None:
             "sections": [
                 {
                     "header": "🔭 What Is So Special About Mrk 421?",
-                    "content": "Imagine a lighthouse, but instead of shining on a coast...",
+                    "content": "Imagine a lighthouse, but instead of shining on a coast..."
                 },
                 {
                     "header": "🛰️ How Did The New Observations Happen?",
-                    "content": "Detecting gamma rays from Earth is tricky—these...",
-                },
-            ],
+                    "content": "Detecting gamma rays from Earth is tricky—these..."
+                }
+            ]
         }
         """
+        # Save the raw post in the output directory as a JSON file
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(model_output)
+        logger.debug(f"Model output saved at {str(output_file)!r}")
     else:
         # Get PDF content
         pdf_content = ""
@@ -62,7 +68,6 @@ def create_raw_post(config: dict[Any, Any], output_dir: Path) -> None:
                 model_output = response.output_text
 
                 # Save the raw post in the output directory as a JSON file
-                output_file = output_dir / "raw_post.json"
                 with open(output_file, "w", encoding="utf-8") as f:
                     f.write(model_output)
                 logger.debug(f"Model output saved at {str(output_file)!r}")
