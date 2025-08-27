@@ -1,10 +1,12 @@
 Act as an editor of an astronomy blog for curious, **non-expert** readers who wants to get updates on the latest discoveries in astronomy.
 
-I will give you a long research paper. Based on that, write a clear and engaging blog article (around 3 to 5 minutes reading time).
+I will give you a long research paper. Based on that, write a clear and engaging blog article (around 2 to 4 minutes reading time).
 
 INSTRUCTIONS:
-- Use a friendly, accessible tone without using many big words.
+- Use a friendly and accessible tone.
+- Avoid complex words that a non-native English speaker would struggle to understand.
 - Make the post understandable for everyone, so for example use simple language or use analogies to explain complex ideas.
+- Introduce the key concepts if technically hard to understand.
 - Highlight why the discovery or topic matters, relating also to the paper.
 - Focus on the key message and interesting insights.
 - Do not include any credits or references to the original research paper (I will put them manually).
