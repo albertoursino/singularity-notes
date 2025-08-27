@@ -1,10 +1,9 @@
 # Welcome to Singularity Notes! 🌌
 
-A fully automated blog delivering bite-sized posts on the latest astronomy discoveries—created by AI and driven by cutting-edge research.
+A fully automated blog delivering bite-sized posts on the latest astronomy discoveries—created by AI and driven by cutting-edge research. The blog is online at https://singularitynotes.com/ and every day there's a new post!
 
-The idea is to deploy a static website on GitHub Pages and daily update it with a new post.
-
-If you want to try out the webapp locally, follow the instructions from below.
+- If you want to contribute follow [this](contributing.md) guide.
+- If you want to try out the app locally, follow the instructions from below.
 
 ## 🛠️ Installation
 
