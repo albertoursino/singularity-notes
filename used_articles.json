@@ -38,5 +38,21 @@
     "summary": "Gravitational-wave interferometers are expected to monitor the last three\nminutes of inspiral and final coalescence of neutron star and black hole\nbinaries at distances approaching cosmological, where the event rate may be\nmany per year. Because the binary's accumulated orbital phase can be measured\nto a fractional accuracy $\\ll 10^{-3}$ and relativistic effects are large, the\nwaveforms will be far more complex, carry more information, and be far harder\nto model theoretically than has been expected. Theorists must begin now to lay\na foundation for extracting the waves' information.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9208005v1",
     "arxiv_id": "astro-ph/9208005v1"
+  },
+  {
+    "title": "Binary Black Holes in Stationary Orbits",
+    "authors": "Sandip K. Chakrabarti",
+    "published": "1992-08-27",
+    "summary": "We show that under certain astrophysical conditions a binary system\nconsisting of two compact objects can be stabilized against indefinite\nshrinking of orbits due to the emission of gravitational radiation. In this\ncase, the lighter binary companion settles down to a stable orbit when the loss\nof the angular momentum due to gravitational radiation becomes equal to its\ngain from the accreting matter from the disk around the more massive primary.\nWe claim that such systems can be stable against small perturbations and can be\nregarded as steady emitters of gravitational waves of constant frequency and\namplitude. Furthermore, X-rays emitted by the secondary can also produce\nastrophysically interesting situations when coupled with gravitational lensing\nand Doppler effects.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9208006v1",
+    "arxiv_id": "astro-ph/9208006v1"
+  },
+  {
+    "title": "The Implications of the COBE-DMR Results for Cosmic Strings",
+    "authors": "David P. Bennett, Albert Stebbins, Francois R. Bouchet",
+    "published": "1992-06-18",
+    "summary": "We compare the anisotropies in the cosmic microwave background radiation\nmeasured by the COBE experiment to the predictions of cosmic strings. We use an\nanalytic model for the $\\Delta T/T$ power spectrum that is based on our\nprevious numerical simulations to show that the COBE results imply a value for\nthe string mass per unit length, $\\mu$ under the assumption that cosmic strings\nare the source of the measured anisotropy. We find $G\\mu = 1.5\\pm 0.5 \\times\n10^{-6}$ which is consistent with the value of $\\mu$ thought to be required for\ncosmic strings to seed galaxy formation.",
+    "pdf_url": "http://arxiv.org/pdf/hep-ph/9206233v1",
+    "arxiv_id": "hep-ph/9206233v1"
   }
 ]
