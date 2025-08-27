@@ -56,7 +56,7 @@ def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
     # Create a new post in Hugo
     posts_dir = Path("app") / "content" / "posts"
     Path(posts_dir).mkdir(parents=True, exist_ok=True)
-    hugo_post = posts_dir / f"article_{int(time())}.md"
+    hugo_post = posts_dir / f"post_{int(time())}.md"
     with hugo_post.open("w") as f:
         f.write(header + content + credits)
         logger.success(f"Post successfully created at {str(hugo_post)!r}.")

@@ -1,6 +1,6 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://singularity-notes/"
+baseURL: "https://albertoursino.github.io/singularity-notes/"
 title: Singularity Notes
 copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
 theme: [hugo-PaperMod]
@@ -20,11 +20,6 @@ minify:
 pagination:
   disableAliases: false
   pagerSize: 5
-
-languages:
-  blog:
-    languageName: "Blog"
-    weight: 1
 
 outputs:
   home:

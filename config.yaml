@@ -2,13 +2,13 @@
 debug: false
 
 # Check out all OpenAI models here: https://platform.openai.com/docs/models
-model: gpt-4.1-nano
+model: gpt-5
 
 # Number of articles to fetch from arXiv
-number_of_articles: 10 
+number_of_articles: 50
 
 # Number of retries if the model doesn't give a well-formatted response
 max_retries: 1
 
 # Number of times LLM select the best article. Related to the technique "Self-consistency".
-reasoning_paths: 1
+reasoning_paths: 5
