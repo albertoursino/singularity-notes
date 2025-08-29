@@ -1,0 +1,68 @@
+name: Create a new post
+
+permissions: write-all
+
+on:
+  schedule: 
+    # Executes every midnight
+    - cron: "0 0 * * *" 
+  workflow_dispatch:
+
+jobs:
+  create_new_post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout "gh-pages" branch
+        uses: actions/checkout@v5
+        with:
+          ref: gh-pages
+      
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          pip install --user -r requirements.txt
+
+      - name: Run pipeline
+        run: poe pipe
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-outputs
+          path: |
+            used_articles.json
+            app/content/posts
+
+  push_artifacts:
+    runs-on: ubuntu-latest
+    needs: create_new_post
+    steps:
+      - name: Checkout "gh-pages" branch
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false # Otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          ref: gh-pages
+
+      - name: Download pipeline outputs
+        uses: actions/download-artifact@v5
+        with:
+          name: pipeline-outputs
+      
+      - name: Commit artifacts to "gh-pages"
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
+          git add .
+          git commit -m "chore: new post"
+      
+      - name: Push artifacts to "gh-pages"
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT}}
+          branch: gh-pages
