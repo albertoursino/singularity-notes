@@ -22,7 +22,7 @@ if __name__ == "__main__":
     get_arxiv_articles(config, OUTPUT_DIR)
     logger.info("Selecting the best article...")
     select_best_article(config, OUTPUT_DIR)
-    logger.info("Creating article...")
+    logger.info("Creating raw post...")
     create_raw_post(config, OUTPUT_DIR)
     logger.info("Setting up post...")
     setup_post(config, OUTPUT_DIR)
