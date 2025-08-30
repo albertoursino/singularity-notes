@@ -62,5 +62,13 @@
     "summary": "Naked singularities appear naturally in dynamically evolving solutions of\nEinstein equations involving gravitational collapse of radiation, dust and\nperfect fluids, provided the rate of accretion is less than a critical value.\nWe propose that the gamma-ray bursters (GRBs) are examples of these naked\nsingularity solutions. For illustration, we show that according to solutions\ninvolving spherically symmetric collapse of pure radiation field, the energy\n$E_\\gamma$ and the observed duration $\\Delta t_o$ of a GRB should satisfy,\n$\\frac{E_\\gamma}{\\Delta t_o} \\leq 4.5 \\times 10^{58} \\ f_\\gamma $ erg\nsec$^{-1}$, $f_\\gamma$ being the fraction ($10^{-2}$ to $10^{-3}$) of energy\nreleased as gamma rays. All the presently observed GRBs satisfy this condition;\nthose satisfying the condition close to equality must necessarily be of\ncosmological origin with the red-shift factor $z$ not exceeding $\\sim 2-10$\ndepending on exact observed flux.",
     "pdf_url": "http://arxiv.org/pdf/hep-th/9208060v2",
     "arxiv_id": "hep-th/9208060v2"
+  },
+  {
+    "title": "The Ptolemaic Gamma-Ray Burst Universe",
+    "authors": "J. I. Katz",
+    "published": "1992-04-29",
+    "summary": "The BATSE experiment on GRO has demonstrated the isotropic arrival directions\nand flat $\\log N$ {\\it vs.} $\\log S$ of cosmic gamma-ray bursts. These data are\nbest explained if the burst sources are distributed throughout an extended\nspherical Galactic halo, as previously suggested by Jennings. The halo's radius\nis at least 40 Kpc, and probably is more than 100 Kpc. I consider possible\norigins of this halo, including primordial formation and neutron stars\nrecoiling from their birthplaces in the Galactic disc. A simple geometrical\nmodel leads to a predicted relation between the dipole and quadrupole\nanisotropy. I suggest that neutron stars born with low recoil become\nmillisecond pulsars, while those born with high recoil become the sources of\ngamma-ray bursts; these populations are nearly disjoint. Quiescent counterparts\nof gamma-ray bursts are predicted to be undetectably faint.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9204003v2",
+    "arxiv_id": "astro-ph/9204003v2"
   }
 ]
