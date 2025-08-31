@@ -70,5 +70,13 @@
     "summary": "The BATSE experiment on GRO has demonstrated the isotropic arrival directions\nand flat $\\log N$ {\\it vs.} $\\log S$ of cosmic gamma-ray bursts. These data are\nbest explained if the burst sources are distributed throughout an extended\nspherical Galactic halo, as previously suggested by Jennings. The halo's radius\nis at least 40 Kpc, and probably is more than 100 Kpc. I consider possible\norigins of this halo, including primordial formation and neutron stars\nrecoiling from their birthplaces in the Galactic disc. A simple geometrical\nmodel leads to a predicted relation between the dipole and quadrupole\nanisotropy. I suggest that neutron stars born with low recoil become\nmillisecond pulsars, while those born with high recoil become the sources of\ngamma-ray bursts; these populations are nearly disjoint. Quiescent counterparts\nof gamma-ray bursts are predicted to be undetectably faint.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9204003v2",
     "arxiv_id": "astro-ph/9204003v2"
+  },
+  {
+    "title": "Particle Acceleration in (by) Accretion Discs",
+    "authors": "J. I. Katz",
+    "published": "1992-05-04",
+    "summary": "I present a model for acceleration of protons by the second-order Fermi\nprocess acting on randomly scrambled magnetic flux arches above an accretion\ndisc. The accelerated protons collide with thermal protons in the disc,\nproducing degraded energetic protons, charged and neutral pions, and neutrons.\nThe pions produce gamma-rays by spontaneous decay of $\\pi^0$ and by\nbremsstrahlung and Compton processes following the decay of $\\pi^\\pm$ to\n$e^\\pm$.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9205003v1",
+    "arxiv_id": "astro-ph/9205003v1"
   }
 ]
