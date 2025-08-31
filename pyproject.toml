@@ -2,7 +2,7 @@
 name = "singularity-notes"
 version = "0.1.0"
 description = "Fully automated blog delivering posts written by AI on the latest astronomy discoveries."
-authors = [{ name = "Alberto Ursino", email = "Alberto.Ursino@k-ai.at" }]
+authors = [{ name = "Alberto Ursino", email = "albertoursino98@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.13, <4.0"
 dependencies = [

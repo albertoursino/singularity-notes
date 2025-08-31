@@ -5,7 +5,7 @@ permissions: write-all
 on:
   schedule: 
     # Executes every midnight
-    - cron: "0 0 * * *" 
+    - cron: "1 0 * * *" 
   workflow_dispatch:
 
 jobs:
@@ -64,5 +64,5 @@ jobs:
       - name: Push artifacts to "gh-pages"
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.PAT}}
+          github_token: ${{ secrets.PAT }}
           branch: gh-pages
