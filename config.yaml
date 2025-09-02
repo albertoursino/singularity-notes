@@ -5,10 +5,10 @@ debug: false
 model: gpt-5
 
 # Number of articles to fetch from arXiv
-number_of_articles: 50
+number_of_articles: 100
 
 # Number of retries if the model doesn't give a well-formatted response
-max_retries: 1
+max_retries: 5
 
 # Number of times LLM select the best article. Related to the technique "Self-consistency".
 reasoning_paths: 5
