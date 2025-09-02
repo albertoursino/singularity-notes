@@ -134,3 +134,11 @@ markup:
 #     disableInlineCSS: true
 #   x:
 #     disableInlineCSS: true
+
+sitemap:
+  disable: false
+  filename: sitemap.xml
+
+disableKinds:
+  - taxonomy
+  - term
