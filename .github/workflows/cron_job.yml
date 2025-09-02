@@ -5,7 +5,7 @@ permissions: write-all
 on:
   schedule:
     # Executes every midnight
-    - cron: "1 0 * * *"
+    - cron: "1 0 * * */2"
   workflow_dispatch:
 
 jobs:
