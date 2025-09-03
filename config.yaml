@@ -11,4 +11,4 @@ number_of_articles: 100
 max_retries: 5
 
 # Number of times LLM select the best article. Related to the technique "Self-consistency".
-reasoning_paths: 5
+reasoning_paths: 1
