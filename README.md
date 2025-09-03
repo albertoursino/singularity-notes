@@ -28,7 +28,7 @@ A fully automated blog delivering bite-sized posts on the latest astronomy disco
 
 ## 🚀 Quickstart
 
-Launch the app with
+Launch the web app locally with
 
 ```shell
 poe app
