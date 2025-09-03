@@ -94,5 +94,13 @@
     "summary": "We present an in depth discussion of the production of gravitational waves\nfrom an inflationary phase that could have occurred in the early universe,\ngiving derivations for the resulting spectrum and energy density. We also\nconsider the large-scale anisotropy in the cosmic microwave background\nradiation coming from these waves. Assuming that the observed quadrupole\nanisotropy comes mostly from gravitational waves (consistent with the\npredictions of a flat spectrum of scalar density perturbations and the measured\ndipole anisotropy) we describe in detail how to derive a value for the scale of\ninflation of $(1.5-5)\\times 10^{16}$GeV, which is at a particularly interesting\nscale for particle physics. This upper limit corresponds to a 95\\% confidence\nlevel upper limit on the scale of inflation assuming only that the quadrupole\nanisotropy from gravitational waves is not cancelled by another source. Direct\ndetection of gravitational waves produced by inflation near this scale will\nhave to wait for the next generation of detectors.",
     "pdf_url": "http://arxiv.org/pdf/hep-ph/9207239v1",
     "arxiv_id": "hep-ph/9207239v1"
+  },
+  {
+    "title": "On the COBE Discovery - for Pedestrians",
+    "authors": "Leszek Roszkowski",
+    "published": "1992-11-02",
+    "summary": "A recent discovery by the COBE satellite is presented, and its importance\ndiscussed in the context of the physics of the early Universe. The various\nimplications for our understanding of the structure of the Universe are\noutlined.",
+    "pdf_url": "http://arxiv.org/pdf/hep-ph/9211201v1",
+    "arxiv_id": "hep-ph/9211201v1"
   }
 ]
