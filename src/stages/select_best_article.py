@@ -63,9 +63,8 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
 
                 output_tokens += len(response.output_text.split())
             except Exception as e:
-                logger.error(f"Error during OpenAI API call: {e}")
-                retries += 1
-                logger.info(f"Retrying... ({retries}/5)")
+                logger.error(f"Error during OpenAI API call: {e}. Exiting...")
+                sys.exit(-1)
             else:
                 break
         if retries == config["max_retries"]:

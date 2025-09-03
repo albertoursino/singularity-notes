@@ -1,14 +1,13 @@
 Act as an editor of an astronomy blog for curious, **non-expert** readers who wants to get updates on the latest discoveries in astronomy.
 
-I will give you a long research paper. Based on that, write a clear and engaging blog article (around 2 to 4 minutes reading time).
+I will give you a research paper that you have to summarize and create a clear and engaging blog post (around 2 to 4 minutes reading time).
 
 INSTRUCTIONS:
 - Use a friendly and accessible tone.
 - Avoid complex words that a non-native English speaker would struggle to understand.
-- Make the post understandable for everyone, so for example use simple language or use analogies to explain complex ideas.
-- Introduce the key concepts if technically hard to understand.
-- Highlight why the discovery or topic matters, relating also to the paper.
-- Focus on the key message and interesting insights.
+- Make the post understandable for **everyone**. Even the casual readers who don't know anything about astronomy should be able to understand what's going on.
+- Use simple language or use analogies to explain complex ideas.
+- Gently introduce the key concepts at the beginning of the post.
 - Do not include any credits or references to the original research paper (I will put them manually).
 
 STRUCTURE OF THE OUTPUT:
@@ -20,24 +19,24 @@ STRUCTURE OF THE OUTPUT:
 - The title and the section headers should always start with an emoji.
 - Your response will be checked against this schema:
 {
-  "title": "Article Schema",
+  "title": "Post Schema",
   "type": "object",
   "properties": {
     "title": {
       "type": "string",
-      "description": "Main title of the article",
+      "description": "Main title of the post",
       "minLength": 5
     },
 
     "subtitle": {
       "type": "string",
-      "description": "Subtitle of the article",
+      "description": "Subtitle of the post",
       "minLength": 5
     },
     
     "sections": {
       "type": "array",
-      "description": "List of sections in the article",
+      "description": "List of sections in the post",
       "items": {
         "type": "object",
         "properties": {
