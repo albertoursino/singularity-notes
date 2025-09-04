@@ -102,5 +102,13 @@
     "summary": "A recent discovery by the COBE satellite is presented, and its importance\ndiscussed in the context of the physics of the early Universe. The various\nimplications for our understanding of the structure of the Universe are\noutlined.",
     "pdf_url": "http://arxiv.org/pdf/hep-ph/9211201v1",
     "arxiv_id": "hep-ph/9211201v1"
+  },
+  {
+    "title": "Extended Hot Gas Halos Around Starburst Galaxies",
+    "authors": "Kohji Tomisaka, Joel N. Bregman",
+    "published": "1992-09-12",
+    "summary": "Reanalysis of Einstein IPC data and new observations from the GINGA\n  LAC indicate the presence of extended X-ray emission (10-50 kpc) around the\nstarburst galaxy M82. Here we model this emission by calculating numerical\nhydrodynamic simulations of the starburst event to much later times and larger\nscales than previously considered. For our models, we adopt a supernova rate of\n0.1 ${\\rm yr}^{-1}$, and an extended low-density static halo that is bound to\nthe galaxy. There are three stages to the evolution of the wind-blown bubble\nand the propagation of the shock front: the bubble expands in an almost uniform\ndensity disk gas, with a deceleration of the shock front ($t \\alt $ 3.6 Myr);\nbreakout from the disk and the upward acceleration of the shock front (3.6\n  Myr $\\alt t \\alt$ 18 Myr); propagation into the halo, leading to a more\nspherical system and shock deceleration (18 Myr $\\alt t$). For a halo density\nof $10^{-3} {\\rm cm}^{-3}$, the outflow reaches a distance of 40-50 kpc from\nthe center of the starburst galaxy in 50 Myr. We calculate the time evolution\nof the X-ray luminosity and find that the extended starburst emits $3\\times\n10^{39}\\lcgs$ to $10^{40}\\lcgs$ in the\n  GINGA LAC band and $\\sim 10^{41}\\lcgs$ in the Einstein or ROSAT\n  HRI band. The degree of the ionization equilibrium in the outflow and its\neffect on the iron K$\\alpha$ line emission are discussed.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9209002v1",
+    "arxiv_id": "astro-ph/9209002v1"
   }
 ]
