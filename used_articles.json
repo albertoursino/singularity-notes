@@ -118,5 +118,13 @@
     "summary": "The presence of brown dwarfs in the dark galactic halo could be detected\nthrough their gravitational lensing effect and experiments under way monitor\nabout one million stars to observe a few lensing events per year. We show that\nif the photon flux from a galaxy is measured with a good precision, it is not\nnecessary to resolve the stars and besides more events could be observed.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9211002v1",
     "arxiv_id": "astro-ph/9211002v1"
+  },
+  {
+    "title": "Searching for TeV dark matter by atmospheric Cerenkov techniques",
+    "authors": "M. Urban, A. Bouquet, B. Degrange, P. Fleury, J. Kaplan, A. L. Melchior, E. Par\u00e9",
+    "published": "1992-08-27",
+    "summary": "There is a growing interest in the possibility that dark matter could be\nformed of weakly interacting particles with a mass in the 100 GeV - 2 TeV\nrange, and supersymmetric particles are favorite candidates. If they constitute\nthe dark halo of our Galaxy, their mutual annihilations produce energetic gamma\nrays that could be detected using existing atmospheric \\u{C}erenkov techniques.",
+    "pdf_url": "http://arxiv.org/pdf/hep-ph/9208255v1",
+    "arxiv_id": "hep-ph/9208255v1"
   }
 ]
