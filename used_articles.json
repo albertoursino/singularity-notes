@@ -126,5 +126,13 @@
     "summary": "There is a growing interest in the possibility that dark matter could be\nformed of weakly interacting particles with a mass in the 100 GeV - 2 TeV\nrange, and supersymmetric particles are favorite candidates. If they constitute\nthe dark halo of our Galaxy, their mutual annihilations produce energetic gamma\nrays that could be detected using existing atmospheric \\u{C}erenkov techniques.",
     "pdf_url": "http://arxiv.org/pdf/hep-ph/9208255v1",
     "arxiv_id": "hep-ph/9208255v1"
+  },
+  {
+    "title": "Centri`fugal' Force around a Black Hole",
+    "authors": "A. Y. Shiekh",
+    "published": "1992-11-08",
+    "summary": "Besides having some very interesting perturbatively unstable orbits, it seems\nthat for a Schwarzschild black hole, below $r=3M$, the force always increases\ninward with increasing angular momentum. Here this previously known result is\nderived with greater simplicity, and a similar analysis is performed for black\nholes with angular momentum and charge.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9211005v2",
+    "arxiv_id": "astro-ph/9211005v2"
   }
 ]
