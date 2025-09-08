@@ -134,5 +134,13 @@
     "summary": "Besides having some very interesting perturbatively unstable orbits, it seems\nthat for a Schwarzschild black hole, below $r=3M$, the force always increases\ninward with increasing angular momentum. Here this previously known result is\nderived with greater simplicity, and a similar analysis is performed for black\nholes with angular momentum and charge.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9211005v2",
     "arxiv_id": "astro-ph/9211005v2"
+  },
+  {
+    "title": "Detection, Measurement and Gravitational Radiation",
+    "authors": "Lee Samuel Finn",
+    "published": "1992-09-24",
+    "summary": "Here I examine how to determine the sensitivity of the LIGO, VIRGO, and LAGOS\ngravitational wave detectors to sources of gravitational radiation by\nconsidering the process by which data are analyzed in a noisy detector. By\nconstructing the probability that the detector output is consistent with the\npresence of a signal, I show how to (1) quantify the uncertainty that the\noutput contains a signal and is not simply noise, and (2) construct the\nprobability distribution that the signal parameterization has a certain value.\n  From the distribution and its mode I determine volumes $V(P)$ in parameter\nspace such that actual signal parameters are in $V(P)$ with probability $P$. If\nwe are {\\em designing} a detector, or determining the suitability of an\nexisting detector for observing a new source, then we don't have detector\noutput to analyze but are interested in the ``most likely'' response of the\ndetector to a signal. I exploit the techniques just described to determine the\n``most likely'' volumes $V(P)$ for detector output corresponding to the source.\nFinally, as an example, I apply these techniques to anticipate the sensitivity\nof the LIGO and LAGOS detectors to the gravitational radiation from a perturbed\nKerr black hole.",
+    "pdf_url": "http://arxiv.org/pdf/gr-qc/9209010v1",
+    "arxiv_id": "gr-qc/9209010v1"
   }
 ]
