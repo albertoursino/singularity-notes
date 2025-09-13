@@ -150,5 +150,13 @@
     "summary": "As part of a stellar population sampling program, a series of photometric\nprobes at various field sizes and depths have been obtained in a low extinction\nwindow in the galactic anticentre direction. Such data set strong constraints\non the radial structure of the disc. At the forefront of this \"drilling\"\nprogram, very deep CCD frames probe the most external parts of the disc. Over\nthe whole effective magnitude range (18 to 25), all contributions in the\nstatistics which should be expected from old disc stars beyond 6 kpc vanish,\nalthough such stars dominate by far at distances less than 5 kpc. This is the\nsignature of a sharp cut-off in the star density: the edge of the galactic disc\nbetween 5.5 and 6 kpc. As a consequence, the galactic radius does not exceed 14\nkpc (assuming $R/-/(//sun/)$=8.5). Colours of elliptical galaxies measured in\nthe field rule out the risk of being misled by undetected extinction.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9210001v1",
     "arxiv_id": "astro-ph/9210001v1"
+  },
+  {
+    "title": "Evidence for a Very Broad Line Region in PG 1138+222",
+    "authors": "Paolo Marziani, Jack W. Sulentic",
+    "published": "1992-10-20",
+    "summary": "We present a high S/N spectrum for the quasar PG 1138+222. We detect a very\nbroad HeII$\\lambda$4686 emission line component with twice the FWHM of the\nconventional broad line region (BLR) as evidenced by the Balmer lines. The\nprofile shape and centroid redshift also distinguish this HeII component from\nthe BLR features. The large ratio of HeII\\l 4686 to any analogous H$\\beta$\nemission component is an indicator that it arises in a very high density region\n($n_e \\simgt 10^{11}-10^{13}$ \\cm3). This Helium component is probably emitted\nin a Very Broad Line Region (VBLR), where the radiation field is so strong that\nthe Str\\\"omgren depth becomes similar to the geometrical thickness of the\nemitting clouds. The gas could therefore be optically thin to the Lyman\ncontinuum.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9210005v1",
+    "arxiv_id": "astro-ph/9210005v1"
   }
 ]
