@@ -158,5 +158,13 @@
     "summary": "We present a high S/N spectrum for the quasar PG 1138+222. We detect a very\nbroad HeII$\\lambda$4686 emission line component with twice the FWHM of the\nconventional broad line region (BLR) as evidenced by the Balmer lines. The\nprofile shape and centroid redshift also distinguish this HeII component from\nthe BLR features. The large ratio of HeII\\l 4686 to any analogous H$\\beta$\nemission component is an indicator that it arises in a very high density region\n($n_e \\simgt 10^{11}-10^{13}$ \\cm3). This Helium component is probably emitted\nin a Very Broad Line Region (VBLR), where the radiation field is so strong that\nthe Str\\\"omgren depth becomes similar to the geometrical thickness of the\nemitting clouds. The gas could therefore be optically thin to the Lyman\ncontinuum.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9210005v1",
     "arxiv_id": "astro-ph/9210005v1"
+  },
+  {
+    "title": "Topological Defect Models of Structure Formation After the COBE Discovery of CMB Anisotropies",
+    "authors": "Robert H. Brandenberger",
+    "published": "1992-10-24",
+    "summary": "The COBE satellite has discovered anisotropies in the cosmic microwave\nbackground (CMB) consistent with a scale invariant spectrum of density\nperturbations. As reviewed in this lecture, topological defect models of\nstructure formation generically produce such a spectrum. We give a summary of\nthe cosmic string and global texture models, focusing on distinct observational\nsignatures in large-scale structure surveys and in the microwave background. It\nis shown that the amplitude of the CMB quadrupole detected by COBE is in good\nagreement with the predictions of the cosmic string model.",
+    "pdf_url": "http://arxiv.org/pdf/hep-ph/9210261v1",
+    "arxiv_id": "hep-ph/9210261v1"
   }
 ]
