@@ -174,5 +174,13 @@
     "summary": "We introduce an approximation to calculate the gravitational radiation\nproduced by the collision of true-vacuum bubbles that is simple enough to allow\nthe simulation of a phase transition by the collision of hundreds of bubbles.\nThis ``envelope approximation'' neglects the complicated ``overlap'' regions of\ncolliding bubbles and follows only the evolution of the bubble walls. The\napproximation accurately reproduces previous results for the gravitational\nradiation from the collision of two scalar-field vacuum bubbles. Using a bubble\nnucleation rate given by $\\Gamma = \\Gamma_0 e^{\\beta t}$, we simulate a phase\ntransition by colliding 20 to 200 bubbles; the fraction of vacuum energy\nreleased into gravity waves is $E_{\\rm GW}/E_{\\rm vac} = 0.06(H/\\beta)^2$ and\nthe peak of the spectrum occurs at $\\omega_{\\rm max}=1.6\\beta$ ($H^2=8\\pi G\\rho\n/3$ is the Hubble constant associated with the false-vacuum phase). The\nspectrum is very similar to that in the two-bubble case, except that the\nefficiency of gravity-wave generation is about five times higher, presumably\ndue to the fact that a given bubble collides with many others. Finally, we\nconsider two further ``statistical'' approximations, where the gravitational\nradiation is computed as an incoherent sum over individual bubbles weighted by\nthe distribution of bubble sizes. These approximations provide reasonable\nestimates of the gravitational-wave spectrum with far less computation.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9211004v1",
     "arxiv_id": "astro-ph/9211004v1"
+  },
+  {
+    "title": "Gauge Field Back-reaction on a Black Hole",
+    "authors": "David Hochberg, Thomas W. Kephart",
+    "published": "1992-11-05",
+    "summary": "The order $\\hbar$ fluctuations of gauge fields in the vicinity of a blackhole\ncan create a repulsive antigravity region extending out beyond the renormalized\nSchwarzschild horizon. If the strength of this repulsive force increases as\nhigher orders in the back-reaction are included, the formation of a\nwormhole-like object could occur.",
+    "pdf_url": "http://arxiv.org/pdf/gr-qc/9211008v1",
+    "arxiv_id": "gr-qc/9211008v1"
   }
 ]
