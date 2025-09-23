@@ -182,5 +182,13 @@
     "summary": "The order $\\hbar$ fluctuations of gauge fields in the vicinity of a blackhole\ncan create a repulsive antigravity region extending out beyond the renormalized\nSchwarzschild horizon. If the strength of this repulsive force increases as\nhigher orders in the back-reaction are included, the formation of a\nwormhole-like object could occur.",
     "pdf_url": "http://arxiv.org/pdf/gr-qc/9211008v1",
     "arxiv_id": "gr-qc/9211008v1"
+  },
+  {
+    "title": "COBE vs Cosmic Strings: An Analytical Model",
+    "authors": "Leandros Perivolaropoulos",
+    "published": "1992-08-25",
+    "summary": "We construct a simple analytical model to study the effects of cosmic strings\non the microwave background radiation. Our model is based on counting random\nmultiple impulses inflicted on photon trajectories by the string network\nbetween the time of recombination and today. We construct the temperature\nauto-correlation function and use it to obtain the effective power spectrum\nindex n, the rms-quadrupole-normalized amplitude $Q_{rms-PS}$ and the rms\ntemperature variation smoothed on small angular scales. For the values of the\nscaling solution parameters obtained in Refs.\\cite{bb90},\\cite{as90} we obtain\n$n=1.14 \\pm 0.5$, $Q_{rms-PS}=(4.5\\pm 1.5) G\\mu$ and $({{\\Delta T}\\over\nT})_{rms}=5.5 G\\mu$. Demanding consistency of these results with the COBE data\nleads to $G\\mu=(1.7 \\pm 0.7)\\times 10^{-6}$ (where $\\mu$ is the string mass per\nunit length), in good agreement with direct normalizations of $\\mu$ from\nobservations.",
+    "pdf_url": "http://arxiv.org/pdf/hep-ph/9208247v1",
+    "arxiv_id": "hep-ph/9208247v1"
   }
 ]
