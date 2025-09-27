@@ -190,5 +190,13 @@
     "summary": "We construct a simple analytical model to study the effects of cosmic strings\non the microwave background radiation. Our model is based on counting random\nmultiple impulses inflicted on photon trajectories by the string network\nbetween the time of recombination and today. We construct the temperature\nauto-correlation function and use it to obtain the effective power spectrum\nindex n, the rms-quadrupole-normalized amplitude $Q_{rms-PS}$ and the rms\ntemperature variation smoothed on small angular scales. For the values of the\nscaling solution parameters obtained in Refs.\\cite{bb90},\\cite{as90} we obtain\n$n=1.14 \\pm 0.5$, $Q_{rms-PS}=(4.5\\pm 1.5) G\\mu$ and $({{\\Delta T}\\over\nT})_{rms}=5.5 G\\mu$. Demanding consistency of these results with the COBE data\nleads to $G\\mu=(1.7 \\pm 0.7)\\times 10^{-6}$ (where $\\mu$ is the string mass per\nunit length), in good agreement with direct normalizations of $\\mu$ from\nobservations.",
     "pdf_url": "http://arxiv.org/pdf/hep-ph/9208247v1",
     "arxiv_id": "hep-ph/9208247v1"
+  },
+  {
+    "title": "Cosmic Microwave Background Probes Models of Inflation",
+    "authors": "R. L. Davis, H. M. Hodges, G. F. Smoot, P. J. Steinhardt, M. S. Turner",
+    "published": "1992-07-13",
+    "summary": "Inflation creates both scalar (density) and tensor (gravity wave) metric\nperturbations. We find that the tensor mode contribution to the CMB anisotropy\non large-angular scales can only exceed that of the scalar mode in models where\nthe spectrum of perturbations deviates significantly from scale invariance\n(e.g., extended and power-law inflation models and extreme versions of chaotic\ninflation). If the tensor mode dominates at large-angular scales, then the\nvalue of $\\Delta T/T$ predicted on $1^\\circ$ is less than if the scalar mode\ndominates, and, for cold dark matter models, $b>1$ can be made consistent with\nthe COBE DMR results.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9207001v1",
+    "arxiv_id": "astro-ph/9207001v1"
   }
 ]
