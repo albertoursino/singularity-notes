@@ -198,5 +198,13 @@
     "summary": "Inflation creates both scalar (density) and tensor (gravity wave) metric\nperturbations. We find that the tensor mode contribution to the CMB anisotropy\non large-angular scales can only exceed that of the scalar mode in models where\nthe spectrum of perturbations deviates significantly from scale invariance\n(e.g., extended and power-law inflation models and extreme versions of chaotic\ninflation). If the tensor mode dominates at large-angular scales, then the\nvalue of $\\Delta T/T$ predicted on $1^\\circ$ is less than if the scalar mode\ndominates, and, for cold dark matter models, $b>1$ can be made consistent with\nthe COBE DMR results.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9207001v1",
     "arxiv_id": "astro-ph/9207001v1"
+  },
+  {
+    "title": "COBE, Gravitational Waves, Inflation and Extended Inflation",
+    "authors": "David H Lyth, Andrew R Liddle",
+    "published": "1992-08-27",
+    "summary": "We analyse the implications for inflationary models of the cosmic microwave\nbackground (cmb) anisotropy measured by COBE. Vacuum fluctuations during\ninflation generate an adiabatic density perturbation, and also gravitational\nwaves. The ratio of these two contributions to the cmb anisotropy is given for\nan arbitrary slow-roll inflaton potential. Results from the IRAS/QDOT and\nPOTENT galaxy surveys are used to normalise the spectrum of the density\nperturbation on the scale $20h^{-1}\\Mpc$, so that the COBE measurement on the\nscale $10^3h^{-1}\\Mpc$ provides a lower bound on the spectral index $n$. For\n`power law' and `extended' inflation, gravitational waves are significant and\nthe bound is $n>0.84$ at the $2$-sigma level. For `natural' inflation,\ngravitational waves are negligible and the constraint is weakened to $n>0.70$,\nat best marginally consistent with a recent proposal for explaining the excess\nclustering observed in the APM galaxy survey. Many versions of extended\ninflation, including those based on the Brans--Dicke theory, are ruled out,\nbecause they require $n\\lsim 0.75$ in order that bubbles formed at the end of\ninflation should not be observed now in the cmb.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9208007v2",
+    "arxiv_id": "astro-ph/9208007v2"
   }
 ]
