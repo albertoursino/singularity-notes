@@ -206,5 +206,13 @@
     "summary": "We analyse the implications for inflationary models of the cosmic microwave\nbackground (cmb) anisotropy measured by COBE. Vacuum fluctuations during\ninflation generate an adiabatic density perturbation, and also gravitational\nwaves. The ratio of these two contributions to the cmb anisotropy is given for\nan arbitrary slow-roll inflaton potential. Results from the IRAS/QDOT and\nPOTENT galaxy surveys are used to normalise the spectrum of the density\nperturbation on the scale $20h^{-1}\\Mpc$, so that the COBE measurement on the\nscale $10^3h^{-1}\\Mpc$ provides a lower bound on the spectral index $n$. For\n`power law' and `extended' inflation, gravitational waves are significant and\nthe bound is $n>0.84$ at the $2$-sigma level. For `natural' inflation,\ngravitational waves are negligible and the constraint is weakened to $n>0.70$,\nat best marginally consistent with a recent proposal for explaining the excess\nclustering observed in the APM galaxy survey. Many versions of extended\ninflation, including those based on the Brans--Dicke theory, are ruled out,\nbecause they require $n\\lsim 0.75$ in order that bubbles formed at the end of\ninflation should not be observed now in the cmb.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9208007v2",
     "arxiv_id": "astro-ph/9208007v2"
+  },
+  {
+    "title": "Neutrino production through hadronic cascades in AGN accretion disks",
+    "authors": "L. Nellen, K. Mannheim, P. L. Biermann",
+    "published": "1992-11-17",
+    "summary": "We consider the production of neutrinos in active galactic nuclei (AGN)\nthrough hadronic cascades. The initial, high energy nucleons are accelerated in\na source above the accretion disk around the central black hole. From the\nsource, the particles diffuse back to the disk and initiate hadronic cascades.\nThe observable output from the cascade are electromagnetic radiation and\nneutrinos. We use the observed diffuse background X-ray luminosity, which\npresumably results {}from this process, to predict the diffuse neutrino flux\nclose to existing limits from the Frejus experiment. The resulting neutrino\nspectrum is $E^{-2}$ down to the $\\GeV$ region. We discuss modifications of\nthis scenario which reduce the predicted neutrino flux.",
+    "pdf_url": "http://arxiv.org/pdf/hep-ph/9211257v1",
+    "arxiv_id": "hep-ph/9211257v1"
   }
 ]
