@@ -214,5 +214,13 @@
     "summary": "We consider the production of neutrinos in active galactic nuclei (AGN)\nthrough hadronic cascades. The initial, high energy nucleons are accelerated in\na source above the accretion disk around the central black hole. From the\nsource, the particles diffuse back to the disk and initiate hadronic cascades.\nThe observable output from the cascade are electromagnetic radiation and\nneutrinos. We use the observed diffuse background X-ray luminosity, which\npresumably results {}from this process, to predict the diffuse neutrino flux\nclose to existing limits from the Frejus experiment. The resulting neutrino\nspectrum is $E^{-2}$ down to the $\\GeV$ region. We discuss modifications of\nthis scenario which reduce the predicted neutrino flux.",
     "pdf_url": "http://arxiv.org/pdf/hep-ph/9211257v1",
     "arxiv_id": "hep-ph/9211257v1"
+  },
+  {
+    "title": "Implications of New Gallex Results for the MSW Solution of the Solar Neutrino Problem",
+    "authors": "J. M. Gelb, Waikwok Kwong, S. P. Rosen",
+    "published": "1992-06-17",
+    "summary": "We compare the implications for 7Be and pp neutrinos of the two MSW fits to\nthe new GALLEX solar neutrino measurements . Small mixing angle solutions tend\nto suppress the former as electron-neutrinos, but not the latter, and large\nangle solutions tend to reduce both by about a factor of 2. The consequences\nfor BOREXINO and similar solar neutrino--electron scattering experiments are\ndiscussed.",
+    "pdf_url": "http://arxiv.org/pdf/hep-ph/9206228v1",
+    "arxiv_id": "hep-ph/9206228v1"
   }
 ]
