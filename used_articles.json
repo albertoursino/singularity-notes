@@ -222,5 +222,13 @@
     "summary": "We compare the implications for 7Be and pp neutrinos of the two MSW fits to\nthe new GALLEX solar neutrino measurements . Small mixing angle solutions tend\nto suppress the former as electron-neutrinos, but not the latter, and large\nangle solutions tend to reduce both by about a factor of 2. The consequences\nfor BOREXINO and similar solar neutrino--electron scattering experiments are\ndiscussed.",
     "pdf_url": "http://arxiv.org/pdf/hep-ph/9206228v1",
     "arxiv_id": "hep-ph/9206228v1"
+  },
+  {
+    "title": "The Spatial Distribution of Nearby Galaxy Clusters in the Northern and Southern Galactic Hemispheres",
+    "authors": "A. Cappi, S. Maurogordato",
+    "published": "1992-05-08",
+    "summary": "We compare the spatial distributions of galaxy clusters in the northern and\nsouthern galactic hemispheres, and the Abell and ACO clusters distributions. We\nperform a statistical (correlation and cluster) analysis of a sample of Abell\nand ACO galaxy clusters in the southern galactic hemisphere. We compare these\nresults with a symmetric sample at northern galactic latitude taken from\nPostman et al. (1992). For the northern sample, we substantially confirm the\nresults of Postman et al. We find that the two-point spatial correlation\nfunction of northern and southern clusters is comparable, with mean correlation\nlength 19.6 Mpc and slope -1.8 positive up to about 45 Mpc. Percolation\nproperties are remarkably similar in the northern and southern cluster samples.\nWe give also a catalog of superclusters. In the south galactic hemisphere the\nmain feature is a very rich, extended supercluster in the Horologium region at\na redshift 0.06, near to a large void.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9205004v1",
+    "arxiv_id": "astro-ph/9205004v1"
   }
 ]
