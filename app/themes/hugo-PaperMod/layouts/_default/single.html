@@ -39,6 +39,11 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
+
+    <hr>
+
+    <div style="text-align: center;">Support this project
+      by giving a star on <a href="https://github.com/albertoursino/singularity-notes">GitHub!</a> ⭐</div>
   </div>
   {{- end }}
 
@@ -60,6 +65,11 @@
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
+
+
+
+
 </article>
+
 
 {{- end }}{{/* end main */}}
