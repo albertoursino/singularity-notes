@@ -4,46 +4,42 @@ Thank you for your interest in contributing to Singularity Notes! We welcome con
 
 ## 🔎 How to Contribute
 
-1. **GitHub Issues**: Check if there's an open [issue](https://github.com/albertoursino/singularity-notes/issues) of your interest, or create a new one!
+1. **Check GitHub issues**: Is there an open [issue](https://github.com/albertoursino/singularity-notes/issues) of your interest? If yes, nice! If not, create a new one! ✨
 
-2. **Clone the Repository**: Clone the repository to your local machine using
+2. **Clone the Repository**
 
    ```shell
    git clone https://github.com/albertoursino/singularity-notes.git
    ```
 
-3. **Create a Branch**: Create a new branch for your changes with a descriptive name, e.g.,
+3. **Development setup**: Follow the guide in the [README.md](README.md/#️🛠️-development-setup-linux) file to setup the environment
+
+4. **Create a Branch** where you will solve the issue
 
    ```shell
    git switch -c feature/add-new-feature
    ```
 
-4. **Make Changes**: Implement your changes or fixes!
+5. **Test your functions (nice to have)**: Do it with [Pytest](https://docs.pytest.org/en/stable/)
 
-5. **Test Your Changes (nice to have)**: Test your changes (with [Pytest](https://docs.pytest.org/en/stable/))
+6. **Install Pre-commit hooks**: We use [pre-commit](https://pre-commit.com/) to maintain a good-quality and standardized code
 
-6. **Install Pre-commit hooks**: We use [pre-commit](https://pre-commit.com/) to reduce bad coding practices; install the hooks with
-
-   ```shell
-   pre-commit install
-   ```
-
-7. **Commit Changes**: Write a good commit messages, e.g.,
+7. **Commit your changes**
 
    ```shell
    git commit -m "feat: add new feature to improve xyz"
    ```
 
-8. **Push Changes**: Push your branch to the repository with
+8. **Push your changes**: Push your branch to the repository with
 
    ```shell
-   git push origin feature/add-new-feature
+   git push --set-upstream origin feature/add-new-feature
    ```
 
-9. **Submit a Pull Request**: Open a pull request (PR) to the `main` branch. Provide a clear description of your changes and their purpose.
+9. **Submit a pull request**: Create a PR from the new branch to `main`
 
 ## ✅ Code of Conduct
 
 - Be respectful and inclusive in all interactions.
-- Follow the project’s coding standards and style guide (if provided).
+- Follow the project’s coding standards and style guide.
 - Ensure your contributions are well-tested and documented.
