@@ -230,5 +230,13 @@
     "summary": "We compare the spatial distributions of galaxy clusters in the northern and\nsouthern galactic hemispheres, and the Abell and ACO clusters distributions. We\nperform a statistical (correlation and cluster) analysis of a sample of Abell\nand ACO galaxy clusters in the southern galactic hemisphere. We compare these\nresults with a symmetric sample at northern galactic latitude taken from\nPostman et al. (1992). For the northern sample, we substantially confirm the\nresults of Postman et al. We find that the two-point spatial correlation\nfunction of northern and southern clusters is comparable, with mean correlation\nlength 19.6 Mpc and slope -1.8 positive up to about 45 Mpc. Percolation\nproperties are remarkably similar in the northern and southern cluster samples.\nWe give also a catalog of superclusters. In the south galactic hemisphere the\nmain feature is a very rich, extended supercluster in the Horologium region at\na redshift 0.06, near to a large void.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9205004v1",
     "arxiv_id": "astro-ph/9205004v1"
+  },
+  {
+    "title": "Limits on Neutrino Radiative Decay from Sn1987a",
+    "authors": "Andrew H. Jaffe, Ed Fenimore, Michael S. Turner",
+    "published": "1992-09-30",
+    "summary": "We calculate limits on the properties of neutrinos using data from gamma-ray\ndetectors on the Pioneer Venus Orbiter and Solar Max Mission satellites. A\nmassive neutrino decaying in flight from the supernova would produce gamma rays\ndetectable by these instruments. The lack of such a signal allows us to\nconstrain the mass, radiative lifetime, and branching ratio to photons of a\nmassive neutrino species produced in the supernova. Presented at Beyond The\nStandard Model III, June, 1992.",
+    "pdf_url": "http://arxiv.org/pdf/hep-ph/9209298v1",
+    "arxiv_id": "hep-ph/9209298v1"
   }
 ]
