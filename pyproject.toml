@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Fully automated blog delivering posts written by AI on the latest astronomy discoveries."
 authors = [{ name = "Alberto Ursino", email = "albertoursino98@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.13, <4.0"
+requires-python = ">=3.13, <3.14"
 dependencies = [
     "hugo (>=0.148.1,<0.149.0)",
     "pre-commit (>=4.2.0,<5.0.0)",
@@ -22,6 +22,7 @@ dev = ["pytest (>=8.4.1,<9.0.0)"]
 
 [tool.poetry]
 package-mode = false
+requires-poetry = ">=2.1"
 
 [tool.ruff]
 exclude = []
