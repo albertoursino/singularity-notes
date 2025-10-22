@@ -51,7 +51,7 @@ params:
   homeInfoParams:
     Title: "Galaxy lovers, hop aboard our blog! 🌌"
     Content: >
-      *Singularity Notes* is fully automated blog delivering bite-sized posts on the latest astronomy discoveries—created by AI and driven by cutting-edge research.
+      Singularity Notes is a fully automated blog delivering bite-sized posts on the latest astronomy discoveries, powered by AI.
 
   # socialIcons:
   #   - name: github
