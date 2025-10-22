@@ -8,6 +8,8 @@ import json
 from loguru import logger
 import yaml
 
+from src.utils import UsedArticles
+
 
 def get_arxiv_articles(config: dict[Any, Any], output_dir: Path) -> None:
     # Initialize the arXiv client
@@ -21,17 +23,7 @@ def get_arxiv_articles(config: dict[Any, Any], output_dir: Path) -> None:
         sort_order=arxiv.SortOrder.Ascending,
     )
 
-    used_articles_file = Path("used_articles.json")
-
-    # Create file if it doesn't exist
-    if not os.path.exists(used_articles_file):
-        with open(used_articles_file, "w") as f:
-            f.write("[]")
-
-    # Get used articles
-    with open(used_articles_file, "r", encoding="utf-8") as f:
-        used_articles = json.load(f)
-    used_arxiv_ids = {article["arxiv_id"] for article in used_articles}
+    used_arxiv_ids = UsedArticles().get_used_articles()
 
     # Fetch and format results
     results = []
