@@ -238,5 +238,13 @@
     "summary": "We calculate limits on the properties of neutrinos using data from gamma-ray\ndetectors on the Pioneer Venus Orbiter and Solar Max Mission satellites. A\nmassive neutrino decaying in flight from the supernova would produce gamma rays\ndetectable by these instruments. The lack of such a signal allows us to\nconstrain the mass, radiative lifetime, and branching ratio to photons of a\nmassive neutrino species produced in the supernova. Presented at Beyond The\nStandard Model III, June, 1992.",
     "pdf_url": "http://arxiv.org/pdf/hep-ph/9209298v1",
     "arxiv_id": "hep-ph/9209298v1"
+  },
+  {
+    "title": "Gamma-Ray Bursts and Neutron Star Mergers - Possibly the Strongest Explosions in the Universe",
+    "authors": "Tsvi Piran",
+    "published": "1992-11-17",
+    "summary": "$\\gamma$-ray bursts have baffled theorists ever since their accidental\ndiscovery at the sixties. We suggest that these bursts originate in merger of\nneutron star binaries, taking place at cosmological distances. These mergers\nrelease $\\approx 10^{54}ergs$, in what are possibly the strongest explosions in\nthe Universe. If even a small fraction of this energy is channeled to an\nelectromagnetic signal it will be detected as a grbs. We examine the virtues\nand limitations of this model and compare it with the recent Compton \\g-ray\nobservatory results.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9211010v1",
+    "arxiv_id": "astro-ph/9211010v1"
   }
 ]
