@@ -5,7 +5,7 @@ debug: false
 model: gpt-5
 
 # Number of articles to fetch from arXiv (https://arxiv.org/)
-number_of_articles: 50
+number_of_articles: 200
 
 # Number of retries if the model doesn't give a well-formatted response
 max_retries: 1

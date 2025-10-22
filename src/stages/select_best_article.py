@@ -10,6 +10,8 @@ import json
 from tqdm import tqdm
 import yaml
 
+from src.utils import update_used_articles
+
 load_dotenv()
 
 
@@ -119,6 +121,10 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
         logger.success(f"Raw content of the PDF saved at {str(txt_file)!r}")
     else:
         logger.error(f"Can't fetch the URL {pdf_url!r}.")
+        # TODO: send signal to re-run the pipeline
+        with (output_dir / "best_article.json").open("r") as f:
+            best_article_json = json.load(f)
+        update_used_articles(Path("used_articles.json"), best_article_json)
         sys.exit(1)
 
 
