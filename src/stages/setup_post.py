@@ -9,7 +9,7 @@ from typing import Any
 from loguru import logger
 import yaml
 
-from src.utils import update_used_articles
+from src.utils import UsedArticles
 
 
 def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
@@ -63,7 +63,7 @@ def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
         f.write(header + content + credits)
         logger.success(f"Post successfully created at {str(hugo_post)!r}.")
 
-    update_used_articles(Path("used_articles.json"), best_article_json)
+    UsedArticles().update_used_articles(best_article_json)
 
 
 if __name__ == "__main__":
