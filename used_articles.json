@@ -246,5 +246,13 @@
     "summary": "$\\gamma$-ray bursts have baffled theorists ever since their accidental\ndiscovery at the sixties. We suggest that these bursts originate in merger of\nneutron star binaries, taking place at cosmological distances. These mergers\nrelease $\\approx 10^{54}ergs$, in what are possibly the strongest explosions in\nthe Universe. If even a small fraction of this energy is channeled to an\nelectromagnetic signal it will be detected as a grbs. We examine the virtues\nand limitations of this model and compare it with the recent Compton \\g-ray\nobservatory results.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9211010v1",
     "arxiv_id": "astro-ph/9211010v1"
+  },
+  {
+    "title": "A rotating black hole in the Galactic Center",
+    "authors": "Heino Falcke, Peter L. Biermann, Wolfgang J. Duschl, Peter G. Mezger",
+    "published": "1992-12-07",
+    "summary": "Recent observations of Sgr A* give strong constraints for possible models of\nthe physical nature of Sgr A* and suggest the presence of a massive black~hole\nwith M<2 10^6 M_sun surrounded by an accretion disk which we estimate to\nradiate at a luminosity of <7 10^5 L_sun. We therefore calculate the appearance\nof a standard accretion disk around a Kerr hole in Sgr A* following from\ngeneral relativity and a few fundamental assumptions. Effective temperature and\nluminosity of the disk spectra do not depend on the unknown viscosity mechanism\nbut instead are quite sensitive to variations of intrinsic parameters: the\nmass, the accretion rate, the angular momentum of the accreting hole and the\ninclination angle. A radiation field of L~7 10^4 - 7 10^5 L_sun and T_eff ~ 2-4\n10^4 K can be ascribed to a rapidly rotating Kerr~hole (a>0.9) accreting\n10^-8.5 - 10^-7 M_sun/yr at a black~hole mass of M=2 10^6 M_sunseen almost edge\non. A low mass black hole of M<10^3 M_sun seems to be very unlikely. We provide\na ``Hertzsprung-Russell diagram for black holes'' together with simple scaling\nlaws to provide an easy-to-handle test for the black hole model.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9212001v1",
+    "arxiv_id": "astro-ph/9212001v1"
   }
 ]
