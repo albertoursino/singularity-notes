@@ -254,5 +254,13 @@
     "summary": "Recent observations of Sgr A* give strong constraints for possible models of\nthe physical nature of Sgr A* and suggest the presence of a massive black~hole\nwith M<2 10^6 M_sun surrounded by an accretion disk which we estimate to\nradiate at a luminosity of <7 10^5 L_sun. We therefore calculate the appearance\nof a standard accretion disk around a Kerr hole in Sgr A* following from\ngeneral relativity and a few fundamental assumptions. Effective temperature and\nluminosity of the disk spectra do not depend on the unknown viscosity mechanism\nbut instead are quite sensitive to variations of intrinsic parameters: the\nmass, the accretion rate, the angular momentum of the accreting hole and the\ninclination angle. A radiation field of L~7 10^4 - 7 10^5 L_sun and T_eff ~ 2-4\n10^4 K can be ascribed to a rapidly rotating Kerr~hole (a>0.9) accreting\n10^-8.5 - 10^-7 M_sun/yr at a black~hole mass of M=2 10^6 M_sunseen almost edge\non. A low mass black hole of M<10^3 M_sun seems to be very unlikely. We provide\na ``Hertzsprung-Russell diagram for black holes'' together with simple scaling\nlaws to provide an easy-to-handle test for the black hole model.",
     "pdf_url": "http://arxiv.org/pdf/astro-ph/9212001v1",
     "arxiv_id": "astro-ph/9212001v1"
+  },
+  {
+    "title": "Early Cosmic Formation of Massive Black Holes",
+    "authors": "M. Umemura, A. Loeb, E. L. Turner",
+    "published": "1993-03-09",
+    "summary": "The evolution of nonlinear density fluctuations around the Jeans mass shortly\nafter cosmological recombination is analyzed using a 3D\nhydrodynamics/dark--matter code. The Cosmic Background Radiation (CBR) exerts\nCompton friction on free electrons due to peculiar velocities. The dynamics\ntherefore depends strongly on the gas ionization history. Under a variety of\nionization conditions and in systems with or without non-baryonic components,\nthe baryons lose angular momentum efficiently and collapse to form a compact\noptically--thick object which would probably quickly evolve into a massive\nblack hole. Attention is concentrated on elucidating some of the novel physical\neffects in early cosmological collapses, but ways in which more realistic\ncalculations might be made and in which the scenario could be incorporated into\na more complete cosmogonic model are discussed.",
+    "pdf_url": "http://arxiv.org/pdf/astro-ph/9303004v1",
+    "arxiv_id": "astro-ph/9303004v1"
   }
 ]
