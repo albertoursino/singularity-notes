@@ -270,5 +270,13 @@
     "summary": "We investigate the sensitivity of individual LIGO/VIRGO-like interferometers and the precision with which they can determine the characteristics of an inspiralling binary system. Since the two interferometers of the LIGO detector share nearly the same orientation, their joint sensitivity is similar to that of a single, more sensitive interferometer. We express our results for a single interferometer of both initial and advanced LIGO design, and also for the LIGO detector in the limit that its two interferometers share exactly the same orientation. We approximate the evolution of a binary system as driven exclusively by leading order quadrupole gravitational radiation. To assess the sensitivity, we calculate the rate at which sources are expected to be observed, the range to which they are observable, and the precision with which characteristic quantities describing the observed binary system can be determined. Assuming a conservative rate density for coalescing neutron star binary systems we expect that the advanced LIGO detector will observe approximately 69~yr${}^{-1}$ with an amplitude SNR greater than 8. Of these, approximately 7~yr${}^{-1}$ will be from binaries at distances greater than 950~Mpc. We explore the sensitivity of these results to a tunable parameter in the interferometer design (the recycling frequency). The optimum choice of the parameter is dependent on the goal of the observations, e.g., maximizing the rate of detections or maximizing the precision of measurement. We determine the optimum parameter values for these two cases.",
     "pdf_url": "https://arxiv.org/pdf/gr-qc/9301003v1",
     "arxiv_id": "gr-qc/9301003v1"
+  },
+  {
+    "title": "Axion Miniclusters and Bose Stars",
+    "authors": "Edward W. Kolb, Igor I. Tkachev",
+    "published": "1993-03-29",
+    "summary": "Evolution of inhomogeneities in the axion field around the QCD epoch is studied numerically, including for the first time important non-linear effects. It is found that perturbations on scales corresponding to causally disconnected regions at $T \\sim 1 \\, {\\rm GeV}$ can lead to very dense axion clumps, with present density $\u03c1_a \\ga 10^{-8}\\,{\\rm g \\, cm^{-3}}$. This is high enough for the collisional $2a \\rightarrow 2a$ process to lead to Bose--Einstein relaxation in the gravitationally bound clumps of axions, forming Bose stars.",
+    "pdf_url": "https://arxiv.org/pdf/hep-ph/9303313v1",
+    "arxiv_id": "hep-ph/9303313v1"
   }
 ]
