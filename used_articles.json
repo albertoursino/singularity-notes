@@ -278,5 +278,13 @@
     "summary": "Evolution of inhomogeneities in the axion field around the QCD epoch is studied numerically, including for the first time important non-linear effects. It is found that perturbations on scales corresponding to causally disconnected regions at $T \\sim 1 \\, {\\rm GeV}$ can lead to very dense axion clumps, with present density $\u03c1_a \\ga 10^{-8}\\,{\\rm g \\, cm^{-3}}$. This is high enough for the collisional $2a \\rightarrow 2a$ process to lead to Bose--Einstein relaxation in the gravitationally bound clumps of axions, forming Bose stars.",
     "pdf_url": "https://arxiv.org/pdf/hep-ph/9303313v1",
     "arxiv_id": "hep-ph/9303313v1"
+  },
+  {
+    "title": "Hydrodynamics of Relativistic Fireballs",
+    "authors": "Tsvi Piran, Amotz Shemi, Ramesh Narayan",
+    "published": "1993-01-12",
+    "summary": "We examine analytically and numerically the evolution of a relativistic fireball. We show that, after an early rearrangement phase, most of the matter and energy in the fireball is concentrated within a narrow shell. The shell propagates at nearly the speed of light, with a frozen radial profile and according to a simple set of scaling laws. The spectrum of the escaping radiation is harder at early times and softer later on. The results are applicable to models of $\u03b3$-ray bursts. Submitted to Monthly Notices of the RAS Figures available on request from the authors",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9301004v1",
+    "arxiv_id": "astro-ph/9301004v1"
   }
 ]
