@@ -286,5 +286,13 @@
     "summary": "We examine analytically and numerically the evolution of a relativistic fireball. We show that, after an early rearrangement phase, most of the matter and energy in the fireball is concentrated within a narrow shell. The shell propagates at nearly the speed of light, with a frozen radial profile and according to a simple set of scaling laws. The spectrum of the escaping radiation is harder at early times and softer later on. The results are applicable to models of $\u03b3$-ray bursts. Submitted to Monthly Notices of the RAS Figures available on request from the authors",
     "pdf_url": "https://arxiv.org/pdf/astro-ph/9301004v1",
     "arxiv_id": "astro-ph/9301004v1"
+  },
+  {
+    "title": "Do Solar Neutrino Experiments Imply New Physics?",
+    "authors": "John N. Bahcall, H. A. Bethe",
+    "published": "1992-12-01",
+    "summary": "None of the 1000 solar models in a full Monte Carlo simulation is consistent with the results of the chlorine or the Kamiokande experiments. Even if the solar models are forced artifically to have a \\b8 neutrino flux in agreeement with the Kamiokande experiment, none of the fudged models agrees with the chlorine observations. The GALLEX and SAGE experiments, which currently have large statistical uncertainties, differ from the predictions of the standard solar model by $2 \u03c3$ and $3 \u03c3$, respectively.",
+    "pdf_url": "https://arxiv.org/pdf/hep-ph/9212204v1",
+    "arxiv_id": "hep-ph/9212204v1"
   }
 ]
