@@ -294,5 +294,13 @@
     "summary": "None of the 1000 solar models in a full Monte Carlo simulation is consistent with the results of the chlorine or the Kamiokande experiments. Even if the solar models are forced artifically to have a \\b8 neutrino flux in agreeement with the Kamiokande experiment, none of the fudged models agrees with the chlorine observations. The GALLEX and SAGE experiments, which currently have large statistical uncertainties, differ from the predictions of the standard solar model by $2 \u03c3$ and $3 \u03c3$, respectively.",
     "pdf_url": "https://arxiv.org/pdf/hep-ph/9212204v1",
     "arxiv_id": "hep-ph/9212204v1"
+  },
+  {
+    "title": "Two Populations and Models of Gamma Ray Bursts",
+    "authors": "J. I. Katz",
+    "published": "1992-12-31",
+    "summary": "Gamma-ray burst statistics are best explained by a source population at cosmological distances, while spectroscopy and intensity histories of some individual bursts imply an origin on Galactic neutron stars. To resolve this inconsistency I suggest the presence of two populations, one at cosmological distances and the other Galactic. I build on ideas of Shemi and Piran (1990) and of M\u00e9sz\u00e1ros and Rees (1993) involving the interaction of fireball debris with surrounding clouds to explain the observed intensity histories in bursts at cosmological distances. The distances to the Galactic population are undetermined because they are too few to affect the statistics of intensity and direction; I explain them as resulting from magnetic reconnection in neutron star magnetospheres.",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9212006v1",
+    "arxiv_id": "astro-ph/9212006v1"
   }
 ]
