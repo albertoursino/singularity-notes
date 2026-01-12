@@ -310,5 +310,13 @@
     "summary": "Review talk presented at the Texas/PASCOS Symposium, Berkeley, CA, Dec 1992. We review the status of experiments and ideas relevant for the detection of the dark matter which is suspected to be the dominant constituent of the Universe. Great progress is being made and the chances are non-negligible that one of the many currently in-progress experiments will discover the nature of the dark matter. We discuss the main dark matter candidates, and review the experiments relevant to each of them.",
     "pdf_url": "https://arxiv.org/pdf/hep-ph/9303253v1",
     "arxiv_id": "hep-ph/9303253v1"
+  },
+  {
+    "title": "The Masses of Two Binary Neutron Star Systems",
+    "authors": "S. E. Thorsett, Z. Arzoumanian, M. M. McKinnon, J. H. Taylor",
+    "published": "1993-03-02",
+    "summary": "The measurement or constraint of the masses of neutron stars and their binary companions tests theories of neutron star structure and of pulsar formation and evolution. We have measured the rate of the general relativistic advance of the longitude of periastron for the pulsar PSR B1802$-$07: $\\dot\u03c9=0\\fdg060\\pm0\\fdg009\\,\\mbox{yr}^{-1}$, which implies a total system mass, pulsar plus companion star, of $M=1.7\\pm0.4\\,\\Msun$. We also present a much improved measurement of the rate of periastron advance for PSR B2303+46: $\\dot\u03c9= 0\\fdg0099\\pm0\\fdg0002\\,\\mbox{yr}^{-1}$, implying $M=2.53\\pm0.08\\,\\Msun$ for this system. We discuss the available constraints on distribution of mass between the pulsars and their companions, and we compare the pulsar masses with other determinations of neutron star masses.",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9303002v2",
+    "arxiv_id": "astro-ph/9303002v2"
   }
 ]
