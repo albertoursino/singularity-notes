@@ -318,5 +318,13 @@
     "summary": "The measurement or constraint of the masses of neutron stars and their binary companions tests theories of neutron star structure and of pulsar formation and evolution. We have measured the rate of the general relativistic advance of the longitude of periastron for the pulsar PSR B1802$-$07: $\\dot\u03c9=0\\fdg060\\pm0\\fdg009\\,\\mbox{yr}^{-1}$, which implies a total system mass, pulsar plus companion star, of $M=1.7\\pm0.4\\,\\Msun$. We also present a much improved measurement of the rate of periastron advance for PSR B2303+46: $\\dot\u03c9= 0\\fdg0099\\pm0\\fdg0002\\,\\mbox{yr}^{-1}$, implying $M=2.53\\pm0.08\\,\\Msun$ for this system. We discuss the available constraints on distribution of mass between the pulsars and their companions, and we compare the pulsar masses with other determinations of neutron star masses.",
     "pdf_url": "https://arxiv.org/pdf/astro-ph/9303002v2",
     "arxiv_id": "astro-ph/9303002v2"
+  },
+  {
+    "title": "The Imprint of Gravitational Waves on the Cosmic Microwave Background",
+    "authors": "R. Crittenden, J. R. Bond, R. L. Davis, G. Efstathiou, P. J. Steinhardt",
+    "published": "1993-03-26",
+    "summary": "Long-wavelength gravitational waves can induce significant temperature anisotropy in the cosmic microwave background. Distinguishing this from anisotropy induced by energy density fluctuations is critical for testing inflationary cosmology and theories of large-scale structure formation. We describe full radiative transport calculations of the two contributions and show that they differ dramatically at angular scales below a few degrees. We show how anisotropy experiments probing large- and small-angular scales can combine to distinguish the imprint due to gravitational waves.",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9303014v1",
+    "arxiv_id": "astro-ph/9303014v1"
   }
 ]
