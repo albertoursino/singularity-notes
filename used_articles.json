@@ -326,5 +326,13 @@
     "summary": "Long-wavelength gravitational waves can induce significant temperature anisotropy in the cosmic microwave background. Distinguishing this from anisotropy induced by energy density fluctuations is critical for testing inflationary cosmology and theories of large-scale structure formation. We describe full radiative transport calculations of the two contributions and show that they differ dramatically at angular scales below a few degrees. We show how anisotropy experiments probing large- and small-angular scales can combine to distinguish the imprint due to gravitational waves.",
     "pdf_url": "https://arxiv.org/pdf/astro-ph/9303014v1",
     "arxiv_id": "astro-ph/9303014v1"
+  },
+  {
+    "title": "Gasdynamics of Relativistically Expanding Gamma-Ray Burst Sources: Kinematics, Energetics, Magnetic Fields and Efficiency",
+    "authors": "P. M\u00e9sz\u00e1ros, P. Laguna, M. J. Rees",
+    "published": "1993-01-14",
+    "summary": "We calculate both analytically and numerically the evolution of a highly relativistic fireball through the stages of free expansion and coasting, and determine the dependence of the thermodynamic and radiation variables in the comoving and laboratory frames. Magnetic fields may have been important in the original impulsive event. We discuss their effect on the fireball dynamics, and consider also their effects on the radiation emitted when the fireball runs into an external medium and is decelerated. The inverse synchro-Compton mechanism can then yield high radiative efficiency in the reverse shock, producing a burst of non-thermal radiation mainly in the MeV to GeV range whose total energy and duration agree with those of typical cosmic gamma ray bursts.",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9301007v1",
+    "arxiv_id": "astro-ph/9301007v1"
   }
 ]
