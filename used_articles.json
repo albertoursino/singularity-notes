@@ -334,5 +334,13 @@
     "summary": "We calculate both analytically and numerically the evolution of a highly relativistic fireball through the stages of free expansion and coasting, and determine the dependence of the thermodynamic and radiation variables in the comoving and laboratory frames. Magnetic fields may have been important in the original impulsive event. We discuss their effect on the fireball dynamics, and consider also their effects on the radiation emitted when the fireball runs into an external medium and is decelerated. The inverse synchro-Compton mechanism can then yield high radiative efficiency in the reverse shock, producing a burst of non-thermal radiation mainly in the MeV to GeV range whose total energy and duration agree with those of typical cosmic gamma ray bursts.",
     "pdf_url": "https://arxiv.org/pdf/astro-ph/9301007v1",
     "arxiv_id": "astro-ph/9301007v1"
+  },
+  {
+    "title": "Sterile Neutrinos as Dark Matter",
+    "authors": "Scott Dodelson, Lawrence M. Widrow",
+    "published": "1993-03-22",
+    "summary": "The simplest model that can accomodate a viable nonbaryonic dark matter candidate is the standard electroweak theory with the addition of right-handed or sterile neutrinos. We reexamine this model and find that the sterile neutrinos can be either hot, warm, or cold dark matter. Since their only direct coupling is to left-handed or active neutrinos, the most efficient production mechanism is via neutrino oscillations. If the production rate is always less than the expansion rate, then these neutrinos will never be in thermal equilibrium. However, enough of them may be produced so that they provide the missing mass necessary for closure. We consider a single generation of neutrino fields $\\left (\u03bd_L,\\,\u03bd_R\\right )$ with a Dirac mass, $\u03bc$, and a Majorana mass for the right-handed components only, $M$. For $M\\gg \u03bc$ we show that the number density of sterile neutrinos is proportional to $\u03bc^2/M$ so that the energy density today is {\\it independent of} $M$. However $M$ is crucial in determining the large scale structure of the Universe. In particular, $M\\simeq 0.1-1.0 {\\rm ~keV}$ leads to warm dark matter and a structure formation scenario that may have some advantages over both the standard hot and cold dark matter scenarios.",
+    "pdf_url": "https://arxiv.org/pdf/hep-ph/9303287v1",
+    "arxiv_id": "hep-ph/9303287v1"
   }
 ]
