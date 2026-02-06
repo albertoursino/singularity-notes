@@ -32,50 +32,46 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
 
     formatted_articles = "\n".join(article_summaries)
 
-    if not config["debug"]:
-        # Construct prompt
-        with open("src/singularity_notes/resources/prompt_select_best_article.txt", "r") as file:
-            prompt = file.read()
-        prompt += f"\n\n{formatted_articles}\nOUTPUT:"
+    # Construct prompt
+    with open("src/singularity_notes/resources/prompt_select_best_article.txt", "r") as file:
+        prompt = file.read()
+    prompt += f"\n\n{formatted_articles}\nOUTPUT:"
 
-        retries = 0
-        output_tokens = 0
-        while retries < config["max_retries"]:
-            try:
-                client = OpenAI()
-                votes_dict: dict[int, int] = {}
-                for i in tqdm(
-                    range(config["reasoning_paths"]),
-                    desc=f"Select the best article with model {config['model']!r}...",
-                ):
-                    response = client.responses.create(model=config["model"], input=prompt)
-                    number = int(response.output_text)
+    retries = 0
+    output_tokens = 0
+    while retries < config["max_retries"]:
+        try:
+            client = OpenAI()
+            votes_dict: dict[int, int] = {}
+            for i in tqdm(
+                range(config["reasoning_paths"]),
+                desc=f"Select the best article with model {config['model']!r}...",
+            ):
+                response = client.responses.create(model=config["model"], input=prompt)
+                number = int(response.output_text)
 
-                    if number not in votes_dict:
-                        votes_dict[number] = 1
-                    else:
-                        votes_dict[number] += 1
+                if number not in votes_dict:
+                    votes_dict[number] = 1
+                else:
+                    votes_dict[number] += 1
 
-                # Get the most common answer
-                number = max(votes_dict, key=lambda x: votes_dict.get(x, 0))
+            # Get the most common answer
+            number = max(votes_dict, key=lambda x: votes_dict.get(x, 0))
 
-                output_tokens += len(response.output_text.split())
-            except Exception as e:
-                logger.error(f"Error during OpenAI API call: {e}. Exiting...")
-                sys.exit(-1)
-            else:
-                break
-        if retries == config["max_retries"]:
-            logger.error(f"Failed to select the best article after {config['max_retries']} retries.")
-            # TODO: send an email
-            sys.exit(1)
+            output_tokens += len(response.output_text.split())
+        except Exception as e:
+            logger.error(f"Error during OpenAI API call: {e}. Exiting...")
+            sys.exit(-1)
+        else:
+            break
+    if retries == config["max_retries"]:
+        logger.error(f"Failed to select the best article after {config['max_retries']} retries.")
+        # TODO: send an email
+        sys.exit(1)
 
-        logger.debug(f"# Votes to the best article: {votes_dict[number]}/{i + 1}")
-        logger.debug(f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}")
-        logger.debug(f"# Used tokens in output: {output_tokens}")
-    else:
-        logger.info("Debug mode is enabled, skipping OpenAI API call...")
-        number = 0
+    logger.debug(f"# Votes to the best article: {votes_dict[number]}/{i + 1}")
+    logger.debug(f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}")
+    logger.debug(f"# Used tokens in output: {output_tokens}")
 
     # Get the PDF URL of the selected article
     pdf_url = ""

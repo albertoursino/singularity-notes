@@ -1,6 +1,3 @@
-# Whether or not to use the OpenAI API
-debug: false
-
 # Check out all OpenAI models here: https://platform.openai.com/docs/models
 model: gpt-5
 
