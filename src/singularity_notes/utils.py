@@ -32,7 +32,7 @@ def validate_json_data(data: dict[Any, Any], schema: dict[Any, Any]) -> bool:
 
 class UsedArticles:
     def __init__(self):
-        self.used_articles_path = Path("used_articles.json")
+        self.used_articles_path = Path("src/singularity_notes/resources/used_articles.json")
         self._create_file()
 
     def get_used_articles(self):

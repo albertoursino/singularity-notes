@@ -36,7 +36,7 @@ jobs:
         with:
           name: pipeline-outputs
           path: |
-            used_articles.json
+            src/singularity_notes/resources/used_articles.json
             app/content/posts
 
   push_artifacts:
