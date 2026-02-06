@@ -1,53 +1,36 @@
 # Welcome to Singularity Notes! 🌌
 
-Singularity Notes is a fully automated blog delivering bite-sized posts on the latest astronomy discoveries, powered by AI. The blog is online at [**singularitynotes.com**](https://singularitynotes.com).
+Singularity Notes is a fully automated blog delivering bite-sized posts on the latest astronomy discoveries, powered by AI. The blog is online at [singularitynotes.com](https://singularitynotes.com).
 
-- 🤝 If you want to contribute, please follow the project's [**contribution guide**](contributing.md).
+🤝 If you want to contribute, please follow the project's [contribution guide](contributing.md).
 
-## 🛠️ Development setup (Linux)
+## Development setup (Linux)
 
-1. Install Python environment with [**Poetry ≥ 2.1**](https://python-poetry.org/)
-
-   ```shell
-   poetry install
-   eval $(poetry env activate)
-   ```
-
-   or with the Python [**venv**](https://docs.python.org/3/library/venv.html) module
+1. Install Python environment with [uv](https://docs.astral.sh/uv/)
 
    ```shell
-   python -m venv .venv
+   uv sync --all-extras
    source .venv/bin/activate
-   pip install -r requirements.txt
    ```
 
-2. Create an `.env` file in the working directory and set the [**OpenAI key**](https://platform.openai.com/docs/api-reference/introduction)
+2. Create an `.env` file in the working directory and set the [OpenAI key](https://platform.openai.com/docs/api-reference/introduction)
 
    ```env
-   OPENAI_API_KEY = ""
+   OPENAI_API_KEY = "<your_api_key>"
    ```
 
-3. Launch the web app locally with
+## Usage
 
-   ```shell
-   poe app
-   ```
+- Launch the web app locally
 
-4. Create new posts by
+  ```shell
+  poe app
+  ```
 
-   - setting the parameters in `config.yaml`
-   - running
+- Adjust the [config.yaml](config.yaml)
 
-     ```shell
-     poe pipe
-     ```
+- Create a new post
 
-## 🏙️ Structure of the repo
-
-- `src/` contains all the files related to the pipeline, which performs the following steps:
-  1. `get_arxiv_articles.py`: Fetch articles from [**Arxiv**](https://arxiv.org/)
-  2. `select_best_article.py`: Select the most interesting article
-  3. `create_raw_post.py`: Create a raw markdown post
-  4. `setup_post.py`: Setup the post in Hugo
-- `test/` contains unit tests
-- `app/` contains the Hugo configuration files
+  ```shell
+  poe pipe
+  ```

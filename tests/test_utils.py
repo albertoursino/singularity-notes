@@ -4,91 +4,43 @@ from typing import Any
 
 from jsonschema import ValidationError
 import pytest
-
-from src.utils import validate_json_data
-
-
-DATA_FOLDER = Path("tests/data")
+from jsonschema import validate
 
 
-@pytest.fixture  # type: ignore
+@pytest.fixture
 def article_schema() -> Any:
-    with Path("src/resources/article_schema.json").open() as f:
+    """Loads the article schema used in production."""
+    with Path("src/singularity_notes/resources/article_schema.json").open() as f:
         return json.load(f)
 
 
-def test_validate_json_data_good_post(article_schema: dict[Any, Any]) -> None:
-    with (DATA_FOLDER / "good_post.json").open() as f:
+@pytest.mark.parametrize(
+    "filename",
+    ["tests/data/valid_json/1.json"],
+)
+def test_validate_valid_json(article_schema: dict[Any, Any], filename: str) -> None:
+    with Path(filename).open() as f:
         model_output = json.load(f)
 
-    assert validate_json_data(model_output, article_schema)
+    validate(model_output, article_schema)
 
 
-def test_validate_json_data_empty_sections(article_schema: dict[Any, Any]) -> None:
-    with (DATA_FOLDER / "empty_sections.json").open() as f:
-        model_output = json.load(f)
-
-    with pytest.raises(ValidationError):
-        validate_json_data(model_output, article_schema)
-
-
-def test_validate_json_data_empty_section_content(article_schema: dict[Any, Any]) -> None:
-    with (DATA_FOLDER / "empty_section_content.json").open() as f:
-        model_output = json.load(f)
-
-    with pytest.raises(ValidationError):
-        validate_json_data(model_output, article_schema)
-
-
-def test_validate_json_data_empty_section_header(article_schema: dict[Any, Any]) -> None:
-    with (DATA_FOLDER / "empty_section_header.json").open() as f:
-        model_output = json.load(f)
-
-    with pytest.raises(ValidationError):
-        validate_json_data(model_output, article_schema)
-
-
-def test_validate_json_data_empty_subtitle(article_schema: dict[Any, Any]) -> None:
-    with (DATA_FOLDER / "empty_subtitle.json").open() as f:
+@pytest.mark.parametrize(
+    "filename",
+    [
+        "tests/data/invalid_json/empty_sections.json",
+        "tests/data/invalid_json/empty_section_content.json",
+        "tests/data/invalid_json/empty_section_header.json",
+        "tests/data/invalid_json/empty_subtitle.json",
+        "tests/data/invalid_json/empty_title.json",
+        "tests/data/invalid_json/missing_sections_property.json",
+        "tests/data/invalid_json/missing_subtitle_property.json",
+        "tests/data/invalid_json/missing_title_property.json",
+    ],
+)
+def test_validate_invalid_json(article_schema: dict[Any, Any], filename: str) -> None:
+    with Path(filename).open() as f:
         model_output = json.load(f)
 
     with pytest.raises(ValidationError):
-        validate_json_data(model_output, article_schema)
-
-
-def test_validate_json_data_empty_title(article_schema: dict[Any, Any]) -> None:
-    with (DATA_FOLDER / "empty_title.json").open() as f:
-        model_output = json.load(f)
-
-    with pytest.raises(ValidationError):
-        validate_json_data(model_output, article_schema)
-
-
-def test_validate_json_data_missing_sections_property(
-    article_schema: dict[Any, Any],
-) -> None:
-    with (DATA_FOLDER / "missing_sections_property.json").open() as f:
-        model_output = json.load(f)
-
-    with pytest.raises(ValidationError):
-        validate_json_data(model_output, article_schema)
-
-
-def test_validate_json_data_missing_subtitle_property(
-    article_schema: dict[Any, Any],
-) -> None:
-    with (DATA_FOLDER / "missing_subtitle_property.json").open() as f:
-        model_output = json.load(f)
-
-    with pytest.raises(ValidationError):
-        validate_json_data(model_output, article_schema)
-
-
-def test_validate_json_data_missing_title_property(
-    article_schema: dict[Any, Any],
-) -> None:
-    with (DATA_FOLDER / "missing_title_property.json").open() as f:
-        model_output = json.load(f)
-
-    with pytest.raises(ValidationError):
-        validate_json_data(model_output, article_schema)
+        validate(model_output, article_schema)

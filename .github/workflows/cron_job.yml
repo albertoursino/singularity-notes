@@ -24,7 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --user -r requirements.txt
+          pip install uv
+          uv pip install --system -r <(uv export --format=requirements-txt)
 
       - name: Run pipeline
         run: poe pipe
@@ -36,7 +37,7 @@ jobs:
         with:
           name: pipeline-outputs
           path: |
-            used_articles.json
+            src/singularity_notes/resources/used_articles.json
             app/content/posts
 
   push_artifacts:
