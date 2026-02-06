@@ -7,7 +7,6 @@ readme = "README.md"
 requires-python = ">=3.13, <3.14"
 dependencies = [
     "hugo (>=0.148.1,<0.149.0)",
-    "pre-commit (>=4.2.0,<5.0.0)",
     "arxiv (>=2.2.0,<3.0.0)",
     "loguru (>=0.7.3,<0.8.0)",
     "openai (>=1.97.1,<2.0.0)",
@@ -17,12 +16,8 @@ dependencies = [
     "jsonschema (>=4.25.0,<5.0.0)",
 ]
 
-[project.optional-dependencies]
-dev = ["pytest (>=8.4.1,<9.0.0)"]
-
-[tool.poetry]
-package-mode = false
-requires-poetry = ">=2.1"
+[dependency-groups]
+dev = ["prek>=0.3.1", "pytest (>=8.4.1,<9.0.0)"]
 
 [tool.mypy]
 python_version = "3.13"
@@ -62,7 +57,7 @@ exclude = [
 ]
 
 # Same as Black.
-line-length = 90
+line-length = 140
 indent-width = 4
 
 # Assume Python 3.13
@@ -110,9 +105,11 @@ docstring-code-format = false
 docstring-code-line-length = "dynamic"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.10.0,<0.11.0"]
+build-backend = "uv_build"
+
 
 [tool.poe.tasks]
 app = "hugo server -D --source app"
-pipe = "python run_pipeline.py"
+pipe = "python src/singularity_notes/main.py"
+tests = "pytest"

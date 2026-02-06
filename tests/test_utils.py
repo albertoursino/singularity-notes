@@ -4,8 +4,7 @@ from typing import Any
 
 from jsonschema import ValidationError
 import pytest
-
-from src.utils import validate_json_data
+from singularity_notes.utils import validate_json_data
 
 
 DATA_FOLDER = Path("tests/data")
@@ -13,7 +12,7 @@ DATA_FOLDER = Path("tests/data")
 
 @pytest.fixture  # type: ignore
 def article_schema() -> Any:
-    with Path("src/resources/article_schema.json").open() as f:
+    with Path("src/singularity_notes/resources/article_schema.json").open() as f:
         return json.load(f)
 
 

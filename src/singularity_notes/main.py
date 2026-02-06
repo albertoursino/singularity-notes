@@ -1,13 +1,13 @@
 from pathlib import Path
 from typing import Any
 from loguru import logger
-import yaml
+import yaml  # type: ignore[import-untyped]
 
-from src.stages.create_raw_post import create_raw_post
-from src.stages.get_arxiv_articles import get_arxiv_articles
-from src.stages.select_best_article import select_best_article
-from src.stages.setup_post import setup_post
-from src.utils import create_output_dir
+from stages.create_raw_post import create_raw_post
+from stages.get_arxiv_articles import get_arxiv_articles
+from stages.select_best_article import select_best_article
+from stages.setup_post import setup_post
+from utils import create_output_dir
 
 
 OUTPUT_DIR: Path = Path("output/")

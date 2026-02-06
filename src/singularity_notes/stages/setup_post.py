@@ -1,15 +1,14 @@
 from datetime import datetime
 import json
-import os
 from pathlib import Path
 import sys
 from time import time
 from typing import Any
 
 from loguru import logger
-import yaml
+import yaml  # type: ignore[import-untyped]
 
-from src.utils import UsedArticles
+from utils import UsedArticles
 
 
 def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
@@ -35,9 +34,7 @@ def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
     for section in sections:
         section_header = section["header"]
         section_content = section["content"]
-        content += (
-            "### " + section_header + "\n\n" + section_content + "\n\n" + "---" + "\n\n"
-        )
+        content += "### " + section_header + "\n\n" + section_content + "\n\n" + "---" + "\n\n"
 
     # Build Hugo header
     header = (
@@ -68,7 +65,7 @@ def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
 
 if __name__ == "__main__":
     sys.path.append(str(Path.cwd()))
-    from run_pipeline import OUTPUT_DIR
+    from src.singularity_notes.main import OUTPUT_DIR
     from src.utils import create_output_dir
 
     with open("config.yaml", "r") as config_file:

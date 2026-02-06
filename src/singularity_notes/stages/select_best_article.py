@@ -3,14 +3,14 @@ import sys
 from typing import Any
 import PyPDF2
 from loguru import logger
-import requests
+import requests  # type: ignore[import-untyped]
 from dotenv import load_dotenv
 from openai import OpenAI
 import json
 from tqdm import tqdm
-import yaml
+import yaml  # type: ignore[import-untyped]
 
-from src.utils import UsedArticles
+from utils import UsedArticles
 
 load_dotenv()
 
@@ -28,15 +28,13 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
         number = article.get("number")
         title = article.get("title")
         summary = article.get("summary")
-        article_summaries.append(
-            f"**Number**: {number}\n**Title**: {title}\n**Abstract**: {summary}\n"
-        )
+        article_summaries.append(f"**Number**: {number}\n**Title**: {title}\n**Abstract**: {summary}\n")
 
     formatted_articles = "\n".join(article_summaries)
 
     if not config["debug"]:
         # Construct prompt
-        with open("src/resources/prompt_select_best_article.txt", "r") as file:
+        with open("src/singularity_notes/resources/prompt_select_best_article.txt", "r") as file:
             prompt = file.read()
         prompt += f"\n\n{formatted_articles}\nOUTPUT:"
 
@@ -50,9 +48,7 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
                     range(config["reasoning_paths"]),
                     desc=f"Select the best article with model {config['model']!r}...",
                 ):
-                    response = client.responses.create(
-                        model=config["model"], input=prompt
-                    )
+                    response = client.responses.create(model=config["model"], input=prompt)
                     number = int(response.output_text)
 
                     if number not in votes_dict:
@@ -70,16 +66,12 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
             else:
                 break
         if retries == config["max_retries"]:
-            logger.error(
-                f"Failed to select the best article after {config['max_retries']} retries."
-            )
+            logger.error(f"Failed to select the best article after {config['max_retries']} retries.")
             # TODO: send an email
             sys.exit(1)
 
         logger.debug(f"# Votes to the best article: {votes_dict[number]}/{i + 1}")
-        logger.debug(
-            f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}"
-        )
+        logger.debug(f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}")
         logger.debug(f"# Used tokens in output: {output_tokens}")
     else:
         logger.info("Debug mode is enabled, skipping OpenAI API call...")
@@ -131,7 +123,7 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
 
 if __name__ == "__main__":
     sys.path.append(str(Path.cwd()))
-    from run_pipeline import OUTPUT_DIR
+    from src.singularity_notes.main import OUTPUT_DIR
     from src.utils import create_output_dir
 
     with open("config.yaml", "r") as config_file:

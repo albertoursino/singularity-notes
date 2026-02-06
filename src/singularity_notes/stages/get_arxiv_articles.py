@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 import sys
 from typing import Any
@@ -6,9 +5,9 @@ import arxiv
 import json
 
 from loguru import logger
-import yaml
+import yaml  # type: ignore[import-untyped]
 
-from src.utils import UsedArticles
+from utils import UsedArticles
 
 
 def get_arxiv_articles(config: dict[Any, Any], output_dir: Path) -> None:
@@ -50,14 +49,12 @@ def get_arxiv_articles(config: dict[Any, Any], output_dir: Path) -> None:
     output_file = output_dir / "arxiv_articles.json"
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
-        logger.success(
-            f"JSON file with {len(results)} articles saved successfully at {str(output_file)!r}"
-        )
+        logger.success(f"JSON file with {len(results)} articles saved successfully at {str(output_file)!r}")
 
 
 if __name__ == "__main__":
     sys.path.append(str(Path.cwd()))
-    from run_pipeline import OUTPUT_DIR
+    from src.singularity_notes.main import OUTPUT_DIR
     from src.utils import create_output_dir
 
     with open("config.yaml", "r") as config_file:

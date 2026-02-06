@@ -7,10 +7,9 @@ from dotenv import load_dotenv
 from jsonschema import ValidationError
 from loguru import logger
 from openai import OpenAI
-import yaml
+import yaml  # type: ignore[import-untyped]
 
-sys.path.append(str(Path.cwd()))
-from src.utils import validate_json_data
+from utils import validate_json_data
 
 load_dotenv()
 
@@ -48,10 +47,10 @@ def create_raw_post(config: dict[Any, Any], output_dir: Path) -> None:
                 pdf_content += page.extract_text() or ""
 
         # Construct the prompt
-        with open("src/resources/prompt_create_post.txt", "r") as file:
+        with open("src/singularity_notes/resources/prompt_create_post.txt", "r") as file:
             prompt = file.read()
 
-        with Path("src/resources/article_schema.json").open() as f:
+        with Path("src/singularity_notes/resources/article_schema.json").open() as f:
             json_schema = json.load(f)
 
         prompt += f"\n{pdf_content}\n\nOUTPUT:"
@@ -85,14 +84,10 @@ def create_raw_post(config: dict[Any, Any], output_dir: Path) -> None:
                 logger.error(f"Error during OpenAI API call: {e}. Exiting...")
                 sys.exit(1)
             else:
-                logger.success(
-                    f"Post successfully generated and saved to {str(output_file)!r}."
-                )
+                logger.success(f"Post successfully generated and saved to {str(output_file)!r}.")
                 break
         if retries == config["max_retries"]:
-            logger.error(
-                f"Failed to create the post after {config['max_retries']} retries."
-            )
+            logger.error(f"Failed to create the post after {config['max_retries']} retries.")
             # TODO: send an email
             sys.exit(1)
 
@@ -102,7 +97,7 @@ def create_raw_post(config: dict[Any, Any], output_dir: Path) -> None:
 
 if __name__ == "__main__":
     sys.path.append(str(Path.cwd()))
-    from run_pipeline import OUTPUT_DIR
+    from src.singularity_notes.main import OUTPUT_DIR
     from src.utils import create_output_dir
 
     with open("config.yaml", "r") as config_file:
