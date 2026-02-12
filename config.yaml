@@ -1,8 +1,8 @@
 # Check out all OpenAI models here: https://platform.openai.com/docs/models
-model: gpt-5
+model: gpt-5.2-pro
 
 # Number of articles to fetch from arXiv (https://arxiv.org/)
-number_of_articles: 200
+number_of_articles: 300
 
 # Number of retries if the model doesn't return a valid JSON
-max_retries: 5
+max_retries: 3
