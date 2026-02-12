@@ -24,7 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --user -r requirements.txt
+          pip install uv
+          uv pip install --system -r <(uv export --format=requirements-txt)
 
       - name: Run pipeline
         run: poe pipe

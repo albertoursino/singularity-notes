@@ -1,50 +1,21 @@
 from pathlib import Path
 from typing import Any
-from loguru import logger
+from singularity_notes.stages.create_raw_post import create_raw_post
+from singularity_notes.stages.get_arxiv_articles import get_arxiv_articles
+from singularity_notes.stages.select_best_article import select_best_article
+from singularity_notes.stages.setup_post import setup_post
+from singularity_notes.utils import create_output_dir
 import yaml  # type: ignore[import-untyped]
-
-from stages.create_raw_post import create_raw_post
-from stages.get_arxiv_articles import get_arxiv_articles
-from stages.select_best_article import select_best_article
-from stages.setup_post import setup_post
-from utils import create_output_dir
 
 
 OUTPUT_DIR: Path = Path("output/")
-CONFIG_FILE: Path = Path("config.yaml")
-
-
-class ArticleProcessor:
-    def __init__(self, config: dict, output_dir: Path):
-        self.config = config
-        self.output_dir = output_dir
-
-    def get_arxiv_articles(self):
-        get_arxiv_articles(self.config, self.output_dir)
-
-    def select_best_article(self):
-        select_best_article(self.config, self.output_dir)
-
-    def create_raw_post(self):
-        create_raw_post(self.config, self.output_dir)
-
-    def setup_post(self):
-        setup_post(self.config, self.output_dir)
-
-    def run(self):
-        logger.info("Fetching articles from arXiv...")
-        self.get_arxiv_articles()
-        logger.info("Selecting the best article...")
-        self.select_best_article()
-        logger.info("Creating raw post...")
-        self.create_raw_post()
-        logger.info("Setting up Hugo post...")
-        self.setup_post()
 
 
 if __name__ == "__main__":
-    with open(CONFIG_FILE, "r") as f:
+    with Path("config.yaml").open() as f:
         config: dict[str, Any] = yaml.safe_load(f)
 
-    processor = ArticleProcessor(config, create_output_dir(OUTPUT_DIR))
-    processor.run()
+    get_arxiv_articles(num_articles=int(config["number_of_articles"]), output_dir=create_output_dir(OUTPUT_DIR))
+    select_best_article(model=config["model"], output_dir=create_output_dir(OUTPUT_DIR))
+    create_raw_post(model=config["model"], output_dir=create_output_dir(OUTPUT_DIR), max_retries=int(config["max_retries"]))
+    setup_post(model=config["model"], output_dir=create_output_dir(OUTPUT_DIR))

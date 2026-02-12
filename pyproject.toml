@@ -111,5 +111,5 @@ build-backend = "uv_build"
 
 [tool.poe.tasks]
 app = "hugo server -D --source app"
-pipe = "python src/singularity_notes/main.py"
+pipe = "uv run src/singularity_notes/main.py"
 tests = "pytest"

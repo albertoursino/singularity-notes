@@ -1,24 +1,25 @@
 # Welcome to Singularity Notes! 🌌
 
-Singularity Notes is a fully automated blog delivering bite-sized posts on the latest astronomy discoveries, powered by AI. The blog is online at [**singularitynotes.com**](https://singularitynotes.com).
+Singularity Notes is a fully automated blog delivering bite-sized posts on the latest astronomy discoveries, powered by AI. The blog is online at [singularitynotes.com](https://singularitynotes.com).
 
-🤝 If you want to contribute, please follow the project's [**contribution guide**](contributing.md).
+🤝 If you want to contribute, please follow the project's [contribution guide](contributing.md).
 
-## 🛠️ Development setup (Linux)
+## Development setup (Linux)
 
-1. Install Python environment with [**uv**](https://docs.astral.sh/uv/)
+1. Install Python environment with [uv](https://docs.astral.sh/uv/)
 
    ```shell
    uv sync --all-extras
+   source .venv/bin/activate
    ```
 
-2. Create an `.env` file in the working directory and set the [**OpenAI key**](https://platform.openai.com/docs/api-reference/introduction)
+2. Create an `.env` file in the working directory and set the [OpenAI key](https://platform.openai.com/docs/api-reference/introduction)
 
    ```env
-   OPENAI_API_KEY = ""
+   OPENAI_API_KEY = "<your_api_key>"
    ```
 
-## 🚀 Usage
+## Usage
 
 - Launch the web app locally
 

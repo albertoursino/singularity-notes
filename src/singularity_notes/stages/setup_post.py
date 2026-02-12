@@ -8,10 +8,16 @@ from typing import Any
 from loguru import logger
 import yaml  # type: ignore[import-untyped]
 
-from utils import UsedArticles
+from singularity_notes.utils import UsedArticles
 
 
-def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
+def setup_post(model: str, output_dir: Path) -> None:
+    """Using the content of the file `raw_post.json`, creates and saves a new Hugo post in the `app/content/posts` directory.
+
+    Args:
+        model: The OpenAI model name used to generate `raw_post.json`.
+        output_dir: Directory where the output files will be saved.
+    """
     # Read the created article from the JSON file
     try:
         raw_post = output_dir / "raw_post.json"
@@ -38,7 +44,7 @@ def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
 
     # Build Hugo header
     header = (
-        f"""---\nauthor: [Powered by OpenAI ({config["model"]})]\ntitle: "{title}"\n"""
+        f"""---\nauthor: [Powered by OpenAI ({model})]\ntitle: "{title}"\n"""
         f"""date: "{datetime.now().strftime("%Y-%m-%d")}"\ndescription: "{subtitle}"\n"""
         f"""summary: "{subtitle}"\nShowToc: false\n---\n\n"""
     )
@@ -64,11 +70,10 @@ def setup_post(config: dict[Any, Any], output_dir: Path) -> None:
 
 
 if __name__ == "__main__":
-    sys.path.append(str(Path.cwd()))
-    from src.singularity_notes.main import OUTPUT_DIR
-    from src.utils import create_output_dir
+    from singularity_notes.main import OUTPUT_DIR
+    from singularity_notes.utils import create_output_dir
 
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
 
-    setup_post(config, create_output_dir(OUTPUT_DIR))
+    setup_post(model=config["model"], output_dir=create_output_dir(OUTPUT_DIR))

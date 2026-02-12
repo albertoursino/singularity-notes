@@ -7,15 +7,22 @@ import requests  # type: ignore[import-untyped]
 from dotenv import load_dotenv
 from openai import OpenAI
 import json
-from tqdm import tqdm
 import yaml  # type: ignore[import-untyped]
 
-from utils import UsedArticles
+from singularity_notes.utils import UsedArticles
 
 load_dotenv()
 
 
-def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
+def select_best_article(model: str, output_dir: Path) -> None:
+    """Using an OpenAI LLM, selects the best article from the file `arxiv_articles.json`.
+
+    The model bases its decision on the title and the abstract of the articles, and the prompt `prompt_select_best_article.txt`.
+
+    Args:
+        model: The OpenAI model name to use for selection.
+        output_dir: Directory where the output files will be saved.
+    """
     try:
         with (output_dir / "arxiv_articles.json").open() as f:
             articles = json.load(f)
@@ -37,39 +44,16 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
         prompt = file.read()
     prompt += f"\n\n{formatted_articles}\nOUTPUT:"
 
-    retries = 0
     output_tokens = 0
-    while retries < config["max_retries"]:
-        try:
-            client = OpenAI()
-            votes_dict: dict[int, int] = {}
-            for i in tqdm(
-                range(config["reasoning_paths"]),
-                desc=f"Select the best article with model {config['model']!r}...",
-            ):
-                response = client.responses.create(model=config["model"], input=prompt)
-                number = int(response.output_text)
+    try:
+        response = OpenAI().responses.create(model=model, input=prompt)
+        number = int(response.output_text)
 
-                if number not in votes_dict:
-                    votes_dict[number] = 1
-                else:
-                    votes_dict[number] += 1
+        output_tokens += len(response.output_text.split())
+    except Exception as e:
+        logger.error(f"Error during OpenAI API call: {e}. Exiting...")
+        sys.exit(-1)
 
-            # Get the most common answer
-            number = max(votes_dict, key=lambda x: votes_dict.get(x, 0))
-
-            output_tokens += len(response.output_text.split())
-        except Exception as e:
-            logger.error(f"Error during OpenAI API call: {e}. Exiting...")
-            sys.exit(-1)
-        else:
-            break
-    if retries == config["max_retries"]:
-        logger.error(f"Failed to select the best article after {config['max_retries']} retries.")
-        # TODO: send an email
-        sys.exit(1)
-
-    logger.debug(f"# Votes to the best article: {votes_dict[number]}/{i + 1}")
     logger.debug(f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}")
     logger.debug(f"# Used tokens in output: {output_tokens}")
 
@@ -113,16 +97,14 @@ def select_best_article(config: dict[Any, Any], output_dir: Path) -> None:
             best_article_json = json.load(f)
         # * We can't use this article so we consider it used
         UsedArticles().update_used_articles(best_article_json)
-        # TODO: send signal to re-run the pipeline
         sys.exit(1)
 
 
 if __name__ == "__main__":
-    sys.path.append(str(Path.cwd()))
-    from src.singularity_notes.main import OUTPUT_DIR
-    from src.utils import create_output_dir
+    from singularity_notes.main import OUTPUT_DIR
+    from singularity_notes.utils import create_output_dir
 
     with open("config.yaml", "r") as config_file:
         config: dict[str, Any] = yaml.safe_load(config_file)
 
-    select_best_article(config, create_output_dir(OUTPUT_DIR))
+    select_best_article(model=config["model"], output_dir=create_output_dir(OUTPUT_DIR))
