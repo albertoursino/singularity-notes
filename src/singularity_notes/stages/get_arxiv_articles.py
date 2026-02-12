@@ -24,15 +24,15 @@ def get_arxiv_articles(num_articles: int, output_dir: Path) -> None:
         sort_order=arxiv.SortOrder.Ascending,
     )
 
-    used_arxiv_ids = UsedArticles().get_used_articles()
-
     # Fetch and format results
     results = []
     i = 0
+    skipped_articles = 0
     for paper in arxiv.Client().results(search):
         arxiv_id = paper.get_short_id()
-        if arxiv_id in used_arxiv_ids:
+        if arxiv_id in UsedArticles().get_used_articles():
             logger.warning(f"Skipping already used article: {arxiv_id}")
+            skipped_articles += 1
             continue
         results.append(
             {
@@ -46,6 +46,8 @@ def get_arxiv_articles(num_articles: int, output_dir: Path) -> None:
             }
         )
         i += 1
+
+    logger.info(f"Fetched {len(results)} new articles from arXiv. Skipped {skipped_articles} already used articles.")
 
     # Save results to a JSON file
     output_file = output_dir / "arxiv_articles.json"
