@@ -16,7 +16,7 @@ def article_schema() -> Any:
 
 @pytest.mark.parametrize(
     "filename",
-    ["tests/data/valid_json/1.json"],
+    ["tests/unit_tests/data/valid_json/1.json"],
 )
 def test_validate_valid_json(article_schema: dict[Any, Any], filename: str) -> None:
     with Path(filename).open() as f:
@@ -28,14 +28,14 @@ def test_validate_valid_json(article_schema: dict[Any, Any], filename: str) -> N
 @pytest.mark.parametrize(
     "filename",
     [
-        "tests/data/invalid_json/empty_sections.json",
-        "tests/data/invalid_json/empty_section_content.json",
-        "tests/data/invalid_json/empty_section_header.json",
-        "tests/data/invalid_json/empty_subtitle.json",
-        "tests/data/invalid_json/empty_title.json",
-        "tests/data/invalid_json/missing_sections_property.json",
-        "tests/data/invalid_json/missing_subtitle_property.json",
-        "tests/data/invalid_json/missing_title_property.json",
+        "tests/unit_tests/data/invalid_json/empty_sections.json",
+        "tests/unit_tests/data/invalid_json/empty_section_content.json",
+        "tests/unit_tests/data/invalid_json/empty_section_header.json",
+        "tests/unit_tests/data/invalid_json/empty_subtitle.json",
+        "tests/unit_tests/data/invalid_json/empty_title.json",
+        "tests/unit_tests/data/invalid_json/missing_sections_property.json",
+        "tests/unit_tests/data/invalid_json/missing_subtitle_property.json",
+        "tests/unit_tests/data/invalid_json/missing_title_property.json",
     ],
 )
 def test_validate_invalid_json(article_schema: dict[Any, Any], filename: str) -> None:
