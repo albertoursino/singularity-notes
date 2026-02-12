@@ -2,6 +2,8 @@ import json
 import os
 from pathlib import Path
 
+from loguru import logger
+
 
 class UsedArticles:
     def __init__(self):
@@ -28,6 +30,7 @@ class UsedArticles:
 
             with self.used_articles_path.open("w") as f:
                 json.dump(used_articles, f, indent=2)
+            logger.success(f"Updated used articles with {best_article_json['arxiv_id']}")
         else:
             # TODO: raise error
             pass

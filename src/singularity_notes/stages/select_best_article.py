@@ -54,7 +54,7 @@ def select_best_article(model: str, output_dir: Path) -> None:
         logger.error(f"Error during OpenAI API call: {e}. Exiting...")
         sys.exit(-1)
 
-    logger.debug(f"# Used tokens in input: {len(prompt.split()) * config['reasoning_paths']}")
+    logger.debug(f"# Used tokens in input: {len(prompt.split())}")
     logger.debug(f"# Used tokens in output: {output_tokens}")
 
     # Get the PDF URL of the selected article
