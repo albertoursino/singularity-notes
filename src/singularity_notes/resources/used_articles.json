@@ -350,5 +350,13 @@
     "summary": "We investigate particle laws of motion derived from nonstandard kinetic actions of a special form. We are guided by a phenomenological scheme--the modified dynamics (MOND)--that imputes the mass discrepancy observed in galactic systems to a departure from Newtonian dynamics below a certain acceleration scale a0. In the limit a0 goes to 0 the theory goes to Newtonian dynamics. In the opposite limit the action becomes proportional to 1/a0. Galilei-invariant such theories must be strongly non-local; this is a blessing, as such theories need not suffer from the illnesses that are endemic to higher-derivative theories. We discuss the possibility that such a modified law of motion is an effective theory resulting from the elimination of degrees of freedom pertaining to the universe at large (the near equality a0=cH0 being a trace of that connection). A virial relation for bounded trajectories is derived. Exact solutions are obtained for circular orbits, which pertain to rotation curves of disk galaxies. We also explore, in passing, theories that depart from the conventional\n  Newtonian dynamics for very low frequencies. The present formulation contrasts, on important accounts, with earlier, modified-gravity formulations.",
     "pdf_url": "https://arxiv.org/pdf/astro-ph/9303012v1",
     "arxiv_id": "astro-ph/9303012v1"
+  },
+  {
+    "title": "The First Data from the MACHO Experiment",
+    "authors": "D. P. Bennett",
+    "published": "1993-04-15",
+    "summary": "MAssive Compact Halo Objects such as brown dwarfs, Jupiters, and black holes are prime candidates to comprise the dark halo of our galaxy. Paczynski noted that objects (dubbed MACHOs) with masses in the range $10^{-6}M_\\odot < M \\simlt 100 M_\\odot$. can be detected via gravitational microlensing of stars in the Magellanic Clouds with the caveat that only about one in $10^6$ stars will be lensed at any given time. Our group has recently begun a search for microlensing using a refurbished 1.27 meter telescope at the Mount Stromlo Observatory in Australia. Since the summer of 1992, we have been imaging up to $10^7$ stars a night in the Large Magellanic Cloud using our large format two-color $3.4\\times 10^7$ pixel CCD camera. Here I report on our first results based on an analysis of $\\sim 10^6$ of these stars. Although this is not enough data to make definitive statements about the nature of the dark matter, we are able to conclude that the rate of variable star background events is not larger than the expected MACHO signal.",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9304014v1",
+    "arxiv_id": "astro-ph/9304014v1"
   }
 ]
