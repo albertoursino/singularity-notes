@@ -382,5 +382,13 @@
     "summary": "Kouveliotou et al. (1993) recently confirmed that gamma-ray bursts are bimodal in duration. In this paper we compute the statistical properties of the short ($\\le 2$~s) and long ($>2$~s) bursts using a method of analysis that makes no assumption regarding the location of the bursts, whether in the Galaxy or at a cosmological distance. We find the 64 ms channel on BATSE to be more sensitive to short bursts and the 1024 ms channel is more sensitive to long bursts. We show that all the currently available data are consistent with the simple hypothesis that both short and long bursts have the same spatial distribution and that within each population the sources are standard candles. The rate of short bursts is $\\sim 0.4$ of the rate of long bursts. Although the durations of short and long gamma-ray bursts span several orders of magnitude and the total energy of a typical short burst is smaller than that of a typical long burst by a factor of $\\sim 20$, surprisingly the peak luminosities of the two kinds of bursts are equal to within a factor of $\\sim 2$.",
     "pdf_url": "https://arxiv.org/pdf/astro-ph/9304016v1",
     "arxiv_id": "astro-ph/9304016v1"
+  },
+  {
+    "title": "Lensing of Invisible Stars by Brown Dwarfs",
+    "authors": "Alain Bouquet",
+    "published": "1993-04-28",
+    "summary": "To detect brown dwarfs in the dark galactic halo through gravitational lensing, experiments follow the luminosity of millions of stars to observe a few lensing events par year. The luminosity of a star too faint to be continuously followed can be temporarily increased above the detection limit by a lensing. The detection of these invisible stars would increase the number of events by a factor 2 to 7, and moreover their presence would confirm the lensing interpretation of events due to continuously monitored stars.",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9304025v1",
+    "arxiv_id": "astro-ph/9304025v1"
   }
 ]
