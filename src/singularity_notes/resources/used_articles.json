@@ -390,5 +390,13 @@
     "summary": "To detect brown dwarfs in the dark galactic halo through gravitational lensing, experiments follow the luminosity of millions of stars to observe a few lensing events par year. The luminosity of a star too faint to be continuously followed can be temporarily increased above the detection limit by a lensing. The detection of these invisible stars would increase the number of events by a factor 2 to 7, and moreover their presence would confirm the lensing interpretation of events due to continuously monitored stars.",
     "pdf_url": "https://arxiv.org/pdf/astro-ph/9304025v1",
     "arxiv_id": "astro-ph/9304025v1"
+  },
+  {
+    "title": "Hydrodynamic Instability and Coalescence of Binary Neutron Stars",
+    "authors": "D. Lai, F. A. Rasio, S. L. Shapiro",
+    "published": "1993-04-28",
+    "summary": "We study the importance of hydrodynamic effects on the evolution of coalescing binary neutron stars. Using an approximate energy functional constructed from equilibrium solutions for polytropic binary configurations, we incorporate hydrodynamic effects into the calculation of the orbital decay driven by gravitational wave emission. In particular, we follow the transition between the quasi-static, secular decay of the orbit at large separation and the rapid dynamical evolution of configurations approaching contact. We show that a purely Newtonian hydrodynamic instability can significantly accelerate the coalescence at small separation. Such an instability occurs in all close binary configurations containing sufficiently incompressible stars. Calculations are performed for various neutron star masses, radii, spins, and effective polytropic indices. Typically, we find that the radial infall velocity just prior to contact is about 10\\% of the tangential orbital velocity. Post-Newtonian effects can move the stability limit to a larger binary separation, and may induce an even larger radial velocity. We also consider the possibility of mass transfer from one neutron star to the other. We show that stable mass transfer is impossible except when the mass of one of the components is very small (less than about 0.4 solar mass) and the viscosity is high enough to maintain corotation.",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9304027v1",
+    "arxiv_id": "astro-ph/9304027v1"
   }
 ]
