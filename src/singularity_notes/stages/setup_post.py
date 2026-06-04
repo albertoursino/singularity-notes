@@ -1,35 +1,21 @@
 from datetime import datetime
-import json
 from pathlib import Path
-import sys
 from time import time
-from typing import Any
 
 from loguru import logger
-import yaml  # type: ignore[import-untyped]
-
-from singularity_notes.utils import UsedArticles
 
 
-def setup_post(model: str, output_dir: Path) -> None:
-    """Using the content of the file `raw_post.json`, creates and saves a new Hugo post in the `app/content/posts` directory.
+def setup_post(model: str, raw_post: dict, output_dir: Path) -> None:
+    """Using the content of `raw_post`, creates and saves a new markdown post at `output_dir`.
 
     Args:
-        model: The OpenAI model name used to generate `raw_post.json`.
+        model: The model used to generate the post.
+        raw_post: The content of the raw post.
         output_dir: Directory where the output files will be saved.
     """
-    # Read the created article from the JSON file
-    try:
-        raw_post = output_dir / "raw_post.json"
-        with raw_post.open() as f:
-            json_content = json.load(f)
-    except FileNotFoundError:
-        logger.error(f"Raw post file not found at {str(raw_post)!r}.")
-        sys.exit(1)
-
-    title = json_content["title"]
-    subtitle = json_content["subtitle"]
-    sections = json_content["sections"]
+    title = raw_post["title"]
+    subtitle = raw_post["subtitle"]
+    sections = raw_post["sections"]
 
     logger.debug(f"Title of the article: {title}")
     logger.debug(f"Subtitle of the article: {subtitle}")
@@ -42,38 +28,16 @@ def setup_post(model: str, output_dir: Path) -> None:
         section_content = section["content"]
         content += "### " + section_header + "\n\n" + section_content + "\n\n" + "---" + "\n\n"
 
-    # Build Hugo header
+    # Create header
     header = (
         f"""---\nauthor: [Powered by OpenAI ({model})]\ntitle: "{title}"\n"""
         f"""date: "{datetime.now().strftime("%Y-%m-%d")}"\ndescription: "{subtitle}"\n"""
         f"""summary: "{subtitle}"\nShowToc: false\n---\n\n"""
     )
 
-    # Write credits
-    with (output_dir / "best_article.json").open("r") as f:
-        best_article_json = json.load(f)
-
-    credits = (
-        f"""**Source Paper's Authors**: {best_article_json["authors"]}\n\n"""
-        f"""**PDF**: {best_article_json["pdf_url"]}"""
-    )
-
     # Create a new post in Hugo
-    posts_dir = Path("app") / "content" / "posts"
-    Path(posts_dir).mkdir(parents=True, exist_ok=True)
-    hugo_post = posts_dir / f"post_{int(time())}.md"
-    with hugo_post.open("w") as f:
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    post = output_dir / f"post_{int(time())}.md"
+    with post.open("w") as f:
         f.write(header + content + credits)
-        logger.success(f"Post successfully created at {str(hugo_post)!r}.")
-
-    UsedArticles().update_used_articles(best_article_json)
-
-
-if __name__ == "__main__":
-    from singularity_notes.main import OUTPUT_DIR
-    from singularity_notes.utils import create_output_dir
-
-    with open("config.yaml", "r") as config_file:
-        config: dict[str, Any] = yaml.safe_load(config_file)
-
-    setup_post(model=config["model"], output_dir=create_output_dir(OUTPUT_DIR))
+        logger.success(f"Post successfully created at {str(post)!r}.")
