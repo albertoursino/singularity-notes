@@ -1,6 +1,6 @@
 # Welcome to Singularity Notes! 🌌
 
-Singularity Notes is a fully automated blog delivering bite-sized posts on the latest astronomy discoveries, powered by AI. The blog is online at [singularitynotes.com](https://singularitynotes.com).
+Singularity Notes is a fully automated blog delivering bite-sized posts on the latest astronomy discoveries, powered by AI.
 
 🤝 If you want to contribute, please follow the project's [contribution guide](contributing.md).
 
